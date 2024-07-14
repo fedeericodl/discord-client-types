@@ -1,0 +1,35 @@
+{
+  "name": "discord-client-types",
+  "version": "1.0.0",
+  "description": "TypeScript type definitions for Discord client modding.",
+  "scripts": {
+    "cspell:check": "cspell lint ./src/**/*",
+    "eslint:check": "eslint ./src",
+    "prettier:check": "prettier ./src --check",
+    "typescript:check": "tsc --noEmit",
+    "eslint:fix": "eslint ./src --fix",
+    "prettier:fix": "prettier ./src --write",
+    "lint": "pnpm run prettier:check && pnpm run eslint:check && pnpm run cspell:check && pnpm run typescript:check",
+    "lint:fix": "pnpm run prettier:fix && pnpm run eslint:fix && pnpm run cspell:check && pnpm run typescript:check"
+  },
+  "author": "FedeIlLeone",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "@types/react": "~18.2.79",
+    "@types/react-router-dom": "^5.3.3",
+    "@typescript-eslint/eslint-plugin": "^7.16.0",
+    "@typescript-eslint/parser": "^7.16.0",
+    "cspell": "^8.10.4",
+    "dependency-graph": "0.8.0",
+    "discord-api-types": "^0.37.92",
+    "eslint": "^8.57.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-react": "^7.34.4",
+    "prettier": "^3.3.3",
+    "react-focus-rings": "^1.1.0",
+    "type-fest": "^4.21.0",
+    "typescript": "^5.5.3"
+  }
+}
