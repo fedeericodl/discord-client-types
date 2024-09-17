@@ -19,7 +19,6 @@
     "outDir": "dist",
     // Emit type declarations
     "declaration": true,
-    "emitDeclarationOnly": true,
     // Include the DOM types
     "lib": ["ES2022", "DOM", "DOM.Iterable"]
   },
