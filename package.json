@@ -4,11 +4,11 @@
   "description": "TypeScript type definitions for Discord client modding.",
   "scripts": {
     "cspell:check": "cspell lint ./src/**/*",
-    "eslint:check": "eslint ./src",
-    "prettier:check": "prettier ./src --check",
+    "eslint:check": "eslint ./src/**/*",
+    "prettier:check": "prettier ./src/**/* --check",
     "typescript:check": "tsc --noEmit",
-    "eslint:fix": "eslint ./src --fix",
-    "prettier:fix": "prettier ./src --write",
+    "eslint:fix": "eslint ./src/**/* --fix",
+    "prettier:fix": "prettier ./src/**/* --write",
     "lint": "pnpm run prettier:check && pnpm run eslint:check && pnpm run cspell:check && pnpm run typescript:check",
     "lint:fix": "pnpm run prettier:fix && pnpm run eslint:fix && pnpm run cspell:check && pnpm run typescript:check"
   },
