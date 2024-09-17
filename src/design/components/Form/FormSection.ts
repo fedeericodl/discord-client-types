@@ -31,7 +31,6 @@ export type FormSectionProps = Pick<FormTitleProps, "disabled" | "tag"> &
  * A container component that provides a structured layout for form elements.
  * It organizes {@link FormItem}s under a shared title, enhancing the form's readability and usability.
  * It's ideal for forms with multiple fields or complex structures, as it visually separates different sections of the form.
- *
  * @example
  * ```tsx
  * <FormSection title="User Information" tag={FormTitleTags.H1}>

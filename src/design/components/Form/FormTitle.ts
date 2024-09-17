@@ -10,30 +10,25 @@ export type FormTitleTags = {
 interface CommonFormTitleProps extends Pick<FormContextValue, "error" | "errorId"> {
   /**
    * The HTML tag to use for the title. This is applied to its class name.
-   *
    * @default FormTitleTags.H5
-   *
    * @see {@link Tags FormTitleTags}
    */
   tag?: Tags;
 
   /**
    * Whether the title is faded.
-   *
    * @default false
    */
   faded?: boolean;
 
   /**
    * Whether the title is displayed as disabled.
-   *
    * @default false
    */
   disabled?: boolean;
 
   /**
    * Whether an asterisk (*) is displayed next to the title to indicate that the content following the title is required.
-   *
    * @default false
    */
   required?: boolean;
@@ -61,7 +56,6 @@ export type FormTitleProps = HeadingProps | LabelProps | LegendProps;
 
 /**
  * A title for a form. The HTML tag for the title can be automatically selected based on the previous heading levels.
- *
  * @example
  * ```tsx
  * <FormTitle tag={FormTitleTags.H1}>Title of the form</FormTitle>

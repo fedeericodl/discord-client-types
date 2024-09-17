@@ -4,7 +4,6 @@ import type { Shakeable } from "./Shakeable";
 export interface ShakerProps {
   /**
    * Whether the component is shaking.
-   *
    * @default true
    */
   isShaking?: boolean;
@@ -16,7 +15,6 @@ export interface ShakerProps {
 
   /**
    * The intensity of the shake.
-   *
    * @default 5
    */
   intensity?: number;
@@ -40,7 +38,6 @@ export declare class ShakerComponent extends React.Component<React.PropsWithChil
  * Unlike {@link Shakeable}, `Shaker` relies on the parent component to trigger the
  * shaking effect. If `isShaking` is `true`, the component will automatically
  * start shaking and stop when the prop is `false`.
- *
  * @example
  * ```tsx
  * const [isShaking, setIsShaking] = React.useState(false);

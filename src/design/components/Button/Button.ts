@@ -25,41 +25,33 @@ export type ButtonSizes = Record<
 export interface ButtonLinkProps<S = unknown> extends LinkProps<S> {
   /**
    * The appearance of the button.
-   *
    * @default Button.Looks.FILLED
-   *
    * @see {@link ButtonLooks}
    */
   look?: string;
 
   /**
    * The color of the button.
-   *
    * @default Button.Colors.BRAND
-   *
    * @see {@link ButtonColors}
    */
   color?: string;
 
   /**
    * The size of the button.
-   *
    * @default Button.Sizes.MEDIUM
-   *
    * @see {@link ButtonSizes}
    */
   size?: string;
 
   /**
    * Whether the button should take up the full width of its container.
-   *
    * @default false
    */
   fullWidth?: boolean;
 
   /**
    * Whether the button should grow to fill its container.
-   *
    * @default true
    */
   grow?: boolean;
@@ -72,16 +64,13 @@ export interface ButtonLinkProps<S = unknown> extends LinkProps<S> {
 
 /**
  * A button component that acts as a link.
- *
  * @template S The type of state for the button.
- *
  * @example
  * ```tsx
  * <Button.Link to="/channels/@me" look={Button.Looks.LINK} color={Button.Colors.PRIMARY}>
  *   Direct Messages
  * </Button.Link>
  * ```
- *
  * @see {@link https://v5.reactrouter.com/web/api/Link React Router v5}
  */
 export type ButtonLink<S = unknown> = React.FC<React.PropsWithChildren<ButtonLinkProps<S>>>;
@@ -89,48 +78,39 @@ export type ButtonLink<S = unknown> = React.FC<React.PropsWithChildren<ButtonLin
 export interface ButtonProps extends React.ComponentPropsWithoutRef<"button"> {
   /**
    * The appearance of the button.
-   *
    * @default Button.Looks.FILLED
-   *
    * @see {@link ButtonLooks}
    */
   look?: string;
 
   /**
    * The color of the button.
-   *
    * @default Button.Colors.BRAND
-   *
    * @see {@link ButtonColors}
    */
   color?: string;
 
   /**
    * The size of the button.
-   *
    * @default Button.Sizes.MEDIUM
-   *
    * @see {@link ButtonSizes}
    */
   size?: string;
 
   /**
    * Whether the button should take up the full width of its container.
-   *
    * @default false
    */
   fullWidth?: boolean;
 
   /**
    * Whether the button should grow to fill its container.
-   *
    * @default true
    */
   grow?: boolean;
 
   /**
    * Whether the button is in a submitting state. Only applicable when `disabled` prop is false.
-   *
    * @default false
    */
   submitting?: boolean;
@@ -178,7 +158,6 @@ export type GetButtonStyle = (
 
 /**
  * An interactive button element.
- *
  * @example
  * ```tsx
  * <Button

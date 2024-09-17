@@ -4,7 +4,6 @@ import type { FocusRingProps } from "react-focus-rings";
 export interface AnchorProps extends React.ComponentPropsWithoutRef<"a"> {
   /**
    * Whether to use default underline styles.
-   *
    * @default true
    */
   useDefaultUnderlineStyles?: boolean;
@@ -17,7 +16,6 @@ export interface AnchorProps extends React.ComponentPropsWithoutRef<"a"> {
 
 /**
  * Displays an anchor element.
- *
  * @example
  * ```tsx
  * <Anchor href={"https://dis.gd/help"}>Help & Support</Anchor>

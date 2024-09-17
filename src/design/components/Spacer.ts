@@ -8,7 +8,6 @@ export interface SpacerProps {
 
   /**
    * Whether the spacer should be horizontal.
-   *
    * @default false
    */
   horizontal?: boolean;
@@ -16,7 +15,6 @@ export interface SpacerProps {
 
 /**
  * A spacer that creates space between elements.
- *
  * @example
  * ```tsx
  * <Spacer size={10} horizontal />

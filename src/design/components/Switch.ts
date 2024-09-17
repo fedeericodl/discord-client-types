@@ -14,14 +14,12 @@ export interface SwitchProps {
 
   /**
    * The value of the switch.
-   *
    * @default false
    */
   checked?: boolean;
 
   /**
    * Whether the switch is disabled.
-   *
    * @default false
    */
   disabled?: boolean;
@@ -44,7 +42,6 @@ export interface SwitchProps {
 
 /**
  * An interactive switch component.
- *
  * @example
  * ```tsx
  * const [value, setValue] = React.useState(false);

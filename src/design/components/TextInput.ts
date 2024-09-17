@@ -13,7 +13,6 @@ export interface InputErrorProps {
 /**
  * Displays an error message.
  * Should be used under an input field.
- *
  * @example
  * ```tsx
  * <InputError error="A very generic error." />
@@ -38,16 +37,13 @@ export interface TextInputProps
 
   /**
    * The size of the input.
-   *
    * @default TextInput.Sizes.DEFAULT
-   *
    * @see {@link TextInputSizes}
    */
   size?: string;
 
   /**
    * Whether the input is editable.
-   *
    * @default true
    */
   editable?: boolean;
@@ -89,7 +85,6 @@ export interface TextInputProps
 
   /**
    * Whether the input is initially "dirty" (i.e. input field has been changed).
-   *
    * @default false
    */
   defaultDirty?: boolean;
@@ -98,7 +93,6 @@ export interface TextInputProps
 export interface TextInputState {
   /**
    * Whether the input is "dirty" (i.e. input field has been changed).
-   *
    * @default false
    */
   dirty: boolean;
@@ -116,7 +110,6 @@ export declare class TextInputComponent extends React.Component<TextInputProps, 
 
 /**
  * An interactive text input element.
- *
  * @example
  * ```tsx
  * <TextInput value={value} placeholder="Enter some text" />

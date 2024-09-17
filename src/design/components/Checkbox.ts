@@ -17,37 +17,31 @@ export type CheckboxShapes = Record<"BOX" | "ROUND" | "SMALL_BOX", string>;
 export interface CheckboxProps {
   /**
    * Whether the checkbox is disabled.
-   *
    * @default false
    */
   disabled?: boolean;
 
   /**
    * Whether the checkbox is read-only.
-   *
    * @default false
    */
   readOnly?: boolean;
 
   /**
    * The value of the checkbox.
-   *
    * @default false
    */
   value?: boolean;
 
   /**
    * The type of the checkbox, which determines its appearance.
-   *
    * @default Checkbox.Types.DEFAULT
-   *
    * @see {@link Types CheckboxTypes}
    */
   type?: Types;
 
   /**
    * The color of the checkbox tick. This should be used with the CSS var() function.
-   *
    * @default "var(--brand-500)"
    */
   color?: string;
@@ -59,18 +53,14 @@ export interface CheckboxProps {
 
   /**
    * The shape of the checkbox.
-   *
    * @default Checkbox.Shapes.BOX
-   *
    * @see {@link CheckboxShapes}
    */
   shape?: string;
 
   /**
    * The alignment of the checkbox.
-   *
    * @default Checkbox.Aligns.CENTER
-   *
    * @see {@link Aligns CheckboxAligns}
    */
   align?: Aligns;
@@ -87,14 +77,12 @@ export interface CheckboxProps {
 
   /**
    * The size of the checkbox.
-   *
    * @default 24
    */
   size?: number;
 
   /**
    * Whether the checkbox position is reversed.
-   *
    * @default false
    */
   reverse?: boolean;
@@ -106,7 +94,6 @@ export interface CheckboxProps {
 
   /**
    * Whether the checkbox is for display only.
-   *
    * @default false
    */
   displayOnly?: boolean;
@@ -118,7 +105,6 @@ export interface CheckboxProps {
 
   /**
    * Event handler called when the checkbox's value changes. Only applicable when `disabled` prop and `readOnly` prop are false.
-   *
    * @default NOOP
    */
   onChange?: (event: React.ChangeEvent<HTMLInputElement>, value: boolean) => void;
@@ -136,7 +122,6 @@ export declare class CheckboxComponent extends React.PureComponent<
 
 /**
  * An interactive checkbox element.
- *
  * @example
  * ```tsx
  * const [value, setValue] = React.useState(false);

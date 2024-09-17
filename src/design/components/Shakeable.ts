@@ -3,7 +3,6 @@ import type React from "react";
 interface AnimProps {
   /**
    * The duration of the shake animation in milliseconds.
-   *
    * @default 300
    */
   duration: number;
@@ -20,7 +19,6 @@ interface AnimProps {
 
   /**
    * The intensity of the shake.
-   *
    * @default 5
    */
   intensity: number;
@@ -36,12 +34,11 @@ interface AnimProps {
   frameCount: number;
 }
 
-export interface ShakeableProps extends React.ComponentPropsWithRef<"div"> {}
+export type ShakeableProps = React.ComponentPropsWithRef<"div">;
 
 export interface ShakeableState {
   /**
    * Whether the component is shaking.
-   *
    * @default false
    */
   shaking: boolean;
@@ -67,7 +64,6 @@ export declare class ShakeableComponent extends React.Component<
  * Provides a self-contained shaking animation.
  * It internally manages the shaking state and can be triggered to shake or stop
  * shaking programmatically using its `shake()` and `stop()` methods.
- *
  * @example
  * ```tsx
  * const shakeableRef = useRef<ShakeableComponent>(null);

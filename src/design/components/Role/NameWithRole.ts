@@ -26,7 +26,6 @@ interface RoleProps {
 
   /**
    * The alignment of the dot.
-   *
    * @default "left"
    */
   dotAlignment?: "left" | "right";
@@ -41,7 +40,6 @@ export interface NameWithRoleAnchorProps extends Omit<RoleProps, "roleStyle">, A
 
 /**
  * Displays a name colored by a role or with a {@link RoleDot}, with an {@link Anchor}.
- *
  * @example
  * ```tsx
  * <NameWithRoleAnchor name="John Doe" color="#ff0000" roleName="Admin" onClick={() => console.log("Clicked!")} />
@@ -49,11 +47,10 @@ export interface NameWithRoleAnchorProps extends Omit<RoleProps, "roleStyle">, A
  */
 export type NameWithRoleAnchor = React.FC<NameWithRoleAnchorProps>;
 
-export interface NameWithRoleProps extends Omit<RoleProps, "roleStyle"> {}
+export type NameWithRoleProps = Omit<RoleProps, "roleStyle">;
 
 /**
  * Displays a name colored by a role or with a {@link RoleDot}.
- *
  * @example
  * ```tsx
  * <NameWithRole name="John Doe" color="#ff0000" roleName="Admin" />

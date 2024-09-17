@@ -23,16 +23,13 @@ export interface FormErrorBlockProps {
 
   /**
    * The background color of the error block.
-   *
    * @default FormErrorBlockColors.RED
-   *
    * @see {@link FormErrorBlockColors}
    */
   backgroundColor?: string;
 
   /**
    * The icon to be displayed in the error block.
-   *
    * @default WarningCircle
    */
   icon?: React.ComponentType;
@@ -45,7 +42,6 @@ export interface FormErrorBlockProps {
 
 /**
  * Displays an error block to be used in forms.
- *
  * @example
  * ```tsx
  * <FormErrorBlock>This is a generic error.</FormErrorBlock>

@@ -16,16 +16,13 @@ export type SpinnerTypes = {
 interface CommonSpinnerProps {
   /**
    * The type of spinner to display.
-   *
    * @default SpinnerTypes.WANDERING_CUBES
-   *
    * @see {@link Types SpinnerTypes}
    */
   type?: Types;
 
   /**
    * Whether the spinner is animated.
-   *
    * @default true
    */
   animated?: boolean;
@@ -47,7 +44,6 @@ export type SpinnerProps = SpinningCircleProps | OtherSpinnerProps;
 
 /**
  * Visual indicator for loading state.
- *
  * @example
  * ```tsx
  * <Spinner type={Spinner.Type.SPINNING_CIRCLE} />

@@ -1,6 +1,5 @@
 /**
  * Manages the state and behavior of focus rings within the application.
- *
  * @see {@link https://github.com/discord/focus-rings Focus Rings}
  */
 export interface FocusRingManager {

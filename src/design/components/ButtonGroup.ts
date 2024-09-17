@@ -18,7 +18,6 @@ interface Button {
 
   /**
    * Whether the button is disabled.
-   *
    * @default false
    */
   disabled?: boolean;
@@ -32,7 +31,6 @@ interface Buttons {
 
   /**
    * Whether the button is disabled.
-   *
    * @default false
    */
   disabled?: boolean;
@@ -46,7 +44,6 @@ export interface ButtonGroupProps {
 
   /**
    * Whether the button group is disabled.
-   *
    * @default false
    */
   disabled?: boolean;
@@ -59,7 +56,6 @@ export interface ButtonGroupProps {
 
 /**
  * A group of buttons.
- *
  * @example
  * ```tsx
  * const buttons = [

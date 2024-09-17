@@ -19,7 +19,6 @@ export type FormItemProps = FormTitleProps &
 /**
  * Lets you wrap other elements in a form, such as inputs, checkboxes, and buttons.
  * It should be used within a {@link FormSection}, which groups related `FormItem`s together.
- *
  * @example
  * ```tsx
  * <FormItem title="Title name">

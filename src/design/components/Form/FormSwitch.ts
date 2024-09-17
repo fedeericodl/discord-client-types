@@ -4,14 +4,12 @@ import type { SwitchProps } from "../Switch";
 export interface FormSwitchProps extends Pick<SwitchProps, "onChange" | "disabled"> {
   /**
    * The value of the switch.
-   *
    * @default false
    */
   value?: boolean;
 
   /**
    * Whether to hide the divider below the container.
-   *
    * @default false
    */
   hideBorder?: boolean;
@@ -44,7 +42,6 @@ export interface FormSwitchProps extends Pick<SwitchProps, "onChange" | "disable
 
 /**
  * An interactive switch component to be used in forms.
- *
  * @example
  * ```tsx
  * const [value, setValue] = React.useState(false);

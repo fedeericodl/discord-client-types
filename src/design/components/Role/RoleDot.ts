@@ -13,7 +13,6 @@ interface DotProps {
 
   /**
    * Whether to show a background under the dot.
-   *
    * @default true
    */
   background?: boolean;
@@ -27,7 +26,6 @@ export interface RoleDotProps extends DotProps {
 
   /**
    * Whether to show a tooltip with the role name on hover.
-   *
    * @default true
    */
   tooltip?: boolean;

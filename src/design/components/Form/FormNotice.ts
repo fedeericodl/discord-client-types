@@ -27,9 +27,7 @@ export interface ImageData {
 
   /**
    * The position of the image.
-   *
    * @default FormNoticeImagePositions.LEFT
-   *
    * @see {@link ImagePositions FormNoticeImagePositions}
    */
   position?: ImagePositions;
@@ -38,7 +36,6 @@ export interface ImageData {
 export interface FormNoticeProps {
   /**
    * The type of the notice, which determines its appearance.
-   *
    * @default FormNotice.Types.DANGER
    */
   type?: string;
@@ -80,7 +77,6 @@ export interface FormNoticeProps {
 
   /**
    * The alignment of the notice.
-   *
    * @default Flex.Align.START
    */
   align?: string;
@@ -88,7 +84,6 @@ export interface FormNoticeProps {
 
 /**
  * A notice to be displayed in forms.
- *
  * @example
  * ```tsx
  * <FormNotice

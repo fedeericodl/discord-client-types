@@ -5,17 +5,16 @@ export interface DesignConfig {
   /**
    * Function to intercept default link behavior. Used by the `Anchor` component for the `onClick` event handler.
    */
-  getDefaultLinkInterceptor: (...args: any) => void;
+  getDefaultLinkInterceptor: (...args: unknown[]) => void;
 
   /**
    * Function to track screen impressions. Used on the mobile app.
    */
-  useTrackNavigatorScreenImpression: (...args: any) => void;
+  useTrackNavigatorScreenImpression: (...args: unknown[]) => void;
 }
 
 /**
  * Updates the {@link DesignConfig design configuration}.
- *
  * @example
  * ```ts
  * setDesignConfig({

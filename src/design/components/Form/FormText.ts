@@ -15,23 +15,19 @@ export type FormTextTypes = Record<
 export interface FormTextProps extends React.ComponentPropsWithoutRef<"div"> {
   /**
    * The type of the text, which determines its appearance.
-   *
    * @default FormText.Types.DEFAULT
-   *
    * @see {@link FormTextTypes}
    */
   type?: string;
 
   /**
    * Whether the text is displayed as disabled.
-   *
    * @default false
    */
   disabled?: boolean;
 
   /**
    * Whether the text is selectable. Only applicable when `disabled` prop is false.
-   *
    * @default false
    */
   selectable?: boolean;
@@ -39,7 +35,6 @@ export interface FormTextProps extends React.ComponentPropsWithoutRef<"div"> {
 
 /**
  * A text component for forms.
- *
  * @example
  * ```tsx
  * <FormText type={FormText.Types.DESCRIPTION}>This is a description.</FormText>
