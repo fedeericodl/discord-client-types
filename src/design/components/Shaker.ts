@@ -21,13 +21,40 @@ export interface ShakerProps {
 }
 
 export declare class ShakerComponent extends React.Component<React.PropsWithChildren<ShakerProps>> {
+  /**
+   * The ref to the container element.
+   */
   public ref: React.RefObject<HTMLDivElement>;
+
+  /**
+   * The animation frame id.
+   */
   public animationFrame: number | undefined;
+
+  /**
+   * Whether the component should render the next frame.
+   */
   public shouldRenderFrame: boolean;
+
+  /**
+   * The actual animation function implementation.
+   */
   public animate: () => void;
 
+  /**
+   * Sets the shaking state of the component.
+   * @param isShaking Whether the component should shake.
+   */
   public setShaking: (isShaking: boolean) => void;
+
+  /**
+   * Starts the shaking animation.
+   */
   public startShaking: () => void;
+
+  /**
+   * Stops the shaking animation.
+   */
   public stopShaking: () => void;
 }
 

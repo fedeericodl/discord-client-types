@@ -48,15 +48,56 @@ export declare class ShakeableComponent extends React.Component<
   React.PropsWithChildren<ShakeableProps>,
   ShakeableState
 > {
+  /**
+   * The animation properties used for the shake effect.
+   */
   public animProps: AnimProps | undefined;
+
+  /**
+   * The animation frame id.
+   */
   private _animationFrame: number | undefined;
+
+  /**
+   * The ref to the container element.
+   */
   public ref: React.RefObject<HTMLDivElement>;
+
+  /**
+   * The actual animation function implementation.
+   * @private
+   */
   private _animate: () => void;
+
+  /**
+   * The cleanup function for the animation.
+   * @private
+   */
   private _animationCleanup: () => void;
 
+  /**
+   * Returns the default animation properties.
+   * @param duration The duration of the shake animation in milliseconds.
+   * @param intensity The intensity of the shake.
+   */
   public getDefaultAnimProps: (duration?: number, intensity?: number) => AnimProps;
+
+  /**
+   * Starts the shaking animation.
+   * @param duration The duration of the shake animation in milliseconds.
+   * @param intensity The intensity of the shake.
+   */
   public shake: (duration?: number, intensity?: number) => void;
+
+  /**
+   * Stops the shaking animation.
+   */
   public stop: () => void;
+
+  /**
+   * The callback function called when the animation completes.
+   * @private
+   */
   private _animationComplete: () => void;
 }
 

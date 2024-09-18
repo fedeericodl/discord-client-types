@@ -113,10 +113,24 @@ export interface CheckboxProps {
 export declare class CheckboxComponent extends React.PureComponent<
   React.PropsWithChildren<CheckboxProps>
 > {
+  /**
+   * The change event handler for the checkbox.
+   */
   public handleChange: (event: React.MouseEvent<HTMLInputElement>) => void;
 
+  /**
+   * Returns the input mode of the checkbox.
+   */
   public getInputMode: () => "disabled" | "readonly" | "default";
+
+  /**
+   * Returns the style of the checkbox.
+   */
   public getStyle: () => React.CSSProperties;
+
+  /**
+   * Returns the color of the checkbox.
+   */
   public getColor: () => string;
 }
 

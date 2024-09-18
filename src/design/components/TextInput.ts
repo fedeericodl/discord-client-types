@@ -12,7 +12,7 @@ export interface InputErrorProps {
 
 /**
  * Displays an error message.
- * Should be used under an input field.
+ * Typically used under any input field.
  * @example
  * ```tsx
  * <InputError error="A very generic error." />
@@ -99,12 +99,39 @@ export interface TextInputState {
 }
 
 export declare class TextInputComponent extends React.Component<TextInputProps, TextInputState> {
+  /**
+   * Returns whether the input has an error.
+   */
   public hasError: () => boolean;
+
+  /**
+   * Returns the error message.
+   */
   public getError: () => string | null;
+
+  /**
+   * Returns whether the input is underflowing.
+   */
   public getIsUnderFlowing: () => boolean;
+
+  /**
+   * Returns whether the input is overflowing.
+   */
   public getIsOverFlowing: () => boolean;
+
+  /**
+   * The change event handler for the input.
+   */
   public onChange: React.ChangeEventHandler<HTMLInputElement>;
+
+  /**
+   * The focus event handler for the input.
+   */
   public onFocus: React.FocusEventHandler<HTMLInputElement>;
+
+  /**
+   * The blur event handler for the input.
+   */
   public onBlur: React.FocusEventHandler<HTMLInputElement>;
 }
 
