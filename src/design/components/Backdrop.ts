@@ -44,7 +44,7 @@ export interface BackdropProps {
 }
 
 /**
- * Semi-transparent layer that covers the entire screen, used to focus the user's attention on a specific element or action.
+ * Semi-transparent layer that covers the entire screen or a specific element, used to focus the user's attention on a specific element or action.
  */
 export type Backdrop = React.ForwardRefExoticComponent<
   React.PropsWithoutRef<BackdropProps> & React.RefAttributes<unknown>

@@ -23,6 +23,6 @@ export interface HiddenVisuallyProps<T extends keyof JSX.IntrinsicElements = "sp
  * Hides content visually, but keeps it accessible to screen readers.
  * @template T The HTML tag to use for the hidden element.
  */
-export type HiddenVisually<T extends keyof JSX.IntrinsicElements = "span"> = React.FC<
-  React.PropsWithChildren<HiddenVisuallyProps<T>>
->;
+export type HiddenVisually = <T extends keyof JSX.IntrinsicElements = "span">(
+  props: React.PropsWithChildren<HiddenVisuallyProps<T>>,
+) => React.ReactNode;
