@@ -129,6 +129,11 @@ export interface TextAreaProps {
   onChange?: (value: string, name: string) => void;
 
   /**
+   * The name of the textarea.
+   */
+  name?: string;
+
+  /**
    * Event handler called when the textarea gains focus.
    */
   onFocus?: (event: React.FocusEvent<HTMLTextAreaElement>, name: string) => void;

@@ -1,20 +1,36 @@
 {
   "name": "discord-client-types",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "TypeScript type definitions for Discord client modding.",
+  "keywords": [
+    "typescript",
+    "discord",
+    "client-mod",
+    "typings"
+  ],
+  "bugs": {
+    "url": "https://github.com/FedeIlLeone/discord-client-types/issues"
+  },
+  "license": "MIT",
+  "author": "FedeIlLeone",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FedeIlLeone/discord-client-types.git"
+  },
   "scripts": {
-    "cspell:check": "cspell lint ./src/**/*",
-    "eslint:check": "eslint ./src/",
-    "prettier:check": "prettier ./src/ --check",
+    "build": "tsc --emitDeclarationOnly",
+    "cspell:check": "cspell lint \"{design,lib}/**/*.ts\"",
+    "eslint:check": "eslint \"{design,lib}/**/*.ts\"",
+    "prettier:check": "prettier \"{design,lib}/**/*.ts\" --check",
     "typescript:check": "tsc --noEmit",
-    "eslint:fix": "eslint ./src/ --fix",
-    "prettier:fix": "prettier ./src/ --write",
+    "eslint:fix": "eslint \"{design,lib}/**/*.ts\" --fix",
+    "prettier:fix": "prettier . --write",
     "lint": "pnpm run prettier:check && pnpm run eslint:check && pnpm run cspell:check && pnpm run typescript:check",
     "lint:fix": "pnpm run prettier:fix && pnpm run eslint:fix && pnpm run cspell:check && pnpm run typescript:check"
   },
-  "author": "FedeIlLeone",
-  "license": "MIT",
-  "type": "module",
   "devDependencies": {
     "@types/node": "^22.5.5",
     "@types/react": "~18.2.79",
@@ -29,9 +45,9 @@
     "prettier": "^3.3.3",
     "react-focus-rings": "^1.1.0",
     "type-fest": "^4.26.1",
-    "typescript": "^5.5.4"
-  },
-  "dependencies": {
+    "typescript": "^5.5.4",
     "typescript-eslint": "^8.6.0"
-  }
+  },
+  "type": "module",
+  "types": "dist/index.d.ts"
 }
