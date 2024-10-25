@@ -15,6 +15,26 @@ export interface FormContextValue {
    * The error message to display.
    */
   error: string | undefined;
+
+  /**
+   * Whether the form is focused.
+   */
+  isFocused: boolean | undefined;
+
+  /**
+   * Sets the form as focused.
+   */
+  setIsFocused: () => void | React.Dispatch<React.SetStateAction<boolean>>;
+
+  /**
+   * Whether the form has been submitted.
+   */
+  hasValue: boolean | undefined;
+
+  /**
+   * Sets the form as having a value.
+   */
+  setHasValue: () => void | React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 /**

@@ -22,12 +22,12 @@
   },
   "scripts": {
     "build": "tsc --emitDeclarationOnly",
-    "cspell:check": "cspell lint \"{design,lib}/**/*.ts\"",
-    "eslint:check": "eslint \"{design,lib}/**/*.ts\"",
-    "prettier:check": "prettier \"{design,lib}/**/*.ts\" --check",
+    "cspell:check": "cspell lint \"{design,lib,packages}/**/*.ts\"",
+    "eslint:check": "eslint \"{design,lib,packages}/**/*.ts\"",
+    "prettier:check": "prettier \"{design,lib,packages}/**/*.ts\" --check",
     "typescript:check": "tsc --noEmit",
-    "eslint:fix": "eslint \"{design,lib}/**/*.ts\" --fix",
-    "prettier:fix": "prettier . --write",
+    "eslint:fix": "eslint \"{design,lib,packages}/**/*.ts\" --fix",
+    "prettier:fix": "prettier \"{design,lib,packages}/**/*.ts\" --write",
     "lint": "pnpm run prettier:check && pnpm run eslint:check && pnpm run cspell:check && pnpm run typescript:check",
     "lint:fix": "pnpm run prettier:fix && pnpm run eslint:fix && pnpm run cspell:check && pnpm run typescript:check"
   },

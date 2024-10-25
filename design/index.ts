@@ -1,5 +1,6 @@
 import type { Anchor } from "./components/Anchor";
 import type { Backdrop, BackdropStyles } from "./components/Backdrop";
+import type { BlockInteractions, BlockInteractionsContext } from "./components/BlockInteractions";
 import type { Breadcrumbs } from "./components/Breadcrumbs";
 import type {
   Button,
@@ -11,9 +12,10 @@ import type {
 } from "./components/Button/Button";
 import type { ButtonGroup } from "./components/ButtonGroup";
 import type { Card, CardTypes } from "./components/Card";
-import type { Checkbox } from "./components/Checkbox";
+import type { Checkbox, CheckboxIndicator } from "./components/Checkbox";
 import type { Clickable } from "./components/Clickable/Clickable";
 import type { EmptyState, EmptyStateImage, EmptyStateText } from "./components/EmptyState";
+import type { FocusRing, FocusRingScope } from "./components/Focus/FocusRing";
 import type { FocusRingManager } from "./components/Focus/FocusRingManager";
 import type {
   FormContext,
@@ -23,6 +25,7 @@ import type {
 import type { FormDivider } from "./components/Form/FormDivider";
 import type { FormErrorBlock, FormErrorBlockColors } from "./components/Form/FormErrorBlock";
 import type { FormItem } from "./components/Form/FormItem";
+import type { FormLabel } from "./components/Form/FormLabel";
 import type {
   FormNotice,
   FormNoticeImagePositions,
@@ -34,6 +37,8 @@ import type { FormText, FormTextTypes } from "./components/Form/FormText";
 import type { FormTitle, FormTitleTags } from "./components/Form/FormTitle";
 import type { HiddenVisually } from "./components/HiddenVisually";
 import type { Interactive } from "./components/Interactive";
+import type { KeyCombo, PRETTY_KEYS } from "./components/KeyCombo";
+import type { NavItem } from "./components/NavItem";
 import type {
   Notice,
   NoticeButton,
@@ -55,11 +60,13 @@ import type { InputError, TextInput } from "./components/TextInput";
 
 export * from "./components/Anchor";
 export * from "./components/Backdrop";
+export * from "./components/BlockInteractions";
 export * from "./components/Breadcrumbs";
 export * from "./components/Button/Button";
 export * from "./components/ButtonGroup";
 export * from "./components/Card";
 export * from "./components/Checkbox";
+export * from "./components/Clickable/Clickable";
 export * from "./components/EmptyState";
 export * from "./components/Focus/FocusRing";
 export * from "./components/Focus/FocusRingManager";
@@ -67,6 +74,7 @@ export * from "./components/Form/FormContext";
 export * from "./components/Form/FormDivider";
 export * from "./components/Form/FormErrorBlock";
 export * from "./components/Form/FormItem";
+export * from "./components/Form/FormLabel";
 export * from "./components/Form/FormNotice";
 export * from "./components/Form/FormSection";
 export * from "./components/Form/FormSwitch";
@@ -74,6 +82,8 @@ export * from "./components/Form/FormText";
 export * from "./components/Form/FormTitle";
 export * from "./components/HiddenVisually";
 export * from "./components/Interactive";
+export * from "./components/KeyCombo";
+export * from "./components/NavItem";
 export * from "./components/Notice";
 export * from "./components/NumberInputStepper";
 export * from "./components/Role/NameWithRole";
@@ -91,6 +101,8 @@ export interface Design {
   Anchor: Anchor;
   Backdrop: Backdrop;
   BackdropStyles: BackdropStyles;
+  BlockInteractions: BlockInteractions;
+  BlockInteractionsContext: BlockInteractionsContext;
   Breadcrumbs: Breadcrumbs;
   Button: Button;
   ButtonColors: ButtonColors;
@@ -101,17 +113,21 @@ export interface Design {
   Card: Card;
   CardTypes: CardTypes;
   Checkbox: Checkbox;
+  CheckboxIndicator: CheckboxIndicator;
   Clickable: Clickable;
   EmptyState: EmptyState;
   EmptyStateImage: EmptyStateImage;
   EmptyStateText: EmptyStateText;
+  FocusRing: typeof FocusRing;
   FocusRingManager: FocusRingManager;
+  FocusRingScope: typeof FocusRingScope;
   FormContext: FormContext;
   FormContextProvider: FormContextProvider;
   FormDivider: FormDivider;
   FormErrorBlock: FormErrorBlock;
   FormErrorBlockColors: FormErrorBlockColors;
   FormItem: FormItem;
+  FormLabel: FormLabel;
   FormNotice: FormNotice;
   FormNoticeImagePositions: FormNoticeImagePositions;
   FormNoticeTypes: FormNoticeTypes;
@@ -124,14 +140,17 @@ export interface Design {
   HiddenVisually: HiddenVisually;
   InputError: InputError;
   Interactive: Interactive;
+  KeyCombo: KeyCombo;
   NameWithRole: NameWithRole;
   NameWithRoleAnchor: NameWithRoleAnchor;
+  NavItem: NavItem;
   Notice: Notice;
   NoticeButton: NoticeButton;
   NoticeButtonAnchor: NoticeButtonAnchor;
   NoticeCloseButton: NoticeCloseButton;
   NoticeColors: NoticeColors;
   NumberInputStepper: NumberInputStepper;
+  PRETTY_KEYS: PRETTY_KEYS;
   PrimaryCTANoticeButton: PrimaryCTANoticeButton;
   RoleCircle: RoleCircle;
   RoleDot: RoleDot;

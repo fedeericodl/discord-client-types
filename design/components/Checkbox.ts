@@ -14,24 +14,35 @@ export type CheckboxAligns = {
 
 export type CheckboxShapes = Record<"BOX" | "ROUND" | "SMALL_BOX", string>;
 
-export interface CheckboxProps {
+export interface CheckboxIndicatorProps {
   /**
-   * Whether the checkbox is disabled.
-   * @default false
+   * The class name applied to the checkbox indicator.
    */
-  disabled?: boolean;
-
-  /**
-   * Whether the checkbox is read-only.
-   * @default false
-   */
-  readOnly?: boolean;
+  indicatorClassName?: string;
 
   /**
    * The value of the checkbox.
    * @default false
    */
   value?: boolean;
+
+  /**
+   * The size of the checkbox.
+   * @default 24
+   */
+  size?: number;
+
+  /**
+   * The shape of the checkbox.
+   * @default Checkbox.Shapes.BOX
+   * @see {@link CheckboxShapes}
+   */
+  shape?: string;
+
+  /**
+   * The color of the checkbox border.
+   */
+  checkboxColor?: string;
 
   /**
    * The type of the checkbox, which determines its appearance.
@@ -47,16 +58,25 @@ export interface CheckboxProps {
   color?: string;
 
   /**
+   * Whether the checkbox is disabled.
+   * @default false
+   */
+  disabled?: boolean;
+
+  /**
    * The styles applied to the checkbox.
    */
   style?: React.CSSProperties;
+}
 
+export type CheckboxIndicator = React.FC<CheckboxIndicatorProps>;
+
+export interface CheckboxProps extends CheckboxIndicatorProps {
   /**
-   * The shape of the checkbox.
-   * @default Checkbox.Shapes.BOX
-   * @see {@link CheckboxShapes}
+   * Whether the checkbox is read-only.
+   * @default false
    */
-  shape?: string;
+  readOnly?: boolean;
 
   /**
    * The alignment of the checkbox.
@@ -76,21 +96,10 @@ export interface CheckboxProps {
   innerClassName?: string;
 
   /**
-   * The size of the checkbox.
-   * @default 24
-   */
-  size?: number;
-
-  /**
    * Whether the checkbox position is reversed.
    * @default false
    */
   reverse?: boolean;
-
-  /**
-   * The color of the checkbox border.
-   */
-  checkboxColor?: string;
 
   /**
    * Whether the checkbox is for display only.
@@ -112,27 +121,7 @@ export interface CheckboxProps {
 
 export declare class CheckboxComponent extends React.PureComponent<
   React.PropsWithChildren<CheckboxProps>
-> {
-  /**
-   * The change event handler for the checkbox.
-   */
-  public handleChange: (event: React.MouseEvent<HTMLInputElement>) => void;
-
-  /**
-   * Returns the input mode of the checkbox.
-   */
-  public getInputMode: () => "disabled" | "readonly" | "default";
-
-  /**
-   * Returns the style of the checkbox.
-   */
-  public getStyle: () => React.CSSProperties;
-
-  /**
-   * Returns the color of the checkbox.
-   */
-  public getColor: () => string;
-}
+> {}
 
 /**
  * An interactive checkbox element.
