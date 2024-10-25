@@ -17,6 +17,7 @@ import type { ButtonGroup } from "./components/ButtonGroup";
 import type { Card, CardTypes } from "./components/Card";
 import type { Checkbox, CheckboxIndicator } from "./components/Checkbox";
 import type { Clickable } from "./components/Clickable/Clickable";
+import type { Collapsible } from "./components/Collapsible";
 import type { EmptyState, EmptyStateImage, EmptyStateText } from "./components/EmptyState";
 import type { FocusRing, FocusRingScope } from "./components/Focus/FocusRing";
 import type { FocusRingManager } from "./components/Focus/FocusRingManager";
@@ -73,6 +74,7 @@ export * from "./components/ButtonGroup";
 export * from "./components/Card";
 export * from "./components/Checkbox";
 export * from "./components/Clickable/Clickable";
+export * from "./components/Collapsible";
 export * from "./components/EmptyState";
 export * from "./components/Focus/FocusRing";
 export * from "./components/Focus/FocusRingManager";
@@ -105,6 +107,7 @@ export * from "./config";
 
 /**
  * Discord's design system.
+ * This is a collection of components and utilities that are used to build Discord's UI.
  */
 export interface Design {
   AccessibilityAnnouncer: AccessibilityAnnouncer;
@@ -126,6 +129,7 @@ export interface Design {
   Checkbox: Checkbox;
   CheckboxIndicator: CheckboxIndicator;
   Clickable: Clickable;
+  Collapsible: Collapsible;
   EmptyState: EmptyState;
   EmptyStateImage: EmptyStateImage;
   EmptyStateText: EmptyStateText;

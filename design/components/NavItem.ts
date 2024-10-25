@@ -1,7 +1,7 @@
 import type React from "react";
 import type { ClickableProps } from "./Clickable/Clickable";
 
-interface NavItemTo<S = unknown> {
+export interface NavItemTo<S = unknown> {
   /**
    * The URL to navigate to.
    */
@@ -50,5 +50,6 @@ export interface NavItemProps<S = unknown> extends ClickableProps {
 /**
  * A navigational component that represents a single item within a navigation menu.
  * This is used in the guilds sidebar.
+ * @template S The type of state for the nav item.
  */
 export type NavItem<S = unknown> = React.FC<React.PropsWithChildren<NavItemProps<S>>>;

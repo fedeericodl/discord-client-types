@@ -1,6 +1,6 @@
 import type React from "react";
 
-interface Button {
+export interface ButtonData {
   /**
    * The content of the button.
    */
@@ -23,11 +23,11 @@ interface Button {
   disabled?: boolean;
 }
 
-interface Buttons {
+export interface Buttons {
   /**
    * The button props.
    */
-  data: Button;
+  data: ButtonData;
 
   /**
    * Whether the button is disabled.

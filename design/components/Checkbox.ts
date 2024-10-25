@@ -69,6 +69,9 @@ export interface CheckboxIndicatorProps {
   style?: React.CSSProperties;
 }
 
+/**
+ * Visually represents the state of a checkbox.
+ */
 export type CheckboxIndicator = React.FC<CheckboxIndicatorProps>;
 
 export interface CheckboxProps extends CheckboxIndicatorProps {

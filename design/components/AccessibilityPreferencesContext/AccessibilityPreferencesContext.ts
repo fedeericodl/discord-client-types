@@ -2,7 +2,7 @@ import type React from "react";
 
 //? Maybe get raw values from accessibility store
 
-interface ReducedMotionContextValue {
+export interface ReducedMotionContextValue {
   /**
    * Whether reduced motion is enabled.
    * @default false
@@ -16,7 +16,7 @@ interface ReducedMotionContextValue {
   rawValue: "auto" | "no-preference" | "reduce";
 }
 
-interface ForcedColorsContextValue {
+export interface ForcedColorsContextValue {
   /**
    * Whether forced colors are enabled.
    * @default false

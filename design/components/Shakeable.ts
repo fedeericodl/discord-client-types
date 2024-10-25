@@ -1,6 +1,6 @@
 import type React from "react";
 
-interface AnimProps {
+export interface AnimProps {
   /**
    * The duration of the shake animation in milliseconds.
    * @default 300
@@ -123,5 +123,6 @@ export declare class ShakeableComponent extends React.Component<
  *     <Button onClick={triggerShake}>Shake</Button>
  *   </div>
  * );
+ * ```
  */
 export type Shakeable = typeof ShakeableComponent;

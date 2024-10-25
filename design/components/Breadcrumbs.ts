@@ -1,6 +1,6 @@
 import type React from "react";
 
-interface Breadcrumb {
+export interface Breadcrumb {
   /**
    * The id of the breadcrumb.
    */
