@@ -32,6 +32,7 @@
     "lint:fix": "pnpm run prettier:fix && pnpm run eslint:fix && pnpm run cspell:check && pnpm run typescript:check"
   },
   "devDependencies": {
+    "@react-aria/live-announcer": "~3.1.2",
     "@types/node": "^22.5.5",
     "@types/react": "~18.2.79",
     "@types/react-router-dom": "^5.3.3",

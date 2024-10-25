@@ -3,7 +3,7 @@
   "ignorePaths": [],
   "dictionaryDefinitions": [],
   "dictionaries": ["html"],
-  "words": ["resizeable", "underflowing"],
+  "words": ["crossfades", "pagedown", "pageup", "resizeable", "underflowing"],
   "ignoreWords": [],
   "import": []
 }

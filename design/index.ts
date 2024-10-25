@@ -1,3 +1,6 @@
+import type { AccessibilityAnnouncer } from "./components/AccessibilityAnnouncer";
+import type { LOW_SATURATION_THRESHOLD } from "./components/AccessibilityPreferencesContext/AccessibilityConstants";
+import type { AccessibilityPreferencesContext } from "./components/AccessibilityPreferencesContext/AccessibilityPreferencesContext";
 import type { Anchor } from "./components/Anchor";
 import type { Backdrop, BackdropStyles } from "./components/Backdrop";
 import type { BlockInteractions, BlockInteractionsContext } from "./components/BlockInteractions";
@@ -58,6 +61,9 @@ import type { Switch } from "./components/Switch";
 import type { TextArea } from "./components/TextArea/TextArea";
 import type { InputError, TextInput } from "./components/TextInput";
 
+export * from "./components/AccessibilityAnnouncer";
+export * from "./components/AccessibilityPreferencesContext/AccessibilityConstants";
+export * from "./components/AccessibilityPreferencesContext/AccessibilityPreferencesContext";
 export * from "./components/Anchor";
 export * from "./components/Backdrop";
 export * from "./components/BlockInteractions";
@@ -97,7 +103,12 @@ export * from "./components/TextArea/TextArea";
 export * from "./components/TextInput";
 export * from "./config";
 
+/**
+ * Discord's design system.
+ */
 export interface Design {
+  AccessibilityAnnouncer: AccessibilityAnnouncer;
+  AccessibilityPreferencesContext: AccessibilityPreferencesContext;
   Anchor: Anchor;
   Backdrop: Backdrop;
   BackdropStyles: BackdropStyles;
@@ -141,6 +152,7 @@ export interface Design {
   InputError: InputError;
   Interactive: Interactive;
   KeyCombo: KeyCombo;
+  LOW_SATURATION_THRESHOLD: LOW_SATURATION_THRESHOLD;
   NameWithRole: NameWithRole;
   NameWithRoleAnchor: NameWithRoleAnchor;
   NavItem: NavItem;
