@@ -31,21 +31,25 @@
     "lint": "pnpm run prettier:check && pnpm run eslint:check && pnpm run cspell:check && pnpm run typescript:check",
     "lint:fix": "pnpm run prettier:fix && pnpm run eslint:fix && pnpm run cspell:check && pnpm run typescript:check"
   },
-  "devDependencies": {
+  "dependencies": {
     "@react-aria/live-announcer": "~3.1.2",
-    "@types/node": "^22.5.5",
     "@types/react": "~18.2.79",
+    "@types/react-datepicker": "~4.1.7",
     "@types/react-router-dom": "^5.3.3",
-    "cspell": "^8.14.3",
     "dependency-graph": "0.8.0",
     "discord-api-types": "^0.37.100",
+    "moment": "~2.22.2",
+    "react-focus-rings": "^1.1.0",
+    "type-fest": "^4.26.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.5",
+    "cspell": "^8.14.3",
     "eslint": "^9.10.0",
     "eslint-plugin-jsdoc": "^50.2.3",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-react": "^7.36.1",
     "prettier": "^3.3.3",
-    "react-focus-rings": "^1.1.0",
-    "type-fest": "^4.26.1",
     "typescript": "^5.5.4",
     "typescript-eslint": "^8.6.0"
   },

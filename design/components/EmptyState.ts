@@ -102,5 +102,6 @@ export declare class EmptyStateComponent extends React.PureComponent<
  *   <EmptyStateImage lightSrc="light.png" darkSrc="dark.png" width={100} height={100} />
  *   <EmptyStateText>No data available.</EmptyStateText>
  * </EmptyState>
+ * ```
  */
 export type EmptyState = typeof EmptyStateComponent;

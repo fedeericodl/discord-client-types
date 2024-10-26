@@ -37,6 +37,7 @@ export interface FormNoticeProps {
   /**
    * The type of the notice, which determines its appearance.
    * @default FormNotice.Types.DANGER
+   * @see {@link FormNoticeTypes}
    */
   type?: string;
 

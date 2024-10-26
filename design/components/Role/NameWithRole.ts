@@ -2,7 +2,7 @@ import type React from "react";
 import type { Anchor, AnchorProps } from "../Anchor";
 import type { RoleDot } from "./RoleDot";
 
-interface RoleProps {
+export interface RoleProps {
   /**
    * The style of the role.
    */

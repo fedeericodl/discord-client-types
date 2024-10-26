@@ -16,7 +16,7 @@ export type SpinnerTypes = {
 interface CommonSpinnerProps {
   /**
    * The type of spinner to display.
-   * @default SpinnerTypes.WANDERING_CUBES
+   * @default Spinner.Type.WANDERING_CUBES
    * @see {@link Types SpinnerTypes}
    */
   type?: Types;

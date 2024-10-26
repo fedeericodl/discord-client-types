@@ -9,7 +9,7 @@ export type BackdropStyles = {
 export interface BackdropProps {
   /**
    * The style of the backdrop.
-   * @default "SUBTLE"
+   * @default BackdropStyles.SUBTLE
    * @see {@link BackdropStyles}
    */
   backdropStyle?: Styles;

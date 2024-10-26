@@ -1,6 +1,6 @@
 import type React from "react";
 
-interface DotProps {
+export interface DotProps {
   /**
    * The color of the dot.
    */

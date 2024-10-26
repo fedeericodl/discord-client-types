@@ -72,5 +72,6 @@ export declare class ShakerComponent extends React.Component<React.PropsWithChil
  * <Shaker isShaking={isShaking}>
  *  <Text onClick={() => setIsShaking(!isShaking)}>Click me to shake!</Text>
  * </Shaker>
+ * ```
  */
 export type Shaker = typeof ShakerComponent;

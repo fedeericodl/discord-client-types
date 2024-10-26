@@ -54,6 +54,7 @@ export declare class BreadcrumbsComponent extends React.PureComponent<Breadcrumb
 
   /**
    * Event handler called when a breadcrumb is clicked.
+   * @param breadcrumb The breadcrumb that was clicked.
    */
   public handleClick: (breadcrumb: Breadcrumb) => void;
 }
@@ -70,5 +71,6 @@ export declare class BreadcrumbsComponent extends React.PureComponent<Breadcrumb
  *   ]}
  *   onBreadcrumbClick={(breadcrumb) => console.log("Breadcrumb clicked", breadcrumb.label)}
  * />
+ * ```
  */
 export type Breadcrumbs = typeof BreadcrumbsComponent;

@@ -81,7 +81,7 @@ export type NoticeCloseButton = React.FC<NoticeCloseButtonProps>;
 export interface NoticeProps {
   /**
    * The color of the notice.
-   * @default Notice.Colors.DEFAULT
+   * @default NoticeColors.DEFAULT
    * @see {@link NoticeColors}
    */
   color?: string;
@@ -106,5 +106,6 @@ export interface NoticeProps {
  *     This is a notice!
  *   <NoticeButton onClick={() => console.log("Button clicked!")}>Click me!</NoticeButton>
  * </Notice>
+ * ```
  */
 export type Notice = React.FC<React.PropsWithChildren<NoticeProps>>;

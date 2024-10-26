@@ -34,10 +34,13 @@ export interface CollapsibleProps {
  * A collapsible component that can be used to hide and show content.
  * @example
  * ```tsx
- * <Collapsible>
+ * <Collapsible collapsibleContent={<Text>This is open now</Text>}>
  *   {({ onClick }) => (
- *     <Button onClick={onClick}>Click me</Button>
+ *     <Clickable onClick={onClick}>
+ *       <Text.H3>Click me to open this</Text.H3>
+ *     </Clickable>
  *   )}
  * </Collapsible>
+ * ```
  */
 export type Collapsible = React.FC<CollapsibleProps>;
