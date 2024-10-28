@@ -46,11 +46,9 @@ export interface FormSwitchProps extends Pick<SwitchProps, "onChange" | "disable
  * ```tsx
  * const [value, setValue] = React.useState(false);
  *
- * return (
- *   <FormSwitch value={value} onChange={() => setValue(!value)} note="This enables notifications.">
- *     Enable Notifications
- *   </FormSwitch>
- * );
+ * <FormSwitch value={value} onChange={() => setValue(!value)} note="This enables notifications.">
+ *   Enable Notifications
+ * </FormSwitch>
  * ```
  */
 export type FormSwitch = React.FC<React.PropsWithChildren<FormSwitchProps>>;

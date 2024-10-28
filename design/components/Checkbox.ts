@@ -132,9 +132,7 @@ export declare class CheckboxComponent extends React.PureComponent<
  * ```tsx
  * const [value, setValue] = React.useState(false);
  *
- * return (
- *   <Checkbox type={Checkbox.Types.INVERTED} value={value} onChange={() => setValue(!value)} />
- * );
+ * <Checkbox type={Checkbox.Types.INVERTED} value={value} onChange={() => setValue(!value)} />
  * ```
  */
 export type Checkbox = typeof CheckboxComponent & {

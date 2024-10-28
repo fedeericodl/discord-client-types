@@ -46,9 +46,7 @@ export interface SwitchProps {
  * ```tsx
  * const [value, setValue] = React.useState(false);
  *
- * return (
- *  <Switch checked={value} onChange={(newValue) => setValue(newValue)} />
- * );
+ * <Switch checked={value} onChange={(newValue) => setValue(newValue)} />
  * ```
  */
 export type Switch = React.FC<SwitchProps>;

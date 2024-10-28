@@ -16,9 +16,8 @@ export type ClickableProps<T extends keyof JSX.IntrinsicElements = "div"> =
 
     /**
      * A ref for the clickable element.
-     *
-     * ! FIX ME
      */
+    // TODO: Fix this type.
     innerRef?: React.Ref<JSX.IntrinsicElements[T]>;
 
     /**
@@ -31,11 +30,29 @@ export type ClickableProps<T extends keyof JSX.IntrinsicElements = "div"> =
 export declare class ClickableComponent<
   T extends keyof JSX.IntrinsicElements = "div",
 > extends React.Component<React.PropsWithChildren<ClickableProps<T>>> {
+  /**
+   * The ref to the clickable element.
+   */
   public ref?: JSX.IntrinsicElements[T];
+
+  /**
+   * Event handler called when a key is pressed down on the clickable element.
+   */
   public handleKeyPress: React.KeyboardEventHandler<JSX.IntrinsicElements[T]>;
+
+  /**
+   * Ref callback to store the clickable element.
+   */
   public setRef: React.RefCallback<JSX.IntrinsicElements[T]>;
 
+  /**
+   * Renders a non-interactive clickable element.
+   */
   public renderNonInteractive: () => React.ReactElement;
+
+  /**
+   * Renders the clickable element with an onClick handler.
+   */
   public renderInner: () => React.ReactElement;
 }
 

@@ -51,12 +51,12 @@ export declare class ShakeableComponent extends React.Component<
   /**
    * The animation properties used for the shake effect.
    */
-  public animProps: AnimProps | undefined;
+  public animProps?: AnimProps;
 
   /**
    * The animation frame id.
    */
-  private _animationFrame: number | undefined;
+  private _animationFrame?: number;
 
   /**
    * The ref to the container element.

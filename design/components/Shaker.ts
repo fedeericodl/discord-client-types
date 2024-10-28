@@ -29,7 +29,7 @@ export declare class ShakerComponent extends React.Component<React.PropsWithChil
   /**
    * The animation frame id.
    */
-  public animationFrame: number | undefined;
+  public animationFrame?: number;
 
   /**
    * Whether the component should render the next frame.

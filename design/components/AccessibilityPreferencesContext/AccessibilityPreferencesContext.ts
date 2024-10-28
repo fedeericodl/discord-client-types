@@ -5,13 +5,11 @@ import type React from "react";
 export interface ReducedMotionContextValue {
   /**
    * Whether reduced motion is enabled.
-   * @default false
    */
   enabled: boolean;
 
   /**
    * The raw value of the reduced motion preference.
-   * @default "no-preference"
    */
   rawValue: "auto" | "no-preference" | "reduce";
 }
@@ -19,13 +17,11 @@ export interface ReducedMotionContextValue {
 export interface ForcedColorsContextValue {
   /**
    * Whether forced colors are enabled.
-   * @default false
    */
   enabled: boolean;
 
   /**
    * The raw value of the forced colors preference.
-   * @default "none"
    */
   rawValue: "active" | "none";
 }

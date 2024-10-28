@@ -63,7 +63,9 @@ import type { Spacer } from "./components/Spacer";
 import type { Spinner, SpinnerTypes } from "./components/Spinner";
 import type { Switch } from "./components/Switch";
 import type { TextArea } from "./components/TextArea/TextArea";
+import type { TextAreaAutosize } from "./components/TextArea/TextAreaAutosize";
 import type { InputError, TextInput } from "./components/TextInput";
+import type { TimeInput } from "./components/TimeInput";
 
 export * from "./components/AccessibilityAnnouncer";
 export * from "./components/AccessibilityPreferencesContext/AccessibilityConstants";
@@ -108,7 +110,9 @@ export * from "./components/Spacer";
 export * from "./components/Spinner";
 export * from "./components/Switch";
 export * from "./components/TextArea/TextArea";
+export * from "./components/TextArea/TextAreaAutosize";
 export * from "./components/TextInput";
+export * from "./components/TimeInput";
 export * from "./config";
 
 /**
@@ -187,7 +191,9 @@ export interface Design {
   SpinnerTypes: SpinnerTypes;
   Switch: Switch;
   TextArea: TextArea;
+  TextAreaAutosize: TextAreaAutosize;
   TextInput: TextInput;
+  TimeInput: TimeInput;
   getButtonStyle: GetButtonStyle;
   useFormContext: UseFormContext;
 }

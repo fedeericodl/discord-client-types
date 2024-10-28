@@ -24,9 +24,11 @@ export interface DateInputProps extends Pick<CalendarPickerProps, "value" | "min
  * An interactive date input that displays a calendar picker when clicked.
  * @example
  * ```tsx
+ * const [date, setDate] = React.useState(moment());
+ *
  * <DateInput
- *   value={moment()}
- *   onSelect={(date) => console.log(date)}
+ *   value={date}
+ *   onSelect={(date) => setDate(date)}
  * />
  * ```
  */
