@@ -63,9 +63,7 @@ export declare class ClickableComponent<
  * @template T The HTML tag to use for the clickable element.
  * @example
  * ```tsx
- * <Clickable onClick={() => console.log("Clicked!")}>
- *   Click me!
- * </Clickable>
+ * <Clickable onClick={() => console.log("Clicked!")}>Click me!</Clickable>
  * ```
  */
 export type Clickable<T extends keyof JSX.IntrinsicElements = "div"> = typeof ClickableComponent<T>;

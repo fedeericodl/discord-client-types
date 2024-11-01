@@ -13,11 +13,18 @@ import type {
   ButtonSizes,
   GetButtonStyle,
 } from "./components/Button/Button";
+import type {
+  CircleIconButton,
+  CircleIconButtonColors,
+  CircleIconButtonSizes,
+} from "./components/Button/CircleIconButton";
+import type { Shine, ShineSizes, ShinyButton } from "./components/Button/ShinyButton";
 import type { ButtonGroup } from "./components/ButtonGroup";
 import type { CalendarPicker } from "./components/CalendarPicker";
 import type { Card, CardTypes } from "./components/Card";
 import type { Checkbox, CheckboxIndicator } from "./components/Checkbox";
 import type { Clickable } from "./components/Clickable/Clickable";
+import type { ClickableContainer } from "./components/Clickable/ClickableContainer";
 import type { Collapsible } from "./components/Collapsible";
 import type { CopyInput, CopyInputModes } from "./components/CopyInput";
 import type { DateInput } from "./components/DateInput";
@@ -28,20 +35,20 @@ import type {
   FormContext,
   FormContextProvider,
   UseFormContext,
-} from "./components/Form/FormContext";
-import type { FormDivider } from "./components/Form/FormDivider";
-import type { FormErrorBlock, FormErrorBlockColors } from "./components/Form/FormErrorBlock";
-import type { FormItem } from "./components/Form/FormItem";
-import type { FormLabel } from "./components/Form/FormLabel";
+} from "./components/Forms/FormContext";
+import type { FormDivider } from "./components/Forms/FormDivider";
+import type { FormErrorBlock, FormErrorBlockColors } from "./components/Forms/FormErrorBlock";
+import type { FormItem } from "./components/Forms/FormItem";
+import type { FormLabel } from "./components/Forms/FormLabel";
 import type {
   FormNotice,
   FormNoticeImagePositions,
   FormNoticeTypes,
-} from "./components/Form/FormNotice";
-import type { FormSection } from "./components/Form/FormSection";
-import type { FormSwitch } from "./components/Form/FormSwitch";
-import type { FormText, FormTextTypes } from "./components/Form/FormText";
-import type { FormTitle, FormTitleTags } from "./components/Form/FormTitle";
+} from "./components/Forms/FormNotice";
+import type { FormSection } from "./components/Forms/FormSection";
+import type { FormSwitch } from "./components/Forms/FormSwitch";
+import type { FormText, FormTextTypes } from "./components/Forms/FormText";
+import type { FormTitle, FormTitleTags } from "./components/Forms/FormTitle";
 import type { HiddenVisually } from "./components/HiddenVisually";
 import type { Interactive } from "./components/Interactive";
 import type { KeyCombo, PRETTY_KEYS } from "./components/KeyCombo";
@@ -55,16 +62,25 @@ import type {
   PrimaryCTANoticeButton,
 } from "./components/Notice";
 import type { NumberInputStepper } from "./components/NumberInputStepper";
+import type {
+  RadioGroup,
+  RadioIndicator,
+  UseRadioGroup,
+  UseRadioItem,
+} from "./components/RadioGroup";
 import type { NameWithRole, NameWithRoleAnchor } from "./components/Role/NameWithRole";
 import type { RoleCircle, RoleDot } from "./components/Role/RoleDot";
+import type { SearchBox } from "./components/SearchBox";
+import type { SegmentedControl } from "./components/SegmentedControl";
 import type { Shakeable } from "./components/Shakeable";
 import type { Shaker } from "./components/Shaker";
 import type { Spacer } from "./components/Spacer";
 import type { Spinner, SpinnerTypes } from "./components/Spinner";
 import type { Switch } from "./components/Switch";
-import type { TextArea } from "./components/TextArea/TextArea";
-import type { TextAreaAutosize } from "./components/TextArea/TextAreaAutosize";
-import type { InputError, TextInput } from "./components/TextInput";
+import type { Text } from "./components/Text";
+import type { TextArea } from "./components/TextInput/TextArea";
+import type { TextAreaAutosize } from "./components/TextInput/TextAreaAutosize";
+import type { InputError, TextInput } from "./components/TextInput/TextInput";
 import type { TimeInput } from "./components/TimeInput";
 
 export * from "./components/AccessibilityAnnouncer";
@@ -75,43 +91,48 @@ export * from "./components/Backdrop";
 export * from "./components/BlockInteractions";
 export * from "./components/Breadcrumbs";
 export * from "./components/Button/Button";
+export * from "./components/Button/CircleIconButton";
 export * from "./components/ButtonGroup";
 export * from "./components/CalendarPicker";
 export * from "./components/Card";
 export * from "./components/Checkbox";
 export * from "./components/Clickable/Clickable";
+export * from "./components/Clickable/ClickableContainer";
 export * from "./components/Collapsible";
 export * from "./components/CopyInput";
 export * from "./components/DateInput";
 export * from "./components/EmptyState";
 export * from "./components/Focus/FocusRing";
 export * from "./components/Focus/FocusRingManager";
-export * from "./components/Form/FormContext";
-export * from "./components/Form/FormDivider";
-export * from "./components/Form/FormErrorBlock";
-export * from "./components/Form/FormItem";
-export * from "./components/Form/FormLabel";
-export * from "./components/Form/FormNotice";
-export * from "./components/Form/FormSection";
-export * from "./components/Form/FormSwitch";
-export * from "./components/Form/FormText";
-export * from "./components/Form/FormTitle";
+export * from "./components/Forms/FormContext";
+export * from "./components/Forms/FormDivider";
+export * from "./components/Forms/FormErrorBlock";
+export * from "./components/Forms/FormItem";
+export * from "./components/Forms/FormLabel";
+export * from "./components/Forms/FormNotice";
+export * from "./components/Forms/FormSection";
+export * from "./components/Forms/FormSwitch";
+export * from "./components/Forms/FormText";
+export * from "./components/Forms/FormTitle";
 export * from "./components/HiddenVisually";
 export * from "./components/Interactive";
 export * from "./components/KeyCombo";
 export * from "./components/NavItem";
 export * from "./components/Notice";
 export * from "./components/NumberInputStepper";
+export * from "./components/RadioGroup";
 export * from "./components/Role/NameWithRole";
 export * from "./components/Role/RoleDot";
+export * from "./components/SearchBox";
+export * from "./components/SegmentedControl";
 export * from "./components/Shakeable";
 export * from "./components/Shaker";
 export * from "./components/Spacer";
 export * from "./components/Spinner";
 export * from "./components/Switch";
-export * from "./components/TextArea/TextArea";
-export * from "./components/TextArea/TextAreaAutosize";
-export * from "./components/TextInput";
+export * from "./components/TextInput/TextArea";
+export * from "./components/TextInput/TextAreaAutosize";
+export * from "./components/TextInput/TextInput";
 export * from "./components/TimeInput";
 export * from "./config";
 
@@ -139,7 +160,11 @@ export interface Design {
   CardTypes: CardTypes;
   Checkbox: Checkbox;
   CheckboxIndicator: CheckboxIndicator;
+  CircleIconButton: CircleIconButton;
+  CircleIconButtonColors: CircleIconButtonColors;
+  CircleIconButtonSizes: CircleIconButtonSizes;
   Clickable: Clickable;
+  ClickableContainer: ClickableContainer;
   Collapsible: Collapsible;
   CopyInput: CopyInput;
   CopyInputModes: CopyInputModes;
@@ -182,18 +207,28 @@ export interface Design {
   NumberInputStepper: NumberInputStepper;
   PRETTY_KEYS: PRETTY_KEYS;
   PrimaryCTANoticeButton: PrimaryCTANoticeButton;
+  RadioGroup: RadioGroup;
+  RadioIndicator: RadioIndicator;
   RoleCircle: RoleCircle;
   RoleDot: RoleDot;
+  SearchBox: SearchBox;
+  SegmentedControl: SegmentedControl;
   Shakeable: Shakeable;
   Shaker: Shaker;
+  Shine: Shine;
+  ShineSizes: ShineSizes;
+  ShinyButton: ShinyButton;
   Spacer: Spacer;
   Spinner: Spinner;
   SpinnerTypes: SpinnerTypes;
   Switch: Switch;
   TextArea: TextArea;
   TextAreaAutosize: TextAreaAutosize;
+  Text: Text;
   TextInput: TextInput;
   TimeInput: TimeInput;
   getButtonStyle: GetButtonStyle;
   useFormContext: UseFormContext;
+  useRadioGroup: UseRadioGroup;
+  useRadioItem: UseRadioItem;
 }

@@ -55,6 +55,7 @@ export declare class ShakeableComponent extends React.Component<
 
   /**
    * The animation frame id.
+   * @private
    */
   private _animationFrame?: number;
 

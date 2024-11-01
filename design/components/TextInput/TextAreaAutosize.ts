@@ -49,6 +49,7 @@ export declare class TextAreaAutosizeComponent extends React.PureComponent<
 > {
   /**
    * The textarea element.
+   * @private
    */
   private _textArea?: HTMLTextAreaElement;
 
