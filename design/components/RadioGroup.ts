@@ -206,6 +206,7 @@ export interface RadioGroupProps {
   /**
    * The size of the radio item.
    * @default RadioGroup.Sizes.MEDIUM
+   * @see {@link RadioSizes}
    */
   size?: string;
 

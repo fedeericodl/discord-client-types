@@ -148,6 +148,8 @@ export interface ButtonProps extends React.ComponentPropsWithoutRef<"button"> {
 
 /**
  * Function that returns a string representing the class name that should be applied to the button based on the provided properties.
+ * @param props The props to use to determine the button style.
+ * @returns The class name to apply to the button.
  */
 export type GetButtonStyle = (
   props: Pick<

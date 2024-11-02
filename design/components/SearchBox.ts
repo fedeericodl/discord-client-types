@@ -1,4 +1,5 @@
 import type React from "react";
+import type { SearchBar } from "./SearchBar";
 import type { TextInputProps } from "./TextInput/TextInput";
 
 export interface SearchBoxProps
@@ -80,6 +81,7 @@ export declare class SearchBoxComponent extends React.Component<SearchBoxProps> 
 
 /**
  * Text input enhanced for search functionality.
+ * Unlike {@link SearchBar}, `SearchBox` takes much space and is used as a core element of a search-based page.
  * @example
  * ```tsx
  * const [query, setQuery] = React.useState("");
