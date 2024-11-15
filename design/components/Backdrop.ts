@@ -1,6 +1,6 @@
 import type React from "react";
 
-type Styles = "SUBTLE" | "DARK" | "BLUR";
+type Styles = "SUBTLE" | "DARK" | "BLUR" | "IMMERSIVE";
 
 export type BackdropStyles = {
   [K in Styles as Uppercase<K>]: K;

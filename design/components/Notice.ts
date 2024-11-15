@@ -1,21 +1,23 @@
 import type React from "react";
 import type { AnchorProps } from "./Anchor";
 
-export type NoticeColors = Record<
-  | "DEFAULT"
-  | "NEUTRAL"
-  | "BRAND"
-  | "WARNING"
-  | "DANGER"
-  | "INFO"
-  | "STREAMER_MODE"
-  | "CUSTOM"
-  | "SPOTIFY"
-  | "PLAYSTATION"
-  | "PREMIUM_TIER_0"
-  | "PREMIUM_TIER_1"
-  | "PREMIUM_TIER_2",
-  string
+export type NoticeColors = Readonly<
+  Record<
+    | "DEFAULT"
+    | "NEUTRAL"
+    | "BRAND"
+    | "WARNING"
+    | "DANGER"
+    | "INFO"
+    | "STREAMER_MODE"
+    | "CUSTOM"
+    | "SPOTIFY"
+    | "PLAYSTATION"
+    | "PREMIUM_TIER_0"
+    | "PREMIUM_TIER_1"
+    | "PREMIUM_TIER_2",
+    string
+  >
 >;
 
 export interface NoticeButtonProps extends React.ComponentPropsWithoutRef<"button"> {

@@ -63,6 +63,10 @@ import type {
   PrimaryCTANoticeButton,
 } from "./components/Notice";
 import type { NumberInputStepper } from "./components/NumberInputStepper";
+import type { Paginator } from "./components/Paginator/Paginator";
+import type { Progress } from "./components/Progress/Progress";
+import type { ProgressCircle } from "./components/Progress/ProgressCircle";
+import type { StackedProgress } from "./components/Progress/StackedProgress";
 import type {
   RadioGroup,
   RadioIndicator,
@@ -127,6 +131,11 @@ export * from "./components/KeyCombo";
 export * from "./components/NavItem";
 export * from "./components/Notice";
 export * from "./components/NumberInputStepper";
+export * from "./components/Paginator/PaginationController";
+export * from "./components/Paginator/Paginator";
+export * from "./components/Progress/Progress";
+export * from "./components/Progress/ProgressCircle";
+export * from "./components/Progress/StackedProgress";
 export * from "./components/RadioGroup";
 export * from "./components/Role/NameWithRole";
 export * from "./components/Role/RoleDot";
@@ -219,8 +228,11 @@ export interface Design {
   NoticeCloseButton: NoticeCloseButton;
   NoticeColors: NoticeColors;
   NumberInputStepper: NumberInputStepper;
+  Paginator: Paginator;
   PRETTY_KEYS: PRETTY_KEYS;
   PrimaryCTANoticeButton: PrimaryCTANoticeButton;
+  Progress: Progress;
+  ProgressCircle: ProgressCircle;
   RadioGroup: RadioGroup;
   RadioIndicator: RadioIndicator;
   RoleCircle: RoleCircle;
@@ -236,6 +248,7 @@ export interface Design {
   Spacer: Spacer;
   Spinner: Spinner;
   SpinnerTypes: SpinnerTypes;
+  StackedProgress: StackedProgress;
   Switch: Switch;
   Text: Text;
   TextArea: TextArea;

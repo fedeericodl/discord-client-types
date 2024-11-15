@@ -120,7 +120,7 @@ export declare class SearchBarComponent extends React.PureComponent<SearchBarPro
  * Provides a search bar for users to input search queries.
  * @example
  * ```tsx
- * const [query, setQuery] = useState("");
+ * const [query, setQuery] = React.useState("");
  *
  * <SearchBar
  *   query={query}
