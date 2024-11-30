@@ -2,6 +2,23 @@ import type React from "react";
 
 export type RadioSizes = Record<"NOT_SET" | "NONE" | "SMALL" | "MEDIUM", string>;
 
+interface IconProps {
+  /**
+   * The class name applied to the icon.
+   */
+  className?: string;
+
+  /**
+   * The size of the icon.
+   */
+  size?: string;
+
+  /**
+   * The color of the icon.
+   */
+  color?: string;
+}
+
 export interface RadioIndicatorProps {
   /**
    * Whether the radio indicator is checked.
@@ -17,7 +34,7 @@ export interface RadioIndicatorProps {
   /**
    * The icon to display in the radio indicator.
    */
-  icon?: React.ComponentType;
+  icon?: React.ElementType<IconProps>;
 }
 
 /**

@@ -2,7 +2,23 @@ import type { AccessibilityAnnouncer } from "./components/AccessibilityAnnouncer
 import type { LOW_SATURATION_THRESHOLD } from "./components/AccessibilityPreferencesContext/AccessibilityConstants";
 import type { AccessibilityPreferencesContext } from "./components/AccessibilityPreferencesContext/AccessibilityPreferencesContext";
 import type { Anchor } from "./components/Anchor";
+import type {
+  AvatarSizes,
+  AvatarSizeSpecs,
+  GetAvatarSize,
+  GetAvatarSpecs,
+} from "./components/Avatar/AvatarConstants";
 import type { Backdrop, BackdropStyles } from "./components/Backdrop";
+import type {
+  BadgeShapes,
+  CircleBadge,
+  GetBadgeCountString,
+  GetBadgeWidthForValue,
+  IconBadge,
+  NumberBadge,
+  PremiumBadge,
+  TextBadge,
+} from "./components/Badges";
 import type { BlockInteractions, BlockInteractionsContext } from "./components/BlockInteractions";
 import type { Breadcrumbs } from "./components/Breadcrumbs";
 import type {
@@ -18,6 +34,7 @@ import type {
   CircleIconButtonColors,
   CircleIconButtonSizes,
 } from "./components/Button/CircleIconButton";
+import type { LinkButton } from "./components/Button/LinkButton";
 import type { Shine, ShineSizes, ShinyButton } from "./components/Button/ShinyButton";
 import type { ButtonGroup } from "./components/ButtonGroup";
 import type { CalendarPicker } from "./components/CalendarPicker";
@@ -78,11 +95,20 @@ import type { RoleCircle, RoleDot } from "./components/Role/RoleDot";
 import type { SearchBar } from "./components/SearchBar";
 import type { SearchBox } from "./components/SearchBox";
 import type { SegmentedControl } from "./components/SegmentedControl";
+import type { SelectLooks } from "./components/Select/SelectTypes";
 import type { Shakeable } from "./components/Shakeable";
 import type { Shaker } from "./components/Shaker";
 import type { Spacer } from "./components/Spacer";
 import type { Spinner, SpinnerTypes } from "./components/Spinner";
 import type { Switch } from "./components/Switch";
+import type {
+  Table,
+  TableBody,
+  TableCell,
+  TableColumn,
+  TableHeader,
+  TableRow,
+} from "./components/Table";
 import type { Text } from "./components/Text";
 import type { TextArea } from "./components/TextInput/TextArea";
 import type { TextAreaAutosize } from "./components/TextInput/TextAreaAutosize";
@@ -92,16 +118,20 @@ import type { CreateToast, Toast } from "./components/Toast/Toast";
 import type { PopToast, ShowToast, UseToastStore } from "./components/Toast/ToastAPI";
 import type { ToastPosition, ToastType } from "./components/Toast/ToastConstants";
 import type { ToastContainer } from "./components/Toast/ToastContainer";
+import type { TransitionGroup, TransitionStates } from "./components/TransitionGroup";
 
 export * from "./components/AccessibilityAnnouncer";
 export * from "./components/AccessibilityPreferencesContext/AccessibilityConstants";
 export * from "./components/AccessibilityPreferencesContext/AccessibilityPreferencesContext";
 export * from "./components/Anchor";
+export * from "./components/Avatar/AvatarConstants";
 export * from "./components/Backdrop";
+export * from "./components/Badges";
 export * from "./components/BlockInteractions";
 export * from "./components/Breadcrumbs";
 export * from "./components/Button/Button";
 export * from "./components/Button/CircleIconButton";
+export * from "./components/Button/LinkButton";
 export * from "./components/ButtonGroup";
 export * from "./components/CalendarPicker";
 export * from "./components/Card";
@@ -142,11 +172,13 @@ export * from "./components/Role/RoleDot";
 export * from "./components/SearchBar";
 export * from "./components/SearchBox";
 export * from "./components/SegmentedControl";
+export * from "./components/Select/SelectTypes";
 export * from "./components/Shakeable";
 export * from "./components/Shaker";
 export * from "./components/Spacer";
 export * from "./components/Spinner";
 export * from "./components/Switch";
+export * from "./components/Table";
 export * from "./components/TextInput/TextArea";
 export * from "./components/TextInput/TextAreaAutosize";
 export * from "./components/TextInput/TextInput";
@@ -155,6 +187,7 @@ export * from "./components/Toast/Toast";
 export * from "./components/Toast/ToastAPI";
 export * from "./components/Toast/ToastConstants";
 export * from "./components/Toast/ToastContainer";
+export * from "./components/TransitionGroup";
 export * from "./config";
 
 /**
@@ -165,8 +198,11 @@ export interface Design {
   AccessibilityAnnouncer: AccessibilityAnnouncer;
   AccessibilityPreferencesContext: AccessibilityPreferencesContext;
   Anchor: Anchor;
+  AvatarSizes: AvatarSizes;
+  AvatarSizeSpecs: AvatarSizeSpecs;
   Backdrop: Backdrop;
   BackdropStyles: BackdropStyles;
+  BadgeShapes: BadgeShapes;
   BlockInteractions: BlockInteractions;
   BlockInteractionsContext: BlockInteractionsContext;
   Breadcrumbs: Breadcrumbs;
@@ -181,6 +217,7 @@ export interface Design {
   CardTypes: CardTypes;
   Checkbox: Checkbox;
   CheckboxIndicator: CheckboxIndicator;
+  CircleBadge: CircleBadge;
   CircleIconButton: CircleIconButton;
   CircleIconButtonColors: CircleIconButtonColors;
   CircleIconButtonSizes: CircleIconButtonSizes;
@@ -213,11 +250,13 @@ export interface Design {
   FormTitle: FormTitle;
   FormTitleTags: FormTitleTags;
   HelpMessage: HelpMessage;
-  HelpMessageTypes: HelpMessageTypes;
+  HelpMessageTypes: typeof HelpMessageTypes;
   HiddenVisually: HiddenVisually;
+  IconBadge: IconBadge;
   InputError: InputError;
   Interactive: Interactive;
   KeyCombo: KeyCombo;
+  LinkButton: LinkButton;
   LOW_SATURATION_THRESHOLD: LOW_SATURATION_THRESHOLD;
   NameWithRole: NameWithRole;
   NameWithRoleAnchor: NameWithRoleAnchor;
@@ -227,8 +266,10 @@ export interface Design {
   NoticeButtonAnchor: NoticeButtonAnchor;
   NoticeCloseButton: NoticeCloseButton;
   NoticeColors: NoticeColors;
+  NumberBadge: NumberBadge;
   NumberInputStepper: NumberInputStepper;
   Paginator: Paginator;
+  PremiumBadge: PremiumBadge;
   PRETTY_KEYS: PRETTY_KEYS;
   PrimaryCTANoticeButton: PrimaryCTANoticeButton;
   Progress: Progress;
@@ -240,6 +281,7 @@ export interface Design {
   SearchBar: SearchBar;
   SearchBox: SearchBox;
   SegmentedControl: SegmentedControl;
+  SelectLooks: typeof SelectLooks;
   Shakeable: Shakeable;
   Shaker: Shaker;
   Shine: Shine;
@@ -250,16 +292,29 @@ export interface Design {
   SpinnerTypes: SpinnerTypes;
   StackedProgress: StackedProgress;
   Switch: Switch;
+  Table: Table;
+  TableBody: TableBody;
+  TableCell: TableCell;
+  TableColumn: TableColumn;
+  TableHeader: TableHeader;
+  TableRow: TableRow;
   Text: Text;
   TextArea: TextArea;
   TextAreaAutosize: TextAreaAutosize;
+  TextBadge: TextBadge;
   TextInput: TextInput;
   TimeInput: TimeInput;
   Toast: Toast;
   ToastContainer: ToastContainer;
-  ToastPosition: ToastPosition;
-  ToastType: ToastType;
+  ToastPosition: typeof ToastPosition;
+  ToastType: typeof ToastType;
+  TransitionGroup: TransitionGroup;
+  TransitionStates: typeof TransitionStates;
   createToast: CreateToast;
+  getAvatarSize: GetAvatarSize;
+  getAvatarSpecs: GetAvatarSpecs;
+  getBadgeCountString: GetBadgeCountString;
+  getBadgeWidthForValue: GetBadgeWidthForValue;
   getButtonStyle: GetButtonStyle;
   popToast: PopToast;
   showToast: ShowToast;

@@ -2,8 +2,20 @@
   "version": "0.2",
   "ignorePaths": [],
   "dictionaryDefinitions": [],
-  "dictionaries": ["html"],
-  "words": ["crossfades", "pagedown", "pageup", "resizeable", "underflowing"],
+  "dictionaries": [
+    "html"
+  ],
+  "words": [
+    "crossfades",
+    "flexbox",
+    "pagedown",
+    "pageup",
+    "resizeable",
+    "underflowing",
+    "xsmall",
+    "xxsmall",
+    "YEETED"
+  ],
   "ignoreWords": [],
   "import": []
 }

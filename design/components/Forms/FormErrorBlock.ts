@@ -5,6 +5,18 @@ export type FormErrorBlockColors = Record<
   string
 >;
 
+interface IconProps {
+  /**
+   * The class name applied to the icon.
+   */
+  className?: string;
+
+  /**
+   * The color of the icon.
+   */
+  color?: string;
+}
+
 export interface FormErrorBlockProps {
   /**
    * The role attribute for the element containing the text.
@@ -32,7 +44,7 @@ export interface FormErrorBlockProps {
    * The icon to be displayed in the error block.
    * @default WarningCircle
    */
-  icon?: React.ComponentType;
+  icon?: React.ElementType<IconProps>;
 
   /**
    * The class name applied to the icon.
