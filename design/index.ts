@@ -43,6 +43,13 @@ import type { Checkbox, CheckboxIndicator } from "./components/Checkbox";
 import type { Clickable } from "./components/Clickable/Clickable";
 import type { ClickableContainer } from "./components/Clickable/ClickableContainer";
 import type { Collapsible } from "./components/Collapsible";
+import type {
+  ColorPicker,
+  ColorPickerCustomButton,
+  ColorPickerDefaultButton,
+  CustomColorPicker,
+} from "./components/ColorPicker/ColorPicker";
+import type { ColorPickerControl } from "./components/ColorPicker/ColorPickerControl";
 import type { CopyInput, CopyInputModes } from "./components/CopyInput";
 import type { DateInput } from "./components/DateInput";
 import type { EmptyState, EmptyStateImage, EmptyStateText } from "./components/EmptyState";
@@ -142,6 +149,8 @@ export * from "./components/Checkbox";
 export * from "./components/Clickable/Clickable";
 export * from "./components/Clickable/ClickableContainer";
 export * from "./components/Collapsible";
+export * from "./components/ColorPicker/ColorPicker";
+export * from "./components/ColorPicker/ColorPickerControl";
 export * from "./components/CopyInput";
 export * from "./components/DateInput";
 export * from "./components/EmptyState";
@@ -230,8 +239,13 @@ export interface Design {
   Clickable: Clickable;
   ClickableContainer: ClickableContainer;
   Collapsible: Collapsible;
+  ColorPicker: ColorPicker;
+  ColorPickerControl: ColorPickerControl;
+  ColorPickerCustomButton: ColorPickerCustomButton;
+  ColorPickerDefaultButton: ColorPickerDefaultButton;
   CopyInput: CopyInput;
   CopyInputModes: CopyInputModes;
+  CustomColorPicker: CustomColorPicker;
   DateInput: DateInput;
   EmptyState: EmptyState;
   EmptyStateImage: EmptyStateImage;

@@ -37,7 +37,7 @@ export interface CollapsibleProps {
  * <Collapsible collapsibleContent={<Text>This is open now</Text>}>
  *   {({ onClick }) => (
  *     <Clickable onClick={onClick}>
- *       <Text.H3>Click me to open this</Text.H3>
+ *       <Text variant="heading-md/bold" tag="h3">Click me to open this</Text>
  *     </Clickable>
  *   )}
  * </Collapsible>
