@@ -2,9 +2,7 @@
   "version": "0.2",
   "ignorePaths": [],
   "dictionaryDefinitions": [],
-  "dictionaries": [
-    "html"
-  ],
+  "dictionaries": ["html"],
   "words": [
     "crossfades",
     "flexbox",
@@ -12,6 +10,8 @@
     "pageup",
     "resizeable",
     "underflowing",
+    "unscale",
+    "unscales",
     "xsmall",
     "xxsmall",
     "YEETED"

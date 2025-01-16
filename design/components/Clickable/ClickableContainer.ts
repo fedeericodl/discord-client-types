@@ -59,7 +59,7 @@ export interface ClickableContainerProps<T extends keyof JSX.IntrinsicElements =
   onMouseOver?: React.MouseEventHandler<JSX.IntrinsicElements[T]>;
 
   /**
-   * Event handler called when the mouse leaves the clickable element.
+   * Event handler called when the mouse button is pressed down on the clickable element.
    */
   onMouseDown?: React.MouseEventHandler<JSX.IntrinsicElements[T]>;
 

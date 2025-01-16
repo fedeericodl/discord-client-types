@@ -35,6 +35,11 @@ export interface CircleIconButtonProps {
   icon?: React.ReactNode;
 
   /**
+   * Event handler called when the mouse button is pressed down on the button.
+   */
+  onMouseDown?: React.MouseEventHandler<HTMLDivElement>;
+
+  /**
    * Event handler called when the button is clicked.
    */
   onClick: React.MouseEventHandler<HTMLDivElement>;

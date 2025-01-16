@@ -22,6 +22,28 @@ export interface CopyInputProps {
   mode?: Modes;
 
   /**
+   * Whether the input should automatically focus on render.
+   * @default false
+   */
+  autoFocus?: boolean;
+
+  /**
+   * Whether there should be spell checking on the input.
+   * @default false
+   */
+  spellCheck?: boolean;
+
+  /**
+   * The class name applied to the input.
+   */
+  inputClassName?: string;
+
+  /**
+   * The placeholder text for the input.
+   */
+  placeholder?: string;
+
+  /**
    * The text to display on the button.
    */
   text?: string;
@@ -37,6 +59,18 @@ export interface CopyInputProps {
    * @see {@link ButtonLooks}
    */
   buttonLook?: string;
+
+  /**
+   * Whether copying is supported.
+   * @default false
+   */
+  supportsCopy?: boolean;
+
+  /**
+   * Whether the button is disabled.
+   * @default false
+   */
+  disabled?: boolean;
 
   /**
    * The color of the button.

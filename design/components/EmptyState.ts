@@ -89,10 +89,6 @@ export interface EmptyStateProps {
   style?: React.CSSProperties;
 }
 
-export declare class EmptyStateComponent extends React.PureComponent<
-  React.PropsWithChildren<EmptyStateProps>
-> {}
-
 /**
  * Used to display an empty state, which is a state where no data is available.
  * Usually used in a list or table when no items are present.
@@ -104,4 +100,4 @@ export declare class EmptyStateComponent extends React.PureComponent<
  * </EmptyState>
  * ```
  */
-export type EmptyState = typeof EmptyStateComponent;
+export type EmptyState = React.FC<React.PropsWithChildren<EmptyStateProps>>;
