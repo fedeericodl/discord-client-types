@@ -29,7 +29,8 @@
     "eslint:fix": "eslint \"{design,lib,packages}/**/*.ts\" --fix",
     "prettier:fix": "prettier \"{design,lib,packages}/**/*.ts\" --write",
     "lint": "pnpm run prettier:check && pnpm run eslint:check && pnpm run cspell:check && pnpm run typescript:check",
-    "lint:fix": "pnpm run prettier:fix && pnpm run eslint:fix && pnpm run cspell:check && pnpm run typescript:check"
+    "lint:fix": "pnpm run prettier:fix && pnpm run eslint:fix && pnpm run cspell:check && pnpm run typescript:check",
+    "prepublishOnly": "rm -rf dist && pnpm run build"
   },
   "dependencies": {
     "@react-aria/live-announcer": "~3.1.2",
