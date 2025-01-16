@@ -36,7 +36,7 @@ export interface BreadcrumbsProps {
   /**
    * Function to render a custom breadcrumb.
    */
-  renderCustomBreadcrumb?: (breadcrumbs: Breadcrumb[], isActive: boolean) => React.ReactNode;
+  renderCustomBreadcrumb?: (breadcrumb: Breadcrumb, isActive: boolean) => React.ReactNode;
 
   /**
    * The class name applied to the separator (arrow).
