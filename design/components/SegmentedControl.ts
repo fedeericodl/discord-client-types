@@ -4,7 +4,7 @@ export interface SegmentedControlOption {
   /**
    * The value of the option.
    */
-  value: string;
+  value: string | number;
 
   /**
    * The key of the option.

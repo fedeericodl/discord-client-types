@@ -58,7 +58,7 @@ export interface EmptyStateTextProps {
   /**
    * The note to display below the title.
    */
-  note?: string;
+  note?: React.ReactNode;
 
   /**
    * The style applied to the title.

@@ -32,7 +32,7 @@ export interface FormSwitchProps extends Pick<SwitchProps, "onChange" | "disable
   /**
    * The note to display below the switch.
    */
-  note?: string;
+  note?: React.ReactNode;
 
   /**
    * The text to display when the switch is disabled.

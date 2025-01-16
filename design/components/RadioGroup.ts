@@ -164,7 +164,7 @@ export interface RadioOption extends Pick<RadioIndicatorProps, "radioItemIconCla
   /**
    * The text of the tooltip that appears when hovering over the radio option.
    */
-  tooltipText?: string;
+  tooltipText?: React.ReactNode;
 
   /**
    * The position of the tooltip relative to the radio option.
@@ -181,7 +181,7 @@ export interface RadioOption extends Pick<RadioIndicatorProps, "radioItemIconCla
   /**
    * The name to display for the radio option.
    */
-  name: string;
+  name: React.ReactNode;
 
   /**
    * The description to display for the radio option.
