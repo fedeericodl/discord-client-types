@@ -9,53 +9,56 @@
     "typings"
   ],
   "bugs": {
-    "url": "https://github.com/FedeIlLeone/discord-client-types/issues"
+    "url": "https://github.com/fedeericodl/discord-client-types/issues"
   },
   "license": "MIT",
-  "author": "FedeIlLeone",
+  "author": "fedeericodl",
   "files": [
     "dist"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FedeIlLeone/discord-client-types.git"
+    "url": "git+https://github.com/fedeericodl/discord-client-types.git"
   },
   "scripts": {
     "build": "tsc --emitDeclarationOnly",
-    "cspell:check": "cspell lint \"{design,lib,packages}/**/*.ts\"",
-    "eslint:check": "eslint \"{design,lib,packages}/**/*.ts\"",
-    "prettier:check": "prettier \"{design,lib,packages}/**/*.ts\" --check",
+    "cspell:check": "cspell lint \"src/**/*.ts\"",
+    "eslint:check": "eslint \"src/**/*.ts\"",
+    "prettier:check": "prettier \"src/**/*.ts\" --check",
     "typescript:check": "tsc --noEmit",
-    "eslint:fix": "eslint \"{design,lib,packages}/**/*.ts\" --fix",
-    "prettier:fix": "prettier \"{design,lib,packages}/**/*.ts\" --write",
+    "eslint:fix": "eslint \"src/**/*.ts\" --fix",
+    "prettier:fix": "prettier \"src/**/*.ts\" --write",
     "lint": "pnpm run prettier:check && pnpm run eslint:check && pnpm run cspell:check && pnpm run typescript:check",
     "lint:fix": "pnpm run prettier:fix && pnpm run eslint:fix && pnpm run cspell:check && pnpm run typescript:check",
     "prepublishOnly": "rm -rf dist && pnpm run build"
   },
   "dependencies": {
     "@react-aria/live-announcer": "~3.1.2",
-    "@types/react": "~18.3.12",
+    "@types/react": "~19.0.14",
     "@types/react-color": "^3.0.13",
     "@types/react-datepicker": "~4.1.7",
     "@types/react-router-dom": "^5.3.3",
+    "big-integer": "^1.6.52",
     "dependency-graph": "0.8.0",
-    "discord-api-types": "^0.37.115",
+    "discord-api-types": "^0.38.15",
     "moment": "~2.22.2",
     "react-aria-components": "1.0.0-alpha.4",
     "react-focus-rings": "^1.1.0",
-    "type-fest": "^4.32.0",
+    "type-fest": "^4.41.0",
     "zustand": "^3.7.2"
   },
   "devDependencies": {
-    "@types/node": "^22.10.7",
-    "cspell": "^8.17.2",
-    "eslint": "^9.18.0",
-    "eslint-plugin-jsdoc": "^50.6.1",
+    "@eslint/js": "^9.30.1",
+    "@types/node": "^24.0.10",
+    "cspell": "^9.1.3",
+    "eslint": "^9.30.1",
+    "eslint-plugin-jsdoc": "^51.3.4",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-react": "^7.37.4",
-    "prettier": "^3.4.2",
-    "typescript": "^5.7.3",
-    "typescript-eslint": "^8.20.0"
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.3.0",
+    "prettier": "^3.6.2",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.36.0"
   },
   "type": "module",
   "types": "dist/index.d.ts"
