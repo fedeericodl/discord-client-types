@@ -1,0 +1,16 @@
+export type SliderStyles =
+  | "slider"
+  | "mini"
+  | "bar"
+  | "grabber"
+  | "disabled"
+  | "barFill"
+  | "track"
+  | "mark"
+  | "markAbove"
+  | "markBelow"
+  | "markValue"
+  | "markDash"
+  | "markDashSimple"
+  | "defaultValue"
+  | "hasMarks";

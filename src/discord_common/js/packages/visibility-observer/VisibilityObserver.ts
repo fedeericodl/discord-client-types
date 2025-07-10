@@ -1,4 +1,4 @@
-import * as React from "react";
+import type * as React from "react";
 
 /**
  * A utility class that detects when components enter or exit the viewport.

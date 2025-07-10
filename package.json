@@ -44,6 +44,7 @@
     "moment": "~2.22.2",
     "react-aria-components": "1.0.0-alpha.4",
     "react-focus-rings": "^1.1.0",
+    "simple-markdown": "^0.7.3",
     "type-fest": "^4.41.0",
     "zustand": "^3.7.2"
   },

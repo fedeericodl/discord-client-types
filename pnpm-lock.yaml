@@ -41,6 +41,9 @@ importers:
       react-focus-rings:
         specifier: ^1.1.0
         version: 1.1.0(react@18.3.1)
+      simple-markdown:
+        specifier: ^0.7.3
+        version: 0.7.3
       type-fest:
         specifier: ^4.41.0
         version: 4.41.0
@@ -2014,6 +2017,9 @@ packages:
   side-channel@1.1.0:
     resolution: {integrity: sha512-ZX99e6tRweoUXqR+VBrslhda51Nh5MTQwou5tnUDgbtyM0dBgmhEDtWGP/xbKn6hqfPRHujUNwz5fy/wbbhnpw==}
     engines: {node: '>= 0.4'}
+
+  simple-markdown@0.7.3:
+    resolution: {integrity: sha512-uGXIc13NGpqfPeFJIt/7SHHxd6HekEJYtsdoCM06mEBPL9fQH/pSD7LRM6PZ7CKchpSvxKL4tvwMamqAaNDAyg==}
 
   smol-toml@1.4.1:
     resolution: {integrity: sha512-CxdwHXyYTONGHThDbq5XdwbFsuY4wlClRGejfE2NtwUtiHYsP1QtNsHb/hnj31jKYSchztJsaA8pSQoVzkfCFg==}
@@ -4846,6 +4852,10 @@ snapshots:
       side-channel-list: 1.0.0
       side-channel-map: 1.0.1
       side-channel-weakmap: 1.0.2
+
+  simple-markdown@0.7.3:
+    dependencies:
+      '@types/react': 19.0.14
 
   smol-toml@1.4.1: {}
 

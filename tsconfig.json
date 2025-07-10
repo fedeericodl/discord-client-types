@@ -11,7 +11,8 @@
     "verbatimModuleSyntax": true,
     "paths": {
       "@app/*": ["./src/discord_app/*"],
-      "@common/*": ["./src/discord_common/*"]
+      "@discordapp/*": ["./src/discord_common/js/packages/*"],
+      "@discordapp/common/*": ["./src/discord_common/js/shared/*"]
     },
     // Enable strict type checking so you can catch bugs early
     "strict": true,
