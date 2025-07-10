@@ -1,7 +1,8 @@
-import type { Text } from "@app/design/web";
 import type * as React from "react";
 
-export type FormLabelProps<T extends keyof React.JSX.IntrinsicElements = "div"> = Text<T> & {
+import type { TextProps } from "@app/design/web";
+
+export type FormLabelProps<T extends keyof React.JSX.IntrinsicElements = "div"> = TextProps<T> & {
   /**
    * Whether the label is displayed as disabled.
    * @default false
