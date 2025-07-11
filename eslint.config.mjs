@@ -17,5 +17,8 @@ export default tseslint.config(
         tsconfigRootDir: import.meta.dirname,
       },
     },
+    rules: {
+      "jsdoc/require-jsdoc": "off",
+    },
   },
 );
