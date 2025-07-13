@@ -11,6 +11,9 @@ importers:
       '@react-aria/live-announcer':
         specifier: ~3.1.2
         version: 3.1.2
+      '@types/chroma-js':
+        specifier: ^2.4.5
+        version: 2.4.5
       '@types/react':
         specifier: ~19.0.14
         version: 19.0.14
@@ -919,6 +922,9 @@ packages:
 
   '@swc/helpers@0.5.15':
     resolution: {integrity: sha512-JQ5TuMi45Owi4/BIMAJBoSQoOJu12oOk/gADqlcUL9JEdHB8vyjUSsxqeNXnmXHjYKMi2WcYtezGEEhqUI/E2g==}
+
+  '@types/chroma-js@2.4.5':
+    resolution: {integrity: sha512-6ISjhzJViaPCy2q2e6PgK+8HcHQDQ0V2LDiKmYAh+jJlLqDa6HbwDh0wOevHY0kHHUx0iZwjSRbVD47WOUx5EQ==}
 
   '@types/estree@1.0.6':
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
@@ -3427,6 +3433,8 @@ snapshots:
   '@swc/helpers@0.5.15':
     dependencies:
       tslib: 2.8.1
+
+  '@types/chroma-js@2.4.5': {}
 
   '@types/estree@1.0.6': {}
 
