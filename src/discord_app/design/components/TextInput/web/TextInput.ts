@@ -1,8 +1,6 @@
 import type * as React from "react";
 import type { FocusRingProps } from "react-focus-rings";
 
-export type TextInputSizes = Record<"DEFAULT" | "MINI", string>;
-
 export interface InputErrorProps {
   /**
    * The error message to display.
@@ -21,26 +19,11 @@ export interface InputErrorProps {
 export type InputError = React.FC<InputErrorProps>;
 
 export interface TextInputProps
-  extends Omit<
-    React.ComponentPropsWithoutRef<"input">,
-    "size" | "onChange" | "onFocus" | "onBlur"
-  > {
+  extends Omit<React.ComponentPropsWithoutRef<"input">, "onChange" | "onFocus" | "onBlur"> {
   /**
    * The class name applied to the input.
    */
   inputClassName?: string;
-
-  /**
-   * The prefix to display in the input.
-   */
-  inputPrefix?: string;
-
-  /**
-   * The size of the input.
-   * @default TextInput.Sizes.DEFAULT
-   * @see {@link TextInputSizes}
-   */
-  size?: string;
 
   /**
    * Whether the input is editable.
@@ -142,6 +125,4 @@ export declare class TextInputComponent extends React.Component<TextInputProps, 
  * <TextInput value={value} placeholder="Enter some text" />
  * ```
  */
-export type TextInput = typeof TextInputComponent & {
-  Sizes: TextInputSizes;
-};
+export type TextInput = typeof TextInputComponent;

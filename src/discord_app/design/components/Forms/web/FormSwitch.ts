@@ -1,6 +1,6 @@
 import type * as React from "react";
 
-import type { SwitchProps } from "@app/design/web";
+import type { SwitchProps } from "../../Switch/web/Switch";
 
 export interface FormSwitchProps extends Pick<SwitchProps, "onChange" | "disabled"> {
   /**

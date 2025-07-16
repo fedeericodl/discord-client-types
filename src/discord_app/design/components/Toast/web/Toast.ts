@@ -1,4 +1,6 @@
-import type { TOAST_DEFAULT_OPTIONS, ToastPosition, ToastType } from "@app/design/web";
+import type * as React from "react";
+
+import type { TOAST_DEFAULT_OPTIONS, ToastPosition, ToastType } from "./ToastConstants";
 
 export interface ToastOptions {
   /**

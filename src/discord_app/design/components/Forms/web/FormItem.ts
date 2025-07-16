@@ -1,6 +1,8 @@
 import type * as React from "react";
 
-import type { FormContextValue, FormSection, FormTitleProps } from "@app/design/web";
+import type { FormContextValue } from "./FormContext";
+import type { FormSection } from "./FormSection";
+import type { FormTitleProps } from "./FormTitle";
 
 export type FormItemProps = FormTitleProps &
   Partial<Pick<FormContextValue, "titleId">> & {

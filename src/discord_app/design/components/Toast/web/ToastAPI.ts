@@ -1,6 +1,6 @@
 import type { UseBoundStore } from "zustand";
 
-import type { ToastState } from "@app/design/web";
+import type { ToastState } from "./Toast";
 
 export interface ToastStoreState {
   /**

@@ -1,16 +1,22 @@
 {
   "version": "0.2",
-  "ignorePaths": ["src/**/*.module.ts"],
+  "ignorePaths": [
+    "src/**/*.module.ts"
+  ],
   "dictionaryDefinitions": [],
-  "dictionaries": ["html"],
+  "dictionaries": [
+    "html"
+  ],
   "words": [
     "COACHMARK",
     "COACHTIP",
     "crossfades",
+    "CROSSLINE",
     "discordapp",
     "flexbox",
     "HOTSPOT",
     "ICYMI",
+    "INTERACTABLE",
     "NCMEC",
     "pagedown",
     "pageup",

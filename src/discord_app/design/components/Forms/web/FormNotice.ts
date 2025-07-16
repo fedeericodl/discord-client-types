@@ -1,6 +1,6 @@
 import type * as React from "react";
 
-import type { CardTypes } from "@app/design/web";
+import type { CardTypes } from "../../Card/web/Card";
 
 export type FormNoticeTypes = CardTypes;
 

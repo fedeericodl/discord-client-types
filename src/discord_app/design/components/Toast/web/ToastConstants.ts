@@ -9,6 +9,7 @@ export enum ToastType {
   INVITE = "invite",
   BOOKMARK = "bookmark",
   CLOCK = "clock",
+  AI = "ai",
 }
 
 export enum ToastPosition {

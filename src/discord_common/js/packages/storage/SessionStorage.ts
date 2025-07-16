@@ -1,1 +1,1 @@
-export type * from "./web/SessionStorage";
+export type { impl } from "./web/SessionStorage";

@@ -1,6 +1,6 @@
 import type * as React from "react";
 
-import type { Clickable } from "@app/design/web";
+import type { Clickable } from "../../Clickable/web/Clickable";
 
 export type InteractiveProps<T extends keyof React.JSX.IntrinsicElements = "div"> =
   React.ComponentPropsWithoutRef<T> & {

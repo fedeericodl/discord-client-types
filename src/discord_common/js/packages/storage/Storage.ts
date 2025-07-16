@@ -1,1 +1,1 @@
-export type * from "./web/Storage";
+export type { impl } from "./web/Storage";

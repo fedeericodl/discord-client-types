@@ -1,6 +1,6 @@
 import type * as React from "react";
 
-import type { Shakeable } from "@app/design/web";
+import type { Shakeable } from "../../Shakeable/web/Shakeable";
 
 export interface ShakerProps {
   /**

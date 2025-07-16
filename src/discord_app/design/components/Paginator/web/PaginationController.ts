@@ -1,6 +1,6 @@
 import type * as React from "react";
 
-import type { Paginator } from "@app/design/web";
+import type { Paginator } from "./Paginator";
 
 type Types = "PAGE" | "GAP" | "BACK" | "NEXT";
 

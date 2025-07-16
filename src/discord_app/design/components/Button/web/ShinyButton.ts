@@ -1,6 +1,6 @@
 import type * as React from "react";
 
-import type { ButtonProps } from "@app/design/web";
+import type { ButtonProps } from "./Button";
 
 type Sizes = "default" | "small";
 

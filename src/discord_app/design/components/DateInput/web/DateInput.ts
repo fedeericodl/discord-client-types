@@ -1,6 +1,6 @@
 import type * as React from "react";
 
-import type { CalendarPickerProps } from "@app/design/web";
+import type { CalendarPickerProps } from "../../CalendarPicker/web/CalendarPicker";
 
 export interface DateInputProps extends Pick<CalendarPickerProps, "value" | "minDate" | "maxDate"> {
   /**

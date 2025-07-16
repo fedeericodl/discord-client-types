@@ -1,6 +1,6 @@
 import type * as React from "react";
 
-import type { AnchorProps } from "@app/design/web";
+import type { AnchorProps } from "../../Anchor/web/Anchor";
 
 export type NoticeColors = Readonly<
   Record<

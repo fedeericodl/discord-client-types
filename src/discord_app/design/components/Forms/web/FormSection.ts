@@ -1,6 +1,8 @@
 import type * as React from "react";
 
-import type { FormContextValue, FormItem, FormTitleProps, LabelProps } from "@app/design/web";
+import type { FormContextValue } from "./FormContext";
+import type { FormItem } from "./FormItem";
+import type { FormTitleProps, LabelProps } from "./FormTitle";
 
 export type FormSectionProps = Pick<FormTitleProps, "disabled" | "tag"> &
   Pick<LabelProps, "htmlFor"> &

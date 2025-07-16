@@ -1,2 +1,2 @@
-export type * from "./VisibilityObserver";
-export type * from "./VisibilitySensor";
+export type { VisibilityObserver } from "./VisibilityObserver";
+export type { VisibilitySensor } from "./VisibilitySensor";

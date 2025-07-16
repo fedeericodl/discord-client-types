@@ -1,6 +1,6 @@
 import type * as React from "react";
 
-import type { PaginationControllerProps } from "@app/design/web";
+import type { PaginationControllerProps } from "./PaginationController";
 
 export interface PaginatorProps
   extends Pick<PaginationControllerProps, "maxVisiblePages" | "onPageChange" | "hideMaxPage"> {

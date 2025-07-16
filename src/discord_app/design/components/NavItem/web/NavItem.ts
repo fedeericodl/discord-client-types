@@ -1,6 +1,6 @@
 import type * as React from "react";
 
-import type { ClickableProps } from "@app/design/web";
+import type { ClickableProps } from "../../Clickable/web/Clickable";
 
 export interface NavItemTo<S = unknown> {
   /**

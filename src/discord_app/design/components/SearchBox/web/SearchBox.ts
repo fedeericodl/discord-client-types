@@ -1,6 +1,7 @@
 import type * as React from "react";
 
-import type { SearchBar, TextInputProps } from "@app/design/web";
+import type { SearchBar } from "../../SearchBar/web/SearchBar";
+import type { TextInputProps } from "../../TextInput/web/TextInput";
 
 export interface SearchBoxProps
   extends Pick<

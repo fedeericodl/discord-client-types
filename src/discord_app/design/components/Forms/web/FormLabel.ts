@@ -1,6 +1,6 @@
 import type * as React from "react";
 
-import type { TextProps } from "@app/design/web";
+import type { TextProps } from "../../Text/web/Text";
 
 export type FormLabelProps<T extends keyof React.JSX.IntrinsicElements = "div"> = TextProps<T> & {
   /**

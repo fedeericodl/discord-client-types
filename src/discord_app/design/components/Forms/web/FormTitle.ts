@@ -1,6 +1,6 @@
 import type * as React from "react";
 
-import type { FormContextValue } from "@app/design/web";
+import type { FormContextValue } from "./FormContext";
 
 export type Tags = "h1" | "h2" | "h3" | "h4" | "h5" | "label" | "legend";
 
