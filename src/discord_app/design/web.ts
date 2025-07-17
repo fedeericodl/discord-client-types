@@ -57,6 +57,9 @@ export type {
   EmptyStateImage,
   EmptyStateText,
 } from "./components/EmptyState/web/EmptyState";
+export type { FocusBlock, UseFocusBlock } from "./components/Focus/web/FocusBlock";
+export type { FocusRing, FocusRingScope } from "./components/Focus/web/FocusRing";
+export type { FocusRingManager } from "./components/Focus/web/FocusRingManager";
 export type {
   FormContext,
   FormContextProvider,
@@ -79,6 +82,18 @@ export type { HelpMessage, HelpMessageTypes } from "./components/HelpMessage/web
 export type { HiddenVisually } from "./components/HiddenVisually/web/HiddenVisually";
 export type { Interactive } from "./components/Interactive/web/Interactive";
 export type { KeyCombo, PRETTY_KEYS } from "./components/KeyCombo/web/KeyCombo";
+export type {
+  CreateLayer,
+  GetParentLayerContainer,
+  Layer,
+  LayerClassName,
+  LayerContainer,
+  LayerProvider,
+} from "./components/Layers/web/Layer";
+export type {
+  ReferencePortalAwareContains,
+  ReferencePositionLayer,
+} from "./components/Layers/web/ReferencePositionLayer";
 export type { NavItem } from "./components/NavItem/web/NavItem";
 export type {
   Notice,
@@ -127,6 +142,12 @@ export type { CreateToast, Toast } from "./components/Toast/web/Toast";
 export type { PopToast, ShowToast, UseToastStore } from "./components/Toast/web/ToastAPI";
 export type { ToastPosition, ToastType } from "./components/Toast/web/ToastConstants";
 export type { ToastContainer } from "./components/Toast/web/ToastContainer";
+export type {
+  Tooltip,
+  TooltipColors,
+  TooltipContainer,
+  TooltipLayer,
+} from "./components/Tooltip/web/Tooltip";
 export type {
   TransitionGroup,
   TransitionStates,

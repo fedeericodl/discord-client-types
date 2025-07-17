@@ -1,5 +1,7 @@
 import type * as React from "react";
 
+import type { LayerPosition } from "../../Layers/web/ReferencePositionLayer";
+
 export type RadioSizes = Record<"NOT_SET" | "NONE" | "SMALL" | "MEDIUM", string>;
 
 interface IconProps {
@@ -175,9 +177,9 @@ export interface RadioOption extends Pick<RadioIndicatorProps, "radioItemIconCla
   /**
    * The position of the tooltip relative to the radio option.
    * @default "top"
+   * @see {@link LayerPosition}
    */
-  // TODO: Replace with Tooltip's position enum
-  tooltipPosition?: string;
+  tooltipPosition?: LayerPosition;
 
   /**
    * The color of the radio bar.

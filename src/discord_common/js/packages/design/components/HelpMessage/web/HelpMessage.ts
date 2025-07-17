@@ -35,6 +35,7 @@ export interface HelpMessageProps {
   /**
    * The variant of the text in the help message.
    * @default "text-sm/medium"
+   * @see {@link TextVariant}
    */
   textVariant?: TextVariant;
 }

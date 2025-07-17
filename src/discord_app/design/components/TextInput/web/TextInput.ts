@@ -81,7 +81,14 @@ export interface TextInputState {
   dirty: boolean;
 }
 
-export declare class TextInputComponent extends React.Component<TextInputProps, TextInputState> {
+/**
+ * An interactive text input element.
+ * @example
+ * ```tsx
+ * <TextInput value={value} placeholder="Enter some text" />
+ * ```
+ */
+export declare class TextInput extends React.Component<TextInputProps, TextInputState> {
   /**
    * Returns whether the input has an error.
    */
@@ -117,12 +124,3 @@ export declare class TextInputComponent extends React.Component<TextInputProps, 
    */
   public onBlur: React.FocusEventHandler<HTMLInputElement>;
 }
-
-/**
- * An interactive text input element.
- * @example
- * ```tsx
- * <TextInput value={value} placeholder="Enter some text" />
- * ```
- */
-export type TextInput = typeof TextInputComponent;

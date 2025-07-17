@@ -137,7 +137,7 @@ export interface TabBarItemProps {
   onClick?: React.MouseEventHandler<HTMLDivElement>;
 
   /**
-   * Callback fired when this tab item is selected.
+   * Event handler called when this tab item is selected.
    */
   onItemSelect?: (id: string) => void;
 }
@@ -229,7 +229,7 @@ export interface TabBarProps {
   selectedItem?: string;
 
   /**
-   * Callback fired when a tab item is selected.
+   * Event handler called when a tab item is selected.
    */
   onItemSelect?: (id: string) => void;
 
