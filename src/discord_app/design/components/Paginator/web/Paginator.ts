@@ -1,6 +1,6 @@
 import type * as React from "react";
 
-import type { PaginationControllerProps } from "./PaginationController";
+import type { PaginationControllerProps, PaginationItem } from "./PaginationController";
 
 export interface PaginatorProps
   extends Pick<PaginationControllerProps, "maxVisiblePages" | "onPageChange" | "hideMaxPage"> {
@@ -29,6 +29,14 @@ export interface PaginatorProps
    * The class name applied to the paginator container.
    */
   className?: string;
+
+  /**
+   * Render prop to customize the page wrapper element.
+   */
+  renderPageWrapper?: (
+    pageItem: PaginationItem[],
+    pageElement: React.ReactElement,
+  ) => React.ReactNode;
 }
 
 /**

@@ -1,17 +1,16 @@
 import type * as React from "react";
 
-export type SearchBarSizes = Record<"SMALL" | "MEDIUM" | "LARGE", string>;
+import type { SearchIconProps } from "./SearchIcon";
 
-export interface SearchBarProps extends Omit<React.ComponentPropsWithoutRef<"div">, "onChange"> {
+export type SearchBarSizes = "sm" | "md";
+
+export interface SearchBarProps
+  extends Omit<React.ComponentPropsWithoutRef<"div">, "onChange">,
+    Omit<SearchIconProps, "hasContent" | "className"> {
   /**
    * The value of the search bar.
    */
   query?: string;
-
-  /**
-   * Event handler called when the search bar is cleared.
-   */
-  onClear?: React.MouseEventHandler<HTMLDivElement>;
 
   /**
    * The placeholder text for the search bar.
@@ -19,37 +18,16 @@ export interface SearchBarProps extends Omit<React.ComponentPropsWithoutRef<"div
   placeholder?: string;
 
   /**
-   * The class name applied to the search icon.
-   */
-  iconClassName?: string;
-
-  /**
    * Event handler called when a key is pressed down on the input.
    */
   onKeyDown?: React.KeyboardEventHandler<HTMLInputElement>;
 
   /**
-   * Event handler called when a key is released on the input.
-   */
-  onKeyUp?: React.KeyboardEventHandler<HTMLInputElement>;
-
-  /**
-   * Event handler called when a key is pressed and released on the input.
-   */
-  onKeyPress?: React.KeyboardEventHandler<HTMLInputElement>;
-
-  /**
-   * Whether the search bar is in a loading state, showing a spinner instead of the search icon.
-   * @default false
-   */
-  isLoading?: boolean;
-
-  /**
    * The search bar size.
-   * @default SearchBar.Sizes.SMALL
+   * @default "md"
    * @see {@link SearchBarSizes}
    */
-  size?: string;
+  size?: SearchBarSizes;
 
   /**
    * Whether the search bar is disabled.
@@ -81,15 +59,24 @@ export interface SearchBarProps extends Omit<React.ComponentPropsWithoutRef<"div
    * Props to be passed to the input element.
    */
   inputProps?: React.ComponentPropsWithoutRef<"input">;
-
-  /**
-   * Whether the search icon should be hidden.
-   * @default false
-   */
-  hideSearchIcon?: boolean;
 }
 
-export declare class SearchBarComponent extends React.PureComponent<SearchBarProps> {
+/**
+ * Provides a search bar for users to input search queries.
+ * @example
+ * ```tsx
+ * const [query, setQuery] = React.useState("");
+ *
+ * <SearchBar
+ *   query={query}
+ *   onChange={setQuery}
+ *   placeholder="Search..."
+ *   onClear={() => setQuery("")}
+ *   size={SearchBar.Sizes.MEDIUM}
+ * />
+ * ```
+ */
+export declare class SearchBar extends React.PureComponent<SearchBarProps> {
   /**
    * The ref to the input element.
    */
@@ -115,22 +102,3 @@ export declare class SearchBarComponent extends React.PureComponent<SearchBarPro
    */
   public blur: () => void;
 }
-
-/**
- * Provides a search bar for users to input search queries.
- * @example
- * ```tsx
- * const [query, setQuery] = React.useState("");
- *
- * <SearchBar
- *   query={query}
- *   onChange={setQuery}
- *   placeholder="Search..."
- *   onClear={() => setQuery("")}
- *   size={SearchBar.Sizes.MEDIUM}
- * />
- * ```
- */
-export type SearchBar = typeof SearchBarComponent & {
-  Sizes: SearchBarSizes;
-};

@@ -115,6 +115,7 @@ export type {
   UseRadioItem,
 } from "./components/RadioGroup/web/RadioGroup";
 export type { SearchBar } from "./components/SearchBar/web/SearchBar";
+export type { SearchIcon } from "./components/SearchBar/web/SearchIcon";
 export type { SearchBox } from "./components/SearchBox/web/SearchBox";
 export type { SegmentedControl } from "./components/SegmentedControl/web/SegmentedControl";
 export type { SelectLooks } from "./components/Select/web/SelectTypes";

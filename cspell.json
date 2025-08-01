@@ -8,6 +8,7 @@
     "html"
   ],
   "words": [
+    "BORDERLESS",
     "COACHMARK",
     "COACHTIP",
     "crossfades",
@@ -21,10 +22,13 @@
     "pagedown",
     "pageup",
     "PASSWORDLESS",
+    "Pids",
     "POPOUT",
     "PREPROMPT",
+    "QUNS",
     "resizeable",
     "SNOWSGIVING",
+    "TOTP",
     "underflowing",
     "unscale",
     "unscales",

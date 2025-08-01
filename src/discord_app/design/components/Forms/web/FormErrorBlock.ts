@@ -42,7 +42,7 @@ export interface FormErrorBlockProps {
 
   /**
    * The icon to be displayed in the error block.
-   * @default WarningCircle
+   * @default CircleErrorIcon
    */
   icon?: React.ElementType<IconProps>;
 
