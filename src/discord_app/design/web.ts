@@ -58,6 +58,12 @@ export type {
   EmptyStateText,
 } from "./components/EmptyState/web/EmptyState";
 export type { FocusBlock, UseFocusBlock } from "./components/Focus/web/FocusBlock";
+export type {
+  FocusJumpSection,
+  UseFocusJumpSection,
+  UseFocusJumpSectionManager,
+} from "./components/Focus/web/FocusJumpSection";
+export type { FocusLock, UseFocusLock } from "./components/Focus/web/FocusLock";
 export type { FocusRing, FocusRingScope } from "./components/Focus/web/FocusRing";
 export type { FocusRingManager } from "./components/Focus/web/FocusRingManager";
 export type {
@@ -137,7 +143,9 @@ export type {
 export type { Text } from "./components/Text/web/Text";
 export type { TextArea } from "./components/TextInput/web/TextArea";
 export type { TextAreaAutosize } from "./components/TextInput/web/TextAreaAutosize";
-export type { InputError, TextInput } from "./components/TextInput/web/TextInput";
+export type { TextInput } from "./components/TextInput/web/TextInput";
+export type { TextInputLegacy } from "./components/TextInput/web/TextInput.legacy";
+export type { InputError } from "./components/TextInput/web/TextInputError";
 export type { TimeInput } from "./components/TimeInput/web/TimeInput";
 export type { CreateToast, Toast } from "./components/Toast/web/Toast";
 export type { PopToast, ShowToast, UseToastStore } from "./components/Toast/web/ToastAPI";

@@ -19,7 +19,7 @@ export interface SegmentedControlOption {
   /**
    * The tooltip text for the option.
    */
-  tooltip?: string;
+  tooltip?: React.ReactNode | (() => React.ReactNode);
 
   /**
    * The aria-label for the tooltip.

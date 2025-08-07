@@ -18,7 +18,7 @@ export interface FormSwitchProps extends Pick<SwitchProps, "onChange" | "disable
   /**
    * The tooltip text to display when hovering over the switch.
    */
-  tooltipNote?: string;
+  tooltipNote?: React.ReactNode | (() => React.ReactNode);
 
   /**
    * The class name applied to the container.

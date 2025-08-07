@@ -195,6 +195,11 @@ export interface ColorPickerProps {
    * The custom color gradient button component.
    */
   renderGradientCustomButton?: React.FC<ColorPickerCustomButtonProps>;
+
+  /**
+   * The degrees for the gradient.
+   */
+  gradientDegrees?: number;
 }
 
 /**

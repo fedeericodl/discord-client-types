@@ -17,8 +17,7 @@ export type ClickableProps<T extends keyof React.JSX.IntrinsicElements = "div"> 
     /**
      * A ref for the clickable element.
      */
-    // TODO: Fix this type.
-    innerRef?: React.Ref<React.JSX.IntrinsicElements[T]>;
+    innerRef?: React.Ref<React.ComponentRef<T>>;
 
     /**
      * Whether key press events will be ignored.

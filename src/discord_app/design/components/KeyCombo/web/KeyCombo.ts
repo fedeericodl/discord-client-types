@@ -4,10 +4,23 @@ import type * as React from "react";
  * A map of key names to 'pretty' strings or React elements.
  */
 export type PRETTY_KEYS = Record<
-  "mod" | "alt" | "pageup" | "pagedown" | "any-character" | "plus" | "return",
-  () => string
+  | "ctrl"
+  | "cmd"
+  | "alt"
+  | "up"
+  | "down"
+  | "left"
+  | "right"
+  | "mod"
+  | "shift"
+  | "return"
+  | "enter"
+  | "escape"
+  | "esc"
+  | "backspace",
+  () => React.ReactElement
 > &
-  Record<"up" | "down" | "left" | "right", () => React.ReactElement>;
+  Record<"pageup" | "pagedown" | "any-character" | "plus", () => string>;
 
 export interface KeyComboProps {
   /**

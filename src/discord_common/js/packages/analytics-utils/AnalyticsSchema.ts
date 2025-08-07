@@ -53,6 +53,7 @@ export enum ImpressionNames {
   DIRECTORY_ADD_GUILD_CONFIRMATION = "impression_directory_add_guild_confirmation",
   DISCOVERABILITY = "impression_discoverability",
   DISCOVERY_GAME_LANDING_PAGE = "impression_discovery_game_landing_page",
+  DISPLAY_NAME_STYLES_MODAL = "impression_display_name_styles_modal",
   DROPS_QUEST_COMPLETION = "impression_drops_quest_completion",
   DROPS_QUEST_ENROLLMENT = "impression_drops_quest_enrollment",
   EMBEDDED_ACTIVITY_HAPPENING_NOW = "impression_embedded_activity_happening_now",

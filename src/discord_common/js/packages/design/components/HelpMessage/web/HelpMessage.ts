@@ -1,4 +1,4 @@
-import type { TextVariant } from "@discordapp/tokens/typography/generated/TextVariants";
+import type { TEXT_VARIANT } from "@discordapp/tokens/typography/generated/TextVariants";
 import type * as React from "react";
 
 export enum HelpMessageTypes {
@@ -35,9 +35,9 @@ export interface HelpMessageProps {
   /**
    * The variant of the text in the help message.
    * @default "text-sm/medium"
-   * @see {@link TextVariant}
+   * @see {@link TEXT_VARIANT}
    */
-  textVariant?: TextVariant;
+  textVariant?: TEXT_VARIANT;
 }
 
 /**

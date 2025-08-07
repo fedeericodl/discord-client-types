@@ -1,6 +1,6 @@
 // TODO: Auto generate this file
 
-export type TextVariant =
+export type TEXT_VARIANT =
   | "heading-sm/normal"
   | "heading-sm/medium"
   | "heading-sm/semibold"

@@ -1,13 +1,13 @@
-import type { TextVariant } from "@discordapp/tokens/typography/generated/TextVariants";
+import type { TEXT_VARIANT } from "@discordapp/tokens/typography/generated/TextVariants";
 import type * as React from "react";
 
 export type TextProps<T extends keyof React.JSX.IntrinsicElements = "div"> =
   React.ComponentPropsWithoutRef<T> & {
     /**
      * The variant of the text.
-     * @see {@link TextVariant}
+     * @see {@link TEXT_VARIANT}
      */
-    variant?: TextVariant;
+    variant?: TEXT_VARIANT;
 
     /**
      * The HTML tag to use for the text.

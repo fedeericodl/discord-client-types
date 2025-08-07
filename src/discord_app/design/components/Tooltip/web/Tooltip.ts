@@ -144,7 +144,7 @@ export interface TooltipProps
   /**
    * The text content to display in the tooltip.
    */
-  text?: string | (() => string);
+  text?: React.ReactNode | (() => React.ReactNode);
 
   /**
    * Whether the tooltip should be shown.

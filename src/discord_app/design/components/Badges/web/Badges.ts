@@ -43,6 +43,11 @@ export interface NumberBadgeProps extends React.ComponentPropsWithoutRef<"div"> 
    * @see {@link BadgeShapes}
    */
   shape?: string;
+
+  /**
+   * Render prop for customizing the badge count display.
+   */
+  renderBadgeCount?: (count: number) => React.ReactNode;
 }
 
 /**

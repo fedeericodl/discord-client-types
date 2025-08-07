@@ -72,7 +72,6 @@ export interface SearchBarProps
  *   onChange={setQuery}
  *   placeholder="Search..."
  *   onClear={() => setQuery("")}
- *   size={SearchBar.Sizes.MEDIUM}
  * />
  * ```
  */

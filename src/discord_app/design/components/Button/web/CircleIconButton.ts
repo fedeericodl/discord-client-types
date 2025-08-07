@@ -14,7 +14,7 @@ export interface CircleIconButtonProps {
   /**
    * The tooltip text.
    */
-  tooltip?: string;
+  tooltip?: React.ReactNode | (() => React.ReactNode);
 
   /**
    * The color of the button.

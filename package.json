@@ -18,21 +18,21 @@
   "license": "MIT",
   "author": "fedeericodl",
   "type": "module",
-  "types": "dist/index.d.ts",
   "files": [
-    "dist"
+    "discord_app",
+    "discord_common"
   ],
   "scripts": {
     "build": "tsc",
     "cspell:check": "cspell lint \"src/**/*.ts\"",
     "eslint:check": "eslint \"src/**/*.ts\"",
-    "prettier:check": "prettier \"src/**/*.ts\" --check",
-    "typescript:check": "tsc --noEmit",
     "eslint:fix": "eslint \"src/**/*.ts\" --fix",
-    "prettier:fix": "prettier \"src/**/*.ts\" --write",
     "lint": "pnpm run prettier:check && pnpm run eslint:check && pnpm run cspell:check && pnpm run typescript:check",
     "lint:fix": "pnpm run prettier:fix && pnpm run eslint:fix && pnpm run cspell:check && pnpm run typescript:check",
-    "prepublishOnly": "rm -rf dist && pnpm run build"
+    "prepublishOnly": "rm -rf dist && pnpm run build && mv dist/* ./ && rm -rf dist",
+    "prettier:check": "prettier \"src/**/*.ts\" --check",
+    "prettier:fix": "prettier \"src/**/*.ts\" --write",
+    "typescript:check": "tsc --noEmit"
   },
   "dependencies": {
     "@react-aria/live-announcer": "~3.1.2",
@@ -44,7 +44,9 @@
     "big-integer": "^1.6.52",
     "dependency-graph": "0.8.0",
     "discord-api-types": "^0.38.15",
+    "focus-layers": "^0.6.1",
     "moment": "~2.22.2",
+    "react-aria": "3.24.0",
     "react-aria-components": "1.0.0-alpha.4",
     "react-focus-rings": "^1.1.0",
     "simple-markdown": "^0.7.3",
