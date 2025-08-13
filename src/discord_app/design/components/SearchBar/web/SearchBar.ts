@@ -2,6 +2,8 @@ import type * as React from "react";
 
 import type { SearchIconProps } from "./SearchIcon";
 
+export type SearchBarSizes = "sm" | "md";
+
 export interface SearchBarProps
   extends Omit<React.ComponentPropsWithoutRef<"div">, "onChange">,
     Omit<SearchIconProps, "hasContent" | "className"> {
@@ -23,8 +25,9 @@ export interface SearchBarProps
   /**
    * The search bar size.
    * @default "md"
+   * @see {@link SearchBarSizes}
    */
-  size?: "sm" | "md";
+  size?: SearchBarSizes;
 
   /**
    * Whether the search bar is disabled.
