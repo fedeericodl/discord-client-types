@@ -21,7 +21,6 @@ export type ClickableProps<T extends keyof React.JSX.IntrinsicElements = "div"> 
 
     /**
      * Whether key press events will be ignored.
-     * @default false
      */
     ignoreKeyPress?: boolean;
   };

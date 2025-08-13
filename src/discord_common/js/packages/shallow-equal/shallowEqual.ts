@@ -1,7 +1,6 @@
 export interface ShallowEqualOptions {
   /**
    * Whether to warn when comparing large objects.
-   * @default false
    */
   shouldWarnLargeObjects?: boolean;
 

@@ -14,13 +14,11 @@ export interface SwitchProps {
 
   /**
    * The value of the switch.
-   * @default false
    */
   checked?: boolean;
 
   /**
    * Whether the switch is disabled.
-   * @default false
    */
   disabled?: boolean;
 

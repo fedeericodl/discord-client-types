@@ -11,6 +11,9 @@ export type HeadingProps<T extends HeadingLevels> = React.ComponentPropsWithoutR
 
 // TODO: Try to find a way to make the generic working.
 
+/**
+ * A heading component that renders a heading element with the specified level.
+ */
 export type Heading<T extends HeadingLevels> = React.ForwardRefExoticComponent<
   React.PropsWithoutRef<HeadingProps<T>> & React.RefAttributes<unknown>
 > & {

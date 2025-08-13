@@ -83,7 +83,6 @@ export interface PositionInfo {
 export interface ReferencePositionLayerProps {
   /**
    * Whether to use raw target dimensions without ceiling the values.
-   * @default false
    */
   useRawTargetDimensions?: boolean;
 
@@ -164,7 +163,6 @@ export interface ReferencePositionLayerProps {
 
   /**
    * Whether to use fixed positioning instead of absolute positioning.
-   * @default false
    */
   fixed?: boolean;
 

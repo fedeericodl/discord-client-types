@@ -323,7 +323,6 @@ interface TimeOutOptions {
 
   /**
    * Interval between condition checks.
-   * @default TimeSpan.fromMilliseconds(100)
    */
   sleep?: TimeSpanClass;
 }

@@ -31,7 +31,6 @@ export interface SliderProps {
 
   /**
    * Whether markers should be distributed evenly.
-   * @default false
    */
   equidistant?: boolean;
 
@@ -69,13 +68,11 @@ export interface SliderProps {
 
   /**
    * Whether to use a smaller variant of the slider.
-   * @default false
    */
   mini?: boolean;
 
   /**
    * Whether to hide the value tooltip.
-   * @default false
    */
   hideBubble?: boolean;
 
@@ -86,7 +83,6 @@ export interface SliderProps {
 
   /**
    * Orientation of the slider.
-   * @default "horizontal"
    */
   orientation?: "horizontal" | "vertical";
 
@@ -129,7 +125,6 @@ export interface SliderProps {
 
   /**
    * Whether the slider is hidden from screen readers.
-   * @default false
    */
   "aria-hidden"?: boolean;
 

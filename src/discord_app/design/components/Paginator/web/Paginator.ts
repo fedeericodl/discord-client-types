@@ -21,7 +21,6 @@ export interface PaginatorProps
 
   /**
    * Whether to disable pagination gap.
-   * @default false
    */
   disablePaginationGap?: boolean;
 

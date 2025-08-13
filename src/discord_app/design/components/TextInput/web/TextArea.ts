@@ -41,7 +41,6 @@ export interface TextAreaProps {
 
   /**
    * Whether there should be spell checking on the textarea.
-   * @default false
    */
   spellCheck?: boolean;
 
@@ -81,7 +80,6 @@ export interface TextAreaProps {
 
   /**
    * Whether the completion of the textarea is required.
-   * @default false
    */
   required?: boolean;
 
@@ -102,19 +100,16 @@ export interface TextAreaProps {
 
   /**
    * Whether the character count should have padding, considering the remaining character count as well.
-   * @default false
    */
   showCharacterCountFullPadding?: boolean;
 
   /**
    * Whether the character count should be shown.
-   * @default false
    */
   showCharacterCount?: boolean;
 
   /**
    * Whether the remaining character count should be shown.
-   * @default false
    */
   showRemainingCharacterCount?: boolean;
 
@@ -150,7 +145,6 @@ export interface TextAreaProps {
 
   /**
    * Whether the textarea is initially "dirty" (i.e. textarea field has been changed).
-   * @default false
    */
   defaultDirty?: boolean;
 }

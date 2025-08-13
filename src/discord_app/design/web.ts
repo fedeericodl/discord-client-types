@@ -1,3 +1,4 @@
+export type { H, Heading, HeadingLevel, UsePrivateHeadingLevel } from "@discordapp/design/web";
 export type { AccessibilityAnnouncer } from "./components/AccessibilityAnnouncer/web/AccessibilityAnnouncer";
 export type { LOW_SATURATION_THRESHOLD } from "./components/AccessibilityPreferencesContext/AccessibilityConstants";
 export type { AccessibilityPreferencesContext } from "./components/AccessibilityPreferencesContext/AccessibilityPreferencesContext";
@@ -50,8 +51,17 @@ export type {
   ColorPickerDefaultButton,
   CustomColorPicker,
 } from "./components/ColorPicker/web/ColorPicker";
+export type {
+  Combobox,
+  ComboboxItem,
+  UseMultiSelect,
+  UseSingleSelect,
+} from "./components/Combobox/web/Combobox";
+export type { ComboboxPopout } from "./components/Combobox/web/ComboboxPopout";
 export type { CopyInput, CopyInputModes } from "./components/CopyInput/web/CopyInput";
 export type { DateInput } from "./components/DateInput/web/DateInput";
+export type { Dialog, DialogContext } from "./components/Dialog/web/Dialog";
+export type { AnimatedDots, Dots } from "./components/Dots/web/Dots";
 export type {
   EmptyState,
   EmptyStateImage,
@@ -87,7 +97,7 @@ export type { FormTitle, FormTitleTags } from "./components/Forms/web/FormTitle"
 export type { HelpMessage, HelpMessageTypes } from "./components/HelpMessage/web/HelpMessage";
 export type { HiddenVisually } from "./components/HiddenVisually/web/HiddenVisually";
 export type { Interactive } from "./components/Interactive/web/Interactive";
-export type { KeyCombo, PRETTY_KEYS } from "./components/KeyCombo/web/KeyCombo";
+export type { KeyCombo } from "./components/KeyCombo/web/KeyCombo";
 export type {
   CreateLayer,
   GetParentLayerContainer,
@@ -100,6 +110,12 @@ export type {
   ReferencePortalAwareContains,
   ReferencePositionLayer,
 } from "./components/Layers/web/ReferencePositionLayer";
+export type { Menu, MenuSpinner } from "./components/Menu/web/Menu";
+export type {
+  DEFAULT_MODAL_CONTEXT,
+  ModalTransitionState,
+  POPOUT_MODAL_CONTEXT,
+} from "./components/Modal/web/ModalConstants";
 export type { NavItem } from "./components/NavItem/web/NavItem";
 export type {
   Notice,
@@ -111,9 +127,16 @@ export type {
 } from "./components/Notice/web/Notice";
 export type { NumberInputStepper } from "./components/NumberInputStepper/web/NumberInputStepper";
 export type { Paginator } from "./components/Paginator/web/Paginator";
+export type { BasePopout, POPOUT_PREVENT_CLOSE } from "./components/Popout/web/BasePopout";
+export type { LoadingPopout } from "./components/Popout/web/LoadingPopout";
+export type { LazyPopout, Popout } from "./components/Popout/web/Popout";
+export type { PopoutCSSAnimator } from "./components/Popout/web/PopoutCSSAnimator";
+export type { PopoutList } from "./components/Popout/web/PopoutList";
 export type { Progress } from "./components/Progress/web/Progress";
 export type { ProgressCircle } from "./components/Progress/web/ProgressCircle";
 export type { StackedProgress } from "./components/Progress/web/StackedProgress";
+export type { QuickSelect } from "./components/QuickSelect/web/QuickSelect";
+export type { SearchableQuickSelect } from "./components/QuickSelect/web/SearchableQuickSelect";
 export type {
   RadioGroup,
   RadioIndicator,

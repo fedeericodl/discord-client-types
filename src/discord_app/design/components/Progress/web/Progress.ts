@@ -14,7 +14,6 @@ export interface ProgressProps {
 
   /**
    * The percentage of the progress bar.
-   * @default 0
    */
   percent?: number | "indeterminate";
 

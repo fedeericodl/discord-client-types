@@ -9,11 +9,13 @@ export interface AnimProps {
 
   /**
    * The progress of the shake animation.
+   * @default 0
    */
   progress: number;
 
   /**
    * The timestamp of the last frame.
+   * @default Date.now()
    */
   last: number;
 
@@ -25,11 +27,13 @@ export interface AnimProps {
 
   /**
    * The last direction of the shake.
+   * @default -1
    */
   lastDirection: number;
 
   /**
    * The number of frames that have passed.
+   * @default 0
    */
   frameCount: number;
 }

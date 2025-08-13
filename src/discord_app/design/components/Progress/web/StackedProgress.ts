@@ -22,6 +22,7 @@ export interface StackedProgressProps {
   /**
    * Size variant of the progress bar.
    * @default StackedProgress.Sizes.SMALL
+   * @see {@link Sizes StackedProgressSizes}
    */
   size?: Sizes;
 

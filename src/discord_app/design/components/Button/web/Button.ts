@@ -2,6 +2,18 @@ import type * as React from "react";
 import type { FocusRingProps } from "react-focus-rings";
 import type { LinkProps } from "react-router-dom";
 
+/**
+ * Function that returns a string representing the class name that should be applied to the button based on the provided properties.
+ * @param props The props to use to determine the button style.
+ * @returns The class name to apply to the button.
+ */
+export type GetButtonStyle = (
+  props: Pick<
+    ButtonProps,
+    "look" | "color" | "size" | "fullWidth" | "grow" | "submitting" | "disabled"
+  >,
+) => string;
+
 export type ButtonLooks = Record<"FILLED" | "OUTLINED" | "LINK" | "BLANK", string>;
 
 export type ButtonColors = Record<
@@ -145,18 +157,6 @@ export interface ButtonProps extends React.ComponentPropsWithoutRef<"button"> {
    */
   submittingFinishedLabel?: string;
 }
-
-/**
- * Function that returns a string representing the class name that should be applied to the button based on the provided properties.
- * @param props The props to use to determine the button style.
- * @returns The class name to apply to the button.
- */
-export type GetButtonStyle = (
-  props: Pick<
-    ButtonProps,
-    "look" | "color" | "size" | "fullWidth" | "grow" | "submitting" | "disabled"
-  >,
-) => string;
 
 /**
  * An interactive button element.

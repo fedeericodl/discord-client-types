@@ -14,7 +14,6 @@ export interface TimeInputProps {
 
   /**
    * Whether the selected value should not be displayed on the time input.
-   * @default false
    */
   hideValue?: boolean;
 

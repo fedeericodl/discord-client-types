@@ -25,7 +25,6 @@ export interface CollapsibleProps {
 
   /**
    * Whether the collapsible is expanded or not.
-   * @default false
    */
   isExpanded?: boolean;
 }

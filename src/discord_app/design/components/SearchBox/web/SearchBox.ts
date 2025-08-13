@@ -1,11 +1,11 @@
 import type * as React from "react";
 
 import type { SearchBar } from "../../SearchBar/web/SearchBar";
-import type { TextInputProps } from "../../TextInput/web/TextInput";
+import type { TextInputLegacyProps } from "../../TextInput/web/TextInput.legacy";
 
 export interface SearchBoxProps
   extends Pick<
-    TextInputProps,
+    TextInputLegacyProps,
     | "autoFocus"
     | "placeholder"
     | "inputClassName"

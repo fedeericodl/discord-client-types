@@ -72,7 +72,6 @@ export type EmptyStateText = React.FC<React.PropsWithChildren<EmptyStateTextProp
 export interface EmptyStateProps {
   /**
    * The theme of the empty state.
-   * @default "dark"
    */
   theme: "dark" | "light";
 

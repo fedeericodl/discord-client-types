@@ -18,7 +18,6 @@ export interface ButtonData {
 
   /**
    * Whether the button is disabled.
-   * @default false
    */
   disabled?: boolean;
 }
@@ -31,7 +30,6 @@ export interface Buttons {
 
   /**
    * Whether the button is disabled.
-   * @default false
    */
   disabled?: boolean;
 }
@@ -44,7 +42,6 @@ export interface ButtonGroupProps {
 
   /**
    * Whether the button group is disabled.
-   * @default false
    */
   disabled?: boolean;
 

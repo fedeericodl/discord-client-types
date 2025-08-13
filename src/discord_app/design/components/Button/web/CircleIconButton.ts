@@ -46,7 +46,6 @@ export interface CircleIconButtonProps {
 
   /**
    * Whether the button is disabled.
-   * @default false
    */
   disabled?: boolean;
 

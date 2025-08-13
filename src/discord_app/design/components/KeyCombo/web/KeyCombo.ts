@@ -1,27 +1,5 @@
 import type * as React from "react";
 
-/**
- * A map of key names to 'pretty' strings or React elements.
- */
-export type PRETTY_KEYS = Record<
-  | "ctrl"
-  | "cmd"
-  | "alt"
-  | "up"
-  | "down"
-  | "left"
-  | "right"
-  | "mod"
-  | "shift"
-  | "return"
-  | "enter"
-  | "escape"
-  | "esc"
-  | "backspace",
-  () => React.ReactElement
-> &
-  Record<"pageup" | "pagedown" | "any-character" | "plus", () => string>;
-
 export interface KeyComboProps {
   /**
    * The shortcut to display.

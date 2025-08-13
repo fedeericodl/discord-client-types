@@ -24,13 +24,11 @@ export interface CopyInputProps {
 
   /**
    * Whether the input should automatically focus on render.
-   * @default false
    */
   autoFocus?: boolean;
 
   /**
    * Whether there should be spell checking on the input.
-   * @default false
    */
   spellCheck?: boolean;
 
@@ -63,13 +61,12 @@ export interface CopyInputProps {
 
   /**
    * Whether copying is supported.
-   * @default false
+   * @default true
    */
   supportsCopy?: boolean;
 
   /**
    * Whether the button is disabled.
-   * @default false
    */
   disabled?: boolean;
 

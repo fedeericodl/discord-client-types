@@ -52,7 +52,6 @@ export declare class Logger {
   /**
    * Whether logging to native platform is enabled.
    * When true, logs are sent to both standard and native loggers.
-   * @default false
    */
   public nativeLoggerEnabled: boolean;
 

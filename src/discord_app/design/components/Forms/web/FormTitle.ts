@@ -18,13 +18,11 @@ interface CommonFormTitleProps extends Partial<Pick<FormContextValue, "error" | 
 
   /**
    * Whether the title is faded.
-   * @default false
    */
   faded?: boolean;
 
   /**
    * Whether the title is displayed as disabled.
-   * @default false
    */
   disabled?: boolean;
 
@@ -34,8 +32,6 @@ interface CommonFormTitleProps extends Partial<Pick<FormContextValue, "error" | 
    */
   required?: boolean;
 }
-
-// ! HACK: This is a workaround instead of using generics.
 
 export interface HeadingProps
   extends CommonFormTitleProps,

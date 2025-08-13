@@ -24,7 +24,6 @@ interface IconProps {
 export interface RadioIndicatorProps {
   /**
    * Whether the radio indicator is checked.
-   * @default false
    */
   checked?: boolean;
 
@@ -40,7 +39,6 @@ export interface RadioIndicatorProps {
 
   /**
    * Whether the radio indicator is disabled.
-   * @default false
    */
   disabled?: boolean;
 }
@@ -96,7 +94,6 @@ export interface HookRadioGroup {
 
   /**
    * Whether the radio group is disabled.
-   * @default false
    */
   "aria-disabled": boolean;
 }
@@ -160,7 +157,6 @@ export interface RadioOption extends Pick<RadioIndicatorProps, "radioItemIconCla
 
   /**
    * Whether the radio option is disabled.
-   * @default false
    */
   disabled?: boolean;
 
@@ -176,7 +172,6 @@ export interface RadioOption extends Pick<RadioIndicatorProps, "radioItemIconCla
 
   /**
    * The position of the tooltip relative to the radio option.
-   * @default "top"
    * @see {@link LayerPosition}
    */
   tooltipPosition?: LayerPosition;
@@ -270,7 +265,6 @@ export interface RadioGroupProps {
 
   /**
    * Whether the radio group has a transparent background.
-   * @default false
    */
   withTransparentBackground?: boolean;
 }

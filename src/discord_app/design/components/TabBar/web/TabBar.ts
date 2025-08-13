@@ -16,7 +16,6 @@ export interface TabBarHeaderProps {
 
   /**
    * Whether the associated content is expanded.
-   * @default false
    */
   "aria-expanded"?: boolean;
 
@@ -276,24 +275,20 @@ export declare class TabBarComponent extends React.Component<React.PropsWithChil
  * A flexible tab navigation component that provides accessible tab functionality.
  * @example
  * ```tsx
- * function UserDashboard() {
- *   const [selectedTab, setSelectedTab] = React.useState("profile");
+ * const [selectedTab, setSelectedTab] = React.useState("profile");
  *
- *   return (
- *     <TabBar
- *       className="dashboard-tabs"
- *       type="top"
- *       look="brand"
- *       selectedItem={selectedTab}
- *       onItemSelect={(tabId) => {
- *         setSelectedTab(tabId);
- *       }}>
- *       <TabBar.Item id="profile">Profile</TabBar.Item>
- *       <TabBar.Item id="activity">Activity</TabBar.Item>
- *       <TabBar.Item id="settings">Settings</TabBar.Item>
- *     </TabBar>
- *   );
- * }
+ * <TabBar
+ *   className="dashboard-tabs"
+ *   type="top"
+ *   look="brand"
+ *   selectedItem={selectedTab}
+ *   onItemSelect={(tabId) => {
+ *     setSelectedTab(tabId);
+ *   }}>
+ *   <TabBar.Item id="profile">Profile</TabBar.Item>
+ *   <TabBar.Item id="activity">Activity</TabBar.Item>
+ *   <TabBar.Item id="settings">Settings</TabBar.Item>
+ * </TabBar>
  * ```
  */
 export type TabBar = typeof TabBarComponent & {

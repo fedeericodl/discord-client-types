@@ -18,9 +18,13 @@ export interface ColorPickerDefaultButtonProps {
 
   /**
    * Whether the button is disabled.
-   * @default false
    */
   disabled?: boolean;
+
+  /**
+   * Whether to allow black as a custom color.
+   */
+  allowBlackCustomColor?: boolean;
 }
 
 /**
@@ -42,7 +46,6 @@ export interface ColorPickerCustomButtonProps {
 
   /**
    * Whether the button is disabled.
-   * @default false
    */
   disabled?: boolean;
 
@@ -97,7 +100,6 @@ export interface CustomColorPickerProps {
 
   /**
    * Whether to show the eye dropper tool.
-   * @default false
    */
   showEyeDropper?: boolean;
 
@@ -161,7 +163,6 @@ export interface ColorPickerProps {
 
   /**
    * Whether the color picker is disabled.
-   * @default false
    */
   disabled?: boolean;
 
@@ -187,7 +188,6 @@ export interface ColorPickerProps {
 
   /**
    * Whether to show the color picker in a gradient mode.
-   * @default false
    */
   isGradient?: boolean;
 
@@ -200,6 +200,11 @@ export interface ColorPickerProps {
    * The degrees for the gradient.
    */
   gradientDegrees?: number;
+
+  /**
+   * Whether to allow black as a custom color.
+   */
+  allowBlackCustomColor?: boolean;
 }
 
 /**

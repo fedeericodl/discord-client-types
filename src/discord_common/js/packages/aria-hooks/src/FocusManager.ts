@@ -31,7 +31,6 @@ export interface FocusOptions {
 
   /**
    * Whether to wrap focus when reaching the boundaries.
-   * @default false
    */
   wrap?: boolean;
 }

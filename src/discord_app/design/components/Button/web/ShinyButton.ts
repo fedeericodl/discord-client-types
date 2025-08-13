@@ -19,11 +19,10 @@ export interface ShineProps extends React.ComponentPropsWithoutRef<"div"> {
    * @default ShinyButton.ShineSizes.DEFAULT
    * @see {@link Sizes ShineSizes}
    */
-  shineSize?: string;
+  shineSize?: Sizes;
 
   /**
    * Whether the shine animation is paused.
-   * @default false
    */
   shinePaused?: boolean;
 }
@@ -38,7 +37,6 @@ export interface ShinyButtonProps
     Pick<ShineProps, "shineSize" | "shinePaused"> {
   /**
    * Whether the shine animation should be shown.
-   * @default false
    */
   pauseAnimation?: boolean;
 
@@ -49,7 +47,6 @@ export interface ShinyButtonProps
 
   /**
    * Whether the shine should only be visible on hover.
-   * @default false
    */
   onlyShineOnHover?: boolean;
 }

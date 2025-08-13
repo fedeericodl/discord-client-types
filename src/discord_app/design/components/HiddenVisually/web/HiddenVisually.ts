@@ -9,7 +9,6 @@ export interface HiddenVisuallyProps<T extends keyof React.JSX.IntrinsicElements
 
   /**
    * Whether the hidden element should be shown when focused.
-   * @default false
    */
   showOnFocus?: boolean;
 

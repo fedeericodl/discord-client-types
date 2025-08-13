@@ -1,4 +1,5 @@
 import type { Timeout } from "@discordapp/timers/Timers";
+import type { UseTransitionProps } from "@react-spring/web";
 import type * as React from "react";
 
 import type { LayerAlignment, LayerPosition } from "../../Layers/web/ReferencePositionLayer";
@@ -185,11 +186,10 @@ export interface TooltipProps
   /**
    * Event handler called when animation transitions complete.
    */
-  onAnimationRest?: () => void;
+  onAnimationRest?: UseTransitionProps["onRest"];
 
   /**
    * Whether the tooltip should be clickable on mobile devices.
-   * @default false
    */
   clickableOnMobile?: boolean;
 
@@ -254,7 +254,6 @@ export declare class Tooltip extends React.Component<TooltipProps, TooltipState>
 
   /**
    * Whether the component has successfully found its target DOM element.
-   * @default false
    */
   public hasDomElement: boolean;
 

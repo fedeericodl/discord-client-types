@@ -33,7 +33,6 @@ export interface BackdropProps {
 
   /**
    * Whether the backdrop is visible.
-   * @default false
    */
   isVisible?: boolean;
 

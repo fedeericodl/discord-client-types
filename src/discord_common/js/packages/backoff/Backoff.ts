@@ -41,20 +41,17 @@ export declare class Backoff {
 
   /**
    * The minimum (starting) delay in milliseconds.
-   * @default 500
    */
   public min: number;
 
   /**
    * The maximum delay in milliseconds.
-   * @default null
    */
   public max: number | null;
 
   /**
    * Whether to apply random jitter to the delay calculation.
    * Delay will be multiplied by a random factor between 0 and 1.
-   * @default true
    */
   public jitter: boolean;
 
@@ -94,7 +91,6 @@ export declare class Backoff {
 
   /**
    * Returns whether a backoff timeout is currently pending.
-   * @default false
    */
   public get pending(): boolean;
 

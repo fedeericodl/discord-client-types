@@ -22,13 +22,11 @@ export interface PaginationItem {
 
   /**
    * Whether the item is disabled.
-   * @default false
    */
   disabled?: boolean;
 
   /**
    * Whether this item represents the currently selected page.
-   * @default false
    */
   selected?: boolean;
 
@@ -51,7 +49,6 @@ export interface PaginationControllerChildrenProps {
 
   /**
    * Whether there are multiple pages available for pagination.
-   * @default false
    */
   hasMultiplePages: boolean;
 }

@@ -5,7 +5,6 @@ import type { SwitchProps } from "../../Switch/web/Switch";
 export interface FormSwitchProps extends Pick<SwitchProps, "onChange" | "disabled"> {
   /**
    * The value of the switch.
-   * @default false
    */
   value?: boolean;
 

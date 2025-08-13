@@ -22,7 +22,6 @@ export interface ProgressCircleProps {
 
   /**
    * Custom color for the progress arc.
-   * @default "currentColor"
    */
   colorOverride?: string;
 

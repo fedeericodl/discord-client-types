@@ -90,14 +90,12 @@ export declare class AppStartPerformance {
 
   /**
    * Whether the performance tracing is currently active.
-   * @default true
    * @private
    */
   private isTracing_: boolean;
 
   /**
    * Timestamp when tracing should automatically stop.
-   * @default Date.now() + 15000 (15 seconds from now)
    * @private
    */
   private endTime_: number;

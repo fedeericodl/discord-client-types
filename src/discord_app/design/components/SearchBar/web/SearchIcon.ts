@@ -5,7 +5,6 @@ import type { SearchBarSizes } from "./SearchBar";
 export interface SearchIconProps {
   /**
    * Whether there is content in the search bar. This affects the visibility of the clear icon.
-   * @default false
    */
   hasContent?: boolean;
 
@@ -21,7 +20,6 @@ export interface SearchIconProps {
 
   /**
    * Whether the search icon is in a loading state, showing a spinner instead of the search icon.
-   * @default false
    */
   isLoading?: boolean;
 
