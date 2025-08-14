@@ -1,1 +1,4 @@
-export type * from "@discordapp/design/components/BlockInteractions/BlockInteractions";
+export type {
+  BlockInteractions,
+  BlockInteractionsContext,
+} from "@discordapp/design/components/BlockInteractions/BlockInteractions";

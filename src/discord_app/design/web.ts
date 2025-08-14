@@ -62,6 +62,9 @@ export type { CopyInput, CopyInputModes } from "./components/CopyInput/web/CopyI
 export type { DateInput } from "./components/DateInput/web/DateInput";
 export type { Dialog, DialogContext } from "./components/Dialog/web/Dialog";
 export type { AnimatedDots, Dots } from "./components/Dots/web/Dots";
+export type { DnDKeyboardHelpBar } from "./components/DragAndDrop/web/DnDKeyboardHelpBar";
+export type { IsInDndMode } from "./components/DragAndDrop/web/DnDMode";
+export type { DnDProvider } from "./components/DragAndDrop/web/DnDProvider";
 export type {
   EmptyState,
   EmptyStateImage,

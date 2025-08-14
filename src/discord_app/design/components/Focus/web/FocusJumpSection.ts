@@ -20,18 +20,14 @@ export interface FocusJumpSectionProps {
  * Component for enabling focus jumping functionality.
  * @example
  * ```tsx
- * function App() {
- *   return (
- *     <FocusJumpSection>
- *       {(jumpSectionProps) => (
- *         <main {...jumpSectionProps}>
- *           <h1>Main Content</h1>
- *           <p>This content area can be navigated to using F6</p>
- *         </main>
- *       )}
- *     </FocusJumpSection>
- *   );
- * }
+ * <FocusJumpSection>
+ *   {(jumpSectionProps) => (
+ *     <main {...jumpSectionProps}>
+ *       <h1>Main Content</h1>
+ *       <p>This content area can be navigated to using F6</p>
+ *     </main>
+ *   )}
+ * </FocusJumpSection>
  * ```
  */
 export type FocusJumpSection = React.FC<FocusJumpSectionProps>;

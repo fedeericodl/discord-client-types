@@ -215,29 +215,27 @@ export interface ReferencePositionLayerState {
  * ```tsx
  * const targetRef = React.useRef<HTMLButtonElement>(null);
  *
- * return (
- *   <>
- *     <button ref={targetRef}>Trigger</button>
- *     <ReferencePositionLayer
- *       targetRef={targetRef}
- *       position="bottom"
- *       align="left"
- *       autoInvert
- *       nudgeAlignIntoViewport
- *       spacing={8}
- *       onPositionChange={(newPosition) => {
- *         console.log("Position changed to:"", newPosition);
- *       }}>
- *       {({ position, nudge, isPositioned }, updatePosition) => (
- *         <div className="tooltip">
- *           <p>Current position: {position}</p>
- *           <p>Nudge offset: {nudge}px</p>
- *           <button onClick={updatePosition}>Update Position</button>
- *         </div>
- *       )}
- *     </ReferencePositionLayer>
- *   </>
- * );
+ * <>
+ *   <Button ref={targetRef}>Trigger</Button>
+ *   <ReferencePositionLayer
+ *     targetRef={targetRef}
+ *     position="bottom"
+ *     align="left"
+ *     autoInvert
+ *     nudgeAlignIntoViewport
+ *     spacing={8}
+ *     onPositionChange={(newPosition) => {
+ *       console.log("Position changed to:"", newPosition);
+ *     }}>
+ *     {({ position, nudge, isPositioned }, updatePosition) => (
+ *       <div className="tooltip">
+ *         <p>Current position: {position}</p>
+ *         <p>Nudge offset: {nudge}px</p>
+ *         <button onClick={updatePosition}>Update Position</button>
+ *       </div>
+ *     )}
+ *   </ReferencePositionLayer>
+ * </>
  * ```
  */
 export declare class ReferencePositionLayer extends React.Component<

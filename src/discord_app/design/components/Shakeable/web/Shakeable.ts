@@ -54,22 +54,20 @@ export interface ShakeableState {
  * shaking programmatically using its `shake()` and `stop()` methods.
  * @example
  * ```tsx
- * const shakeableRef = useRef<ShakeableComponent>(null);
+ * const shakeableRef = React.useRef<ShakeableComponent>(null);
  *
- * const triggerShake = useCallback(() => {
+ * const triggerShake = React.useCallback(() => {
  *   if (shakeableRef.current) {
  *     shakeableRef.current.shake(1000, 5); // Example duration and intensity
  *   }
  * }, []);
  *
- * return (
- *   <div>
- *     <ShakeableComponent ref={shakeableRef}>
- *       <div>Shakeable Content</div>
- *     </ShakeableComponent>
- *     <Button onClick={triggerShake}>Shake</Button>
- *   </div>
- * );
+ * <div>
+ *   <ShakeableComponent ref={shakeableRef}>
+ *     <div>Shakeable Content</div>
+ *   </ShakeableComponent>
+ *   <Button onClick={triggerShake}>Shake</Button>
+ * </div>
  * ```
  */
 export declare class Shakeable extends React.Component<

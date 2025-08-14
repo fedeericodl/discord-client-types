@@ -1,4 +1,8 @@
-import type { announce, clearAnnouncer } from "@react-aria/live-announcer";
+type Assertiveness = "assertive" | "polite";
+type Message = string | { "aria-labelledby": string };
+
+type announce = (message: Message, assertiveness?: Assertiveness, timeout?: number) => void;
+type clearAnnouncer = (assertiveness: Assertiveness) => void;
 
 /**
  * An announcer that can be used to announce messages to screen readers.
@@ -11,11 +15,11 @@ export interface AccessibilityAnnouncer {
    * @param assertiveness The assertiveness of the announcement.
    * @param timeout The time in milliseconds to announce the message.
    */
-  announce: typeof announce;
+  announce: announce;
 
   /**
    * Stops all queued announcements.
    * @param assertiveness The assertiveness of the announcement.
    */
-  clearAnnouncements: typeof clearAnnouncer;
+  clearAnnouncements: clearAnnouncer;
 }

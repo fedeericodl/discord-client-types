@@ -19,12 +19,11 @@
   "author": "fedeericodl",
   "type": "module",
   "exports": {
-    "./discord_app/*": "./discord_app/*.d.ts",
-    "./discord_common/*": "./discord_common/js/*.d.ts"
+    "./discord_app/*": "./dist/discord_app/*.d.ts",
+    "./discord_common/*": "./dist/discord_common/js/*.d.ts"
   },
   "files": [
-    "discord_app",
-    "discord_common"
+    "dist"
   ],
   "scripts": {
     "build": "tsc",
@@ -33,42 +32,39 @@
     "eslint:fix": "eslint \"src/**/*.ts\" --fix",
     "lint": "pnpm run prettier:check && pnpm run eslint:check && pnpm run cspell:check && pnpm run typescript:check",
     "lint:fix": "pnpm run prettier:fix && pnpm run eslint:fix && pnpm run cspell:check && pnpm run typescript:check",
-    "prepublishOnly": "rm -rf dist && pnpm run build && mv dist/* ./ && rm -rf dist",
+    "prepublishOnly": "rm -rf dist && pnpm run build",
     "prettier:check": "prettier \"src/**/*.ts\" --check",
     "prettier:fix": "prettier \"src/**/*.ts\" --write",
     "typescript:check": "tsc --noEmit"
   },
-  "dependencies": {
-    "@react-aria/live-announcer": "~3.1.2",
+  "devDependencies": {
+    "@eslint/js": "^9.33.0",
     "@react-spring/web": "9.0.0-rc.2",
     "@types/chroma-js": "^2.4.5",
+    "@types/node": "^24.2.1",
     "@types/react": "~19.0.14",
     "@types/react-color": "^3.0.13",
     "@types/react-datepicker": "~4.1.7",
     "@types/react-router-dom": "^5.3.3",
     "big-integer": "^1.6.52",
+    "cspell": "^9.2.0",
     "dependency-graph": "0.8.0",
     "discord-api-types": "^0.38.19",
-    "focus-layers": "^0.6.1",
-    "moment": "~2.22.2",
-    "react-aria": "3.24.0",
-    "react-aria-components": "1.0.0-alpha.4",
-    "react-focus-rings": "^1.2.1",
-    "simple-markdown": "^0.7.3",
-    "type-fest": "^4.41.0",
-    "zustand": "^3.7.2"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.33.0",
-    "@types/node": "^24.2.1",
-    "cspell": "^9.2.0",
+    "dnd-core": "^16.0.1",
     "eslint": "^9.33.0",
     "eslint-plugin-jsdoc": "^54.0.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-react": "^7.37.5",
+    "focus-layers": "^0.6.1",
     "globals": "^16.3.0",
+    "moment": "~2.22.2",
     "prettier": "^3.6.2",
+    "react-aria-components": "1.0.0-alpha.4",
+    "react-focus-rings": "^1.2.1",
+    "simple-markdown": "^0.7.3",
+    "type-fest": "^4.41.0",
     "typescript": "^5.9.2",
-    "typescript-eslint": "^8.39.1"
+    "typescript-eslint": "^8.39.1",
+    "zustand": "^3.7.2"
   }
 }
