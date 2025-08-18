@@ -1,14 +1,14 @@
-export type { H, Heading, HeadingLevel, UsePrivateHeadingLevel } from "@discordapp/design/web";
-export type { AccessibilityAnnouncer } from "./components/AccessibilityAnnouncer/web/AccessibilityAnnouncer";
-export type { LOW_SATURATION_THRESHOLD } from "./components/AccessibilityPreferencesContext/AccessibilityConstants";
-export type { AccessibilityPreferencesContext } from "./components/AccessibilityPreferencesContext/AccessibilityPreferencesContext";
-export type { Anchor } from "./components/Anchor/web/Anchor";
 export type {
   AvatarSizes,
   AvatarSizeSpecs,
   GetAvatarSize,
   GetAvatarSpecs,
-} from "./components/Avatar/web/AvatarConstants";
+} from "@discordapp/common/constants/web/AvatarConstants";
+export type { H, Heading, HeadingLevel, UsePrivateHeadingLevel } from "@discordapp/design/web";
+export type { AccessibilityAnnouncer } from "./components/AccessibilityAnnouncer/web/AccessibilityAnnouncer";
+export type { LOW_SATURATION_THRESHOLD } from "./components/AccessibilityPreferencesContext/AccessibilityConstants";
+export type { AccessibilityPreferencesContext } from "./components/AccessibilityPreferencesContext/AccessibilityPreferencesContext";
+export type { Anchor } from "./components/Anchor/web/Anchor";
 export type { Backdrop, BackdropStyles } from "./components/Backdrop/web/Backdrop";
 export type {
   BadgeShapes,
@@ -113,7 +113,18 @@ export type {
   ReferencePortalAwareContains,
   ReferencePositionLayer,
 } from "./components/Layers/web/ReferencePositionLayer";
+export type { MenuInteractiveCompositeControl } from "./components/Menu/web/controls/MenuInteractiveCompositeControl";
+export type { MenuSearchControl } from "./components/Menu/web/controls/MenuSearchControl";
+export type { MenuSliderControl } from "./components/Menu/web/controls/MenuSliderControl";
 export type { Menu, MenuSpinner } from "./components/Menu/web/Menu";
+export type {
+  MenuCheckboxItem,
+  MenuControlItem,
+  MenuGroup,
+  MenuItem,
+  MenuRadioItem,
+  MenuSeparator,
+} from "./components/Menu/web/MenuComponents";
 export type {
   DEFAULT_MODAL_CONTEXT,
   ModalTransitionState,
@@ -148,7 +159,6 @@ export type {
 } from "./components/RadioGroup/web/RadioGroup";
 export type { SearchBar } from "./components/SearchBar/web/SearchBar";
 export type { SearchIcon } from "./components/SearchBar/web/SearchIcon";
-export type { SearchBox } from "./components/SearchBox/web/SearchBox";
 export type { SegmentedControl } from "./components/SegmentedControl/web/SegmentedControl";
 export type { SelectLooks } from "./components/Select/web/SelectTypes";
 export type { Shakeable } from "./components/Shakeable/web/Shakeable";

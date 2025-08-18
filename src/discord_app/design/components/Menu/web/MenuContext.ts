@@ -17,4 +17,4 @@ export enum MenuItemType {
 /**
  * A React context that holds the menu's state.
  */
-export type MenuItemContext = React.Context<MenuProps["onSelect"] | undefined>;
+export type OnMenuSelectContext = React.Context<MenuProps["onSelect"] | undefined>;

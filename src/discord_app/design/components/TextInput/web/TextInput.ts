@@ -64,7 +64,7 @@ export interface TextInputProps
    * Whether the input can be cleared.
    * @default false
    */
-  clearable?: boolean;
+  clearable?: boolean | { show: boolean };
 
   /**
    * The helper text to display below the input.
@@ -96,6 +96,11 @@ export interface TextInputProps
    * Event handler called when the input loses focus.
    */
   onBlur?: (event: React.FocusEvent<HTMLInputElement>, name: string) => void;
+
+  /**
+   * Event handler called when the input is cleared.
+   */
+  onClear?: (event: React.MouseEventHandler<HTMLElement>) => void;
 }
 
 /**

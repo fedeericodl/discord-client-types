@@ -26,7 +26,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && tsc-alias",
     "cspell:check": "cspell lint \"src/**/*.ts\"",
     "eslint:check": "eslint \"src/**/*.ts\"",
     "eslint:fix": "eslint \"src/**/*.ts\" --fix",
@@ -41,7 +41,7 @@
     "@eslint/js": "^9.33.0",
     "@react-spring/web": "9.0.0-rc.2",
     "@types/chroma-js": "^2.4.5",
-    "@types/node": "^24.2.1",
+    "@types/node": "^24.3.0",
     "@types/react": "~19.0.14",
     "@types/react-color": "^3.0.13",
     "@types/react-datepicker": "~4.1.7",
@@ -52,7 +52,7 @@
     "discord-api-types": "^0.38.19",
     "dnd-core": "^16.0.1",
     "eslint": "^9.33.0",
-    "eslint-plugin-jsdoc": "^54.0.0",
+    "eslint-plugin-jsdoc": "^54.1.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-react": "^7.37.5",
     "focus-layers": "^0.6.1",
@@ -62,9 +62,10 @@
     "react-aria-components": "1.0.0-alpha.4",
     "react-focus-rings": "^1.2.1",
     "simple-markdown": "^0.7.3",
+    "tsc-alias": "^1.8.16",
     "type-fest": "^4.41.0",
     "typescript": "^5.9.2",
-    "typescript-eslint": "^8.39.1",
+    "typescript-eslint": "^8.40.0",
     "zustand": "^3.7.2"
   }
 }

@@ -28,6 +28,7 @@ type Sizes =
   | "SIZE_48"
   | "SIZE_56"
   | "SIZE_80"
+  | "SIZE_96"
   | "SIZE_120"
   | "SIZE_152"
   | "DEPRECATED_SIZE_30"
@@ -35,7 +36,7 @@ type Sizes =
   | "DEPRECATED_SIZE_100";
 
 export type AvatarSizes = {
-  [K in Sizes as Uppercase<K>]: K;
+  [K in Sizes]: K;
 };
 
 type BackdropColors = "black" | "white";

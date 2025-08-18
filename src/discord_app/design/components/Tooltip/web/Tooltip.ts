@@ -229,19 +229,7 @@ export interface TooltipState {
   shouldShowTooltip: boolean;
 }
 
-/**
- * A tooltip component, which displays additional information when hovering over or focusing on an element.
- * Uses a render prop pattern to provide event handlers that should be applied to the target element.
- * @example
- * ```tsx
- * <Tooltip text="Save your changes" position="bottom" color="green">
- *   {(props) => (
- *     <button {...props}>Save</button>
- *   )}
- * </Tooltip>
- * ```
- */
-export declare class Tooltip extends React.Component<TooltipProps, TooltipState> {
+export declare class TooltipComponent extends React.Component<TooltipProps, TooltipState> {
   /**
    * {@link Timeout} instance for managing delayed tooltip display.
    */
@@ -326,6 +314,22 @@ export declare class Tooltip extends React.Component<TooltipProps, TooltipState>
    */
   public toggleShow: (shouldShow: boolean) => void;
 }
+
+/**
+ * A tooltip component, which displays additional information when hovering over or focusing on an element.
+ * Uses a render prop pattern to provide event handlers that should be applied to the target element.
+ * @example
+ * ```tsx
+ * <Tooltip text="Save your changes" position="bottom" color="green">
+ *   {(props) => (
+ *     <button {...props}>Save</button>
+ *   )}
+ * </Tooltip>
+ * ```
+ */
+export type Tooltip = typeof TooltipComponent & {
+  Colors: TooltipColors;
+};
 
 export interface TooltipContainerProps extends TooltipProps {
   /**

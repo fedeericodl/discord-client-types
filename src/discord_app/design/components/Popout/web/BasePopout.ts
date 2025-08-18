@@ -154,6 +154,12 @@ export interface BasePopoutProps
    * Asynchronous function for preloading popout content.
    */
   preload?: () => Promise<void>;
+
+  /**
+   * Whether to close the popout when clicking outside of it.
+   * @default true
+   */
+  closeOnClickOutside?: boolean;
 }
 
 export interface BasePopoutState {
