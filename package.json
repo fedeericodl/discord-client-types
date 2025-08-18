@@ -1,6 +1,6 @@
 {
   "name": "discord-client-types",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "TypeScript type definitions for Discord client modding.",
   "keywords": [
     "typescript",
