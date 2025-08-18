@@ -88,6 +88,6 @@ export interface MenuControlItemProps {
 }
 
 /**
- * A menu component for embedding interactive controls within context menus.
+ * A menu component for embedding interactive controls within menus.
  */
 export type MenuControlItem = React.FC<MenuControlItemProps>;

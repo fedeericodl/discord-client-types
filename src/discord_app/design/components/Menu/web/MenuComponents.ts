@@ -10,10 +10,23 @@ import type { MenuRadioItemProps as OriginalMenuRadioItemProps } from "./items/M
 import type { MenuSubmenuItemProps as OriginalMenuSubmenuItemProps } from "./items/MenuSubmenuItem";
 import type { MenuSubmenuListItemProps as OriginalMenuSubmenuListItemProps } from "./items/MenuSubmenuListItem";
 
+/**
+ * Separator component for visually dividing menu items.
+ */
 export type MenuSeparator = React.FC;
 
 export type MenuGroupProps = React.PropsWithChildren<Omit<OriginalMenuGroupProps, "contents">>;
 
+/**
+ * Container component for grouping related menu items.
+ * @example
+ * ```tsx
+ * <MenuGroup label="Group Label">
+ *   <MenuItem id="item-1" label="Item 1" />
+ *   <MenuCheckboxItem id="checkbox-1" label="Checkbox 1" action={() => console.log("Pressed!")} />
+ * </MenuGroup>
+ * ```
+ */
 export type MenuGroup = React.FC<MenuGroupProps>;
 
 export interface MenuItemProps
@@ -66,6 +79,36 @@ export interface MenuSubmenuListItemProps
   onChildrenScroll: OriginalMenuSubmenuListItemProps["onScroll"];
 }
 
+/**
+ * The standard clickable item component for menus.
+ * @example
+ * ```tsx
+ * // Standard menu item
+ * <MenuItem id="copy" label="Copy" action={() => {...}} />
+ *
+ * // Custom item with custom content
+ * <MenuItem
+ *   id="user-profile"
+ *   render={({ color }) => (
+ *     <div className="user-profile-item">
+ *       <Text variant="text-md/semibold">{user.displayName}</Text>
+ *       <Text variant="text-sm/normal" color="text-muted">
+ *         {user.status}
+ *       </Text>
+ *     </div>
+ *   )}
+ * />
+ *
+ * // Submenu with nested options
+ * <MenuItem id="text-formatting" label="Text Formatting">
+ *   <MenuItem id="bold" label="Bold" hint="Ctrl+B" action={() => formatText("bold")} />
+ *   <MenuItem id="italic" label="Italic" hint="Ctrl+I" action={() => formatText("italic")} />
+ *   <MenuItem id="underline" label="Underline" hint="Ctrl+U" action={() => formatText("underline")} />
+ *   <MenuSeparator />
+ *   <MenuItem id="strikethrough" label="Strikethrough" action={() => formatText("strikethrough")} />
+ * </MenuItem>
+ * ```
+ */
 export type MenuItem = React.FC<
   | MenuItemProps
   | MenuCustomItemProps
@@ -81,6 +124,14 @@ export interface MenuCheckboxItemProps
   id: string;
 }
 
+/**
+ * A checkbox item component for use in menus.
+ * It allows users to select one or more options from a set of choices.
+ * @example
+ * ```tsx
+ * <MenuCheckboxItem id="checkbox-1" label="Checkbox 1" action={() => console.log("Pressed!")} />
+ * ```
+ */
 export type MenuCheckboxItem = React.FC<MenuCheckboxItemProps>;
 
 export interface MenuRadioItemProps
@@ -91,6 +142,14 @@ export interface MenuRadioItemProps
   id: string;
 }
 
+/**
+ * A radio item component for use in menus.
+ * It allows users to select one option from a set of choices.
+ * @example
+ * ```tsx
+ * <MenuRadioItem id="radio-1" label="Radio 1" action={() => {}} />
+ * ```
+ */
 export type MenuRadioItem = React.FC<MenuRadioItemProps>;
 
 export interface MenuControlItemProps
@@ -114,6 +173,15 @@ export interface MenuCompositeControlItemProps
   interactive?: boolean;
 }
 
+/**
+ * A menu component for embedding interactive controls within menus.
+ * @example
+ * ```tsx
+ * <MenuControlItem id="control-1">
+ *   <Text>Control Item Text</Text>
+ * </MenuControlItem>
+ * ```
+ */
 export type MenuControlItem = React.FC<
   | MenuControlItemProps
   | (React.PropsWithChildren<MenuCompositeControlItemProps> & { control?: never })
