@@ -22,6 +22,11 @@ export interface HelpMessageProps {
   messageType: HelpMessageTypes;
 
   /**
+   * Additional content to display on the right side of the help message.
+   */
+  action?: React.ReactNode;
+
+  /**
    * The class name applied to the help message.
    */
   className?: string;

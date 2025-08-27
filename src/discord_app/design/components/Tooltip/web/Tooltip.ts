@@ -83,6 +83,11 @@ export interface TooltipLayerProps {
    * The class name applied to the tooltip pointer.
    */
   tooltipPointerClassName?: string;
+
+  /**
+   * Unique key for position caching and comparison.
+   */
+  positionKeyStemOverride?: string;
 }
 
 /**

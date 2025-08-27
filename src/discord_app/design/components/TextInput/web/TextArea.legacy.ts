@@ -1,6 +1,6 @@
 import type * as React from "react";
 
-export interface TextAreaProps {
+export interface TextAreaLegacyProps {
   /**
    * Whether the textarea is disabled.
    * @default false
@@ -149,7 +149,7 @@ export interface TextAreaProps {
   defaultDirty?: boolean;
 }
 
-export interface TextAreaState {
+export interface TextAreaLegacyState {
   /**
    * Whether the textarea is "dirty" (i.e. textarea field has been changed).
    * @default false
@@ -164,7 +164,10 @@ export interface TextAreaState {
  * <TextArea value={value} placeholder="Enter some text" />
  * ```
  */
-export declare class TextArea extends React.Component<TextAreaProps, TextAreaState> {
+export declare class TextAreaLegacy extends React.Component<
+  TextAreaLegacyProps,
+  TextAreaLegacyState
+> {
   /**
    * Returns the aria described by for the textarea.
    */

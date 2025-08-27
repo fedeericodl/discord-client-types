@@ -1,7 +1,7 @@
 import type * as React from "react";
 import type { ScreamingSnakeCase } from "type-fest";
 
-import type { ButtonColors, ButtonLooks } from "@app/design/web";
+import type { ButtonColors, ButtonLooks } from "@app/design/void/web";
 
 type Modes = "default" | "success" | "error";
 

@@ -26,19 +26,10 @@ export type {
 } from "./components/BlockInteractions/BlockInteractions";
 export type { Breadcrumbs } from "./components/Breadcrumbs/web/Breadcrumbs";
 export type {
-  Button,
-  ButtonColors,
-  ButtonLink,
-  ButtonLooks,
-  ButtonSizes,
-  GetButtonStyle,
-} from "./components/Button/web/Button";
-export type {
   CircleIconButton,
   CircleIconButtonColors,
   CircleIconButtonSizes,
 } from "./components/Button/web/CircleIconButton";
-export type { ButtonGroup } from "./components/ButtonGroup/web/ButtonGroup";
 export type { CalendarPicker } from "./components/CalendarPicker/web/CalendarPicker";
 export type { Card, CardTypes } from "./components/Card/web/Card";
 export type { Checkbox, CheckboxAligns } from "./components/Checkbox/web/Checkbox";
@@ -113,6 +104,14 @@ export type {
   ReferencePortalAwareContains,
   ReferencePositionLayer,
 } from "./components/Layers/web/ReferencePositionLayer";
+export type { CreateListScroller } from "./components/List/web/createListScroller";
+export type { ListThin as List, ListAuto, ListNone, ListThin } from "./components/List/web/List";
+export type { CreateMasonryListScroller } from "./components/MasonryList/web/createMasonryListScroller";
+export type {
+  MasonryListThin as MasonryList,
+  MasonryListAuto,
+  MasonryListThin,
+} from "./components/MasonryList/web/MasonryList";
 export type { MenuInteractiveCompositeControl } from "./components/Menu/web/controls/MenuInteractiveCompositeControl";
 export type { MenuSearchControl } from "./components/Menu/web/controls/MenuSearchControl";
 export type { MenuSliderControl } from "./components/Menu/web/controls/MenuSliderControl";
@@ -157,10 +156,26 @@ export type {
   UseRadioGroup,
   UseRadioItem,
 } from "./components/RadioGroup/web/RadioGroup";
+export type {
+  AdvancedScrollerThin as AdvancedScroller,
+  AdvancedScrollerAuto,
+  AdvancedScrollerNone,
+  AdvancedScrollerThin,
+} from "./components/Scroller/web/AdvancedScroller";
+export type { PinToBottomScrollerAuto } from "./components/Scroller/web/PinToBottomScrollerAuto";
+export type {
+  ScrollerThin as Scroller,
+  ScrollerAuto,
+  ScrollerNone,
+  ScrollerThin,
+} from "./components/Scroller/web/Scroller";
+export type { IsListItemRow } from "./components/Scroller/web/utils";
+export type { CreateAdvancedScroller } from "./components/Scroller/web/utils/createAdvancedScroller";
+export type { CreateManagedReactiveScroller } from "./components/Scroller/web/utils/createManagedReactiveScroller";
+export type { CreateScroller } from "./components/Scroller/web/utils/createScroller";
 export type { SearchBar } from "./components/SearchBar/web/SearchBar";
 export type { SearchIcon } from "./components/SearchBar/web/SearchIcon";
 export type { SegmentedControl } from "./components/SegmentedControl/web/SegmentedControl";
-export type { SelectLooks } from "./components/Select/web/SelectTypes";
 export type { Shakeable } from "./components/Shakeable/web/Shakeable";
 export type { Shaker } from "./components/Shaker/web/Shaker";
 export type { Slider } from "./components/Slider/web/Slider";
@@ -177,7 +192,7 @@ export type {
   TableRow,
 } from "./components/Table/web/Table";
 export type { Text } from "./components/Text/web/Text";
-export type { TextArea } from "./components/TextInput/web/TextArea";
+export type { TextAreaLegacy } from "./components/TextInput/web/TextArea.legacy";
 export type { TextAreaAutosize } from "./components/TextInput/web/TextAreaAutosize";
 export type { TextInput } from "./components/TextInput/web/TextInput";
 export type { TextInputLegacy } from "./components/TextInput/web/TextInput.legacy";

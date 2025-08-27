@@ -1,6 +1,6 @@
 import type * as React from "react";
 
-export interface ButtonData {
+export interface Buttons {
   /**
    * The content of the button.
    */
@@ -15,18 +15,6 @@ export interface ButtonData {
    * Event handler called when the button is clicked.
    */
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
-
-  /**
-   * Whether the button is disabled.
-   */
-  disabled?: boolean;
-}
-
-export interface Buttons {
-  /**
-   * The button props.
-   */
-  data: ButtonData;
 
   /**
    * Whether the button is disabled.

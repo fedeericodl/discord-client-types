@@ -81,6 +81,21 @@ export interface ComboboxProps {
    * @default false
    */
   showScrollbar?: boolean;
+
+  /**
+   * The text displayed when no items match the search query.
+   */
+  emptyStateText?: string;
+
+  /**
+   * The header text displayed above the empty state message.
+   */
+  emptyStateHeader?: string;
+
+  /**
+   * Event handler called when the search query changes.
+   */
+  onQueryChange?: (query: string) => void;
 }
 
 /**

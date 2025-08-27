@@ -12,6 +12,9 @@ export interface ComboboxPopoutProps
     | "showScrollbar"
     | "className"
     | "multiSelect"
+    | "emptyStateText"
+    | "emptyStateHeader"
+    | "onQueryChange"
   > {
   /**
    * Event handler called when the popout is closed.

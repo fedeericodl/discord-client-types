@@ -10,7 +10,7 @@ export interface DateInputProps extends Pick<CalendarPickerProps, "value" | "min
 
   /**
    * The format of the date.
-   * @default "MMM D, YYYY"
+   * @default "ll"
    */
   dateFormat?: string;
 
