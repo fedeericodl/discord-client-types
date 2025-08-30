@@ -4,7 +4,7 @@ import type { FormContextValue } from "./FormContext";
 import type { FormSection } from "./FormSection";
 import type { FormTitleProps } from "./FormTitle";
 
-export type FormItemProps = FormTitleProps &
+export type FormItemProps = Omit<FormTitleProps, "errorId"> &
   Partial<Pick<FormContextValue, "titleId">> & {
     /**
      * The class name applied to the title.
@@ -30,7 +30,8 @@ export type FormItemProps = FormTitleProps &
  * ```
  */
 export type FormItem = React.ForwardRefExoticComponent<
-  React.PropsWithoutRef<React.PropsWithChildren<FormItemProps>> & React.RefAttributes<unknown>
+  React.PropsWithoutRef<React.PropsWithChildren<FormItemProps>> &
+    React.RefAttributes<HTMLDivElement>
 > & {
-  render: React.ForwardRefRenderFunction<unknown, React.PropsWithChildren<FormItemProps>>;
+  render: React.ForwardRefRenderFunction<HTMLDivElement, React.PropsWithChildren<FormItemProps>>;
 };

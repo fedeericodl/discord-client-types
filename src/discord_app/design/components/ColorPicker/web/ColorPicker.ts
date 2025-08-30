@@ -53,6 +53,11 @@ export interface ColorPickerCustomButtonProps {
    * The accessibility label for the button.
    */
   "aria-label"?: string;
+
+  /**
+   * Suggested color presets in integer format.
+   */
+  presets?: number[];
 }
 
 /**
@@ -60,6 +65,18 @@ export interface ColorPickerCustomButtonProps {
  * Used for selecting custom colors.
  */
 export declare class ColorPickerCustomButton extends React.PureComponent<ColorPickerCustomButtonProps> {}
+
+export interface CustomColorPickerWrapperProps {
+  /**
+   * The accessibility label for the color picker wrapper.
+   */
+  "aria-label"?: string;
+
+  /**
+   * The class name applied to the color picker wrapper.
+   */
+  className?: string;
+}
 
 export interface CustomColorPickerProps {
   /**
@@ -106,7 +123,9 @@ export interface CustomColorPickerProps {
   /**
    * The component type to use as the wrapper.
    */
-  wrapperComponentType?: React.ComponentType;
+  wrapperComponentType?: React.ComponentType<
+    React.PropsWithChildren<CustomColorPickerWrapperProps>
+  >;
 
   /**
    * The class name applied to the color picker.

@@ -8,12 +8,7 @@ export type ShineSizes = {
   [K in Sizes as Uppercase<K>]: K;
 };
 
-export interface ShineProps extends React.ComponentPropsWithoutRef<"div"> {
-  /**
-   * The class name applied to the shine.
-   */
-  className?: string;
-
+export interface ShineProps extends Omit<React.ComponentPropsWithoutRef<"div">, "children"> {
   /**
    * The size of the shine.
    * @default ShinyButton.ShineSizes.DEFAULT

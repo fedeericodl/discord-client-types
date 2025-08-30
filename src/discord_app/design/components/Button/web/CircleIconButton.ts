@@ -69,7 +69,7 @@ export interface CircleIconButtonProps {
  * ```
  */
 export type CircleIconButton = React.ForwardRefExoticComponent<
-  React.PropsWithoutRef<CircleIconButtonProps> & React.RefAttributes<unknown>
+  React.PropsWithoutRef<CircleIconButtonProps> & React.RefAttributes<HTMLDivElement>
 > & {
-  render: React.ForwardRefRenderFunction<unknown, CircleIconButtonProps>;
+  render: React.ForwardRefRenderFunction<HTMLDivElement, CircleIconButtonProps>;
 };

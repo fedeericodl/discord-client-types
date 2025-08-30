@@ -1,7 +1,12 @@
 import type * as React from "react";
 
 import type { Stack } from "../../../Stack/web/Stack";
-import type { ScrollerComponentBaseProps, ScrollerOrientationTypes } from "../utils";
+import type {
+  AnimatedScrollHelperState,
+  ScrollerComponentBaseProps,
+  ScrollerOrientationTypes,
+  ScrollerState,
+} from "../utils";
 
 export interface AdvancedScrollerProps extends Omit<ScrollerComponentBaseProps, "paddingFix"> {
   /**
@@ -32,6 +37,18 @@ export interface AdvancedScrollerProps extends Omit<ScrollerComponentBaseProps, 
   experimental_useStack?: boolean;
 }
 
+export interface AdvancedScrollerRef extends AnimatedScrollHelperState {
+  /**
+   * Returns the DOM node for the scroller container.
+   */
+  getScrollerNode: () => HTMLDivElement | null;
+
+  /**
+   * Returns the current scroller state.
+   */
+  getScrollerState: () => ScrollerState;
+}
+
 /**
  * A factory function for creating flexible `AdvancedScroller` components with enhanced capabilities.
  * Creates scrollable containers with queryable scroll state and programmable scroll positioning.
@@ -47,7 +64,7 @@ export type CreateAdvancedScroller = (
   fadeClassName?: string,
   customThemeClassName?: string,
 ) => React.ForwardRefExoticComponent<
-  React.PropsWithoutRef<AdvancedScrollerProps> & React.RefAttributes<unknown>
+  React.PropsWithoutRef<AdvancedScrollerProps> & React.RefAttributes<AdvancedScrollerRef>
 > & {
-  render: React.ForwardRefRenderFunction<unknown, AdvancedScrollerProps>;
+  render: React.ForwardRefRenderFunction<AdvancedScrollerRef, AdvancedScrollerProps>;
 };

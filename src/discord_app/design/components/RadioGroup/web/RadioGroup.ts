@@ -35,7 +35,7 @@ export interface RadioIndicatorProps {
   /**
    * The icon to display in the radio indicator.
    */
-  icon?: React.ElementType<IconProps>;
+  icon?: React.ComponentType<IconProps>;
 
   /**
    * Whether the radio indicator is disabled.

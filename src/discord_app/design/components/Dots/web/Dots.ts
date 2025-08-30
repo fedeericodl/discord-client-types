@@ -79,8 +79,8 @@ export interface DotsProps {
  */
 export type Dots = React.MemoExoticComponent<
   React.ForwardRefExoticComponent<
-    React.PropsWithoutRef<DotsProps> & React.RefAttributes<unknown>
+    React.PropsWithoutRef<DotsProps> & React.RefAttributes<SVGSVGElement>
   > & {
-    render: React.ForwardRefRenderFunction<unknown, DotsProps>;
+    render: React.ForwardRefRenderFunction<SVGSVGElement, DotsProps>;
   }
 >;

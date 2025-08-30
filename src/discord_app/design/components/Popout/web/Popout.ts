@@ -27,7 +27,7 @@ export interface PopoutProps
         | "preload"
         | "disablePointerEvents"
         | "ignoreModalClicks"
-        | "closeOnScroll"
+        | "scrollBehavior"
         | "useMouseEnter"
         | "renderPopout"
         | "layerContext"

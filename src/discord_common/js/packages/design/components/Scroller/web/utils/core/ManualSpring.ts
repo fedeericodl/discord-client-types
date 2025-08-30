@@ -186,6 +186,26 @@ export declare class ManualSpring {
   public callbacks: ManualSpringRestCallback[];
 
   /**
+   * Merges a new target into the current animation, adjusting the current velocity.
+   * @param props The new target and callback.
+   * @returns The `ManualSpring` instance when the animation was merged; otherwise `undefined`.
+   */
+  public mergeTo: (props: Pick<ManualSpringToProps, "to" | "callback">) => this | undefined;
+
+  /**
+   * Aborts the current animation without calling rest callbacks.
+   * This leaves the spring in a non-animating state.
+   */
+  public abort: () => void;
+
+  /**
+   * Advances the physics simulation using a fixed time step loop (FRAME = 1/240)
+   * and calls the consumer callback with the interpolated value each frame.
+   * @param timestamp `DOMHighResTimeStamp` from `requestAnimationFrame`.
+   */
+  public update: (timestamp: number) => void;
+
+  /**
    * Start an animation towards `to`. If `animate` is false the spring will
    * immediately jump to the target and invoke the callback (if provided).
    * @param props The properties for the animation.
@@ -217,24 +237,4 @@ export declare class ManualSpring {
    * @param value Value to snap to and report to the callback.
    */
   public stop: (value: number) => void;
-
-  /**
-   * Merges a new target into the current animation, adjusting the current velocity.
-   * @param props The new target and callback.
-   * @returns The `ManualSpring` instance when the animation was merged; otherwise `undefined`.
-   */
-  public mergeTo: (props: Pick<ManualSpringToProps, "to" | "callback">) => this | undefined;
-
-  /**
-   * Aborts the current animation without calling rest callbacks.
-   * This leaves the spring in a non-animating state.
-   */
-  public abort: () => void;
-
-  /**
-   * Advances the physics simulation using a fixed time step loop (FRAME = 1/240)
-   * and calls the consumer callback with the interpolated value each frame.
-   * @param timestamp `DOMHighResTimeStamp` from `requestAnimationFrame`.
-   */
-  public update: (timestamp: number) => void;
 }

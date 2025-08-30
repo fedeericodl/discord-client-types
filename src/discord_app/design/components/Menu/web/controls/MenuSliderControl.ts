@@ -1,6 +1,7 @@
 import type * as React from "react";
 
 import type { MenuItemType } from "../MenuContext";
+import type { MenuControlRef } from "../items/MenuControlItem";
 
 export interface MenuSliderControlProps {
   /**
@@ -51,7 +52,7 @@ export interface MenuSliderControlProps {
  * ```
  */
 export type MenuSliderControl = React.ForwardRefExoticComponent<
-  React.PropsWithoutRef<MenuSliderControlProps> & React.RefAttributes<unknown>
+  React.PropsWithoutRef<MenuSliderControlProps> & React.RefAttributes<MenuControlRef>
 > & {
-  render: React.ForwardRefRenderFunction<unknown, MenuSliderControlProps>;
+  render: React.ForwardRefRenderFunction<MenuControlRef, MenuSliderControlProps>;
 };

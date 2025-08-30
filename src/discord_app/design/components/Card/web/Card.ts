@@ -36,8 +36,8 @@ export interface CardProps extends React.ComponentPropsWithoutRef<"div"> {
  * ```
  */
 export type Card = React.ForwardRefExoticComponent<
-  React.PropsWithoutRef<React.PropsWithChildren<CardProps>> & React.RefAttributes<unknown>
+  React.PropsWithoutRef<React.PropsWithChildren<CardProps>> & React.RefAttributes<HTMLDivElement>
 > & {
-  render: React.ForwardRefRenderFunction<unknown, React.PropsWithChildren<CardProps>>;
+  render: React.ForwardRefRenderFunction<HTMLDivElement, React.PropsWithChildren<CardProps>>;
   Types: CardTypes;
 };

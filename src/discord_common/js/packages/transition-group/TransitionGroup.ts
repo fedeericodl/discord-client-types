@@ -2,44 +2,43 @@ import type * as React from "react";
 
 import type { ChildMapping } from "./TransitionChildMapping";
 
-export type TransitionGroupProps<T extends keyof React.JSX.IntrinsicElements = "span"> =
-  React.ComponentPropsWithoutRef<T> & {
-    /**
-     * React elements to render within the transition group.
-     */
-    children?: React.ReactElement | React.ReactElement[];
+export interface TransitionGroupProps extends React.AllHTMLAttributes<HTMLElement> {
+  /**
+   * React elements to render within the transition group.
+   */
+  children?: React.ReactElement | React.ReactElement[];
 
-    /**
-     * Whether to animate children when they first appear (on mount).
-     * @default true
-     */
-    transitionAppear?: boolean;
+  /**
+   * Whether to animate children when they first appear (on mount).
+   * @default true
+   */
+  transitionAppear?: boolean;
 
-    /**
-     * Whether to animate children when they are removed.
-     * @default true
-     */
-    transitionLeave?: boolean;
+  /**
+   * Whether to animate children when they are removed.
+   * @default true
+   */
+  transitionLeave?: boolean;
 
-    /**
-     * Whether to animate children when they are added after initial mount.
-     * @default true
-     */
-    transitionEnter?: boolean;
+  /**
+   * Whether to animate children when they are added after initial mount.
+   * @default true
+   */
+  transitionEnter?: boolean;
 
-    /**
-     * Function to modify children before rendering.
-     * Use this to inject additional props into child components.
-     * @default null
-     */
-    childFactory?: (child: React.ReactElement) => React.ReactElement;
+  /**
+   * Function to modify children before rendering.
+   * Use this to inject additional props into child components.
+   * @default null
+   */
+  childFactory?: (child: React.ReactElement) => React.ReactElement;
 
-    /**
-     * The HTML element type to render as the container.
-     * @default "span"
-     */
-    component?: T;
-  };
+  /**
+   * The HTML element type to render as the container.
+   * @default "span"
+   */
+  component?: keyof React.JSX.IntrinsicElements;
+}
 
 export interface TransitionGroupState {
   /**
@@ -64,9 +63,13 @@ export type TransitionDidLifecycleKey =
   | "componentDidEnter"
   | "componentDidLeave";
 
-export declare class TransitionGroupComponent<
-  T extends keyof React.JSX.IntrinsicElements = "span",
-> extends React.Component<TransitionGroupProps<T>, TransitionGroupState> {
+/**
+ * A component for managing transitions of a group of elements.
+ */
+export declare class TransitionGroup extends React.Component<
+  TransitionGroupProps,
+  TransitionGroupState
+> {
   /**
    * Set of keys for children that are currently transitioning.
    * Used to track which children are in the middle of an animation.
@@ -160,10 +163,3 @@ export declare class TransitionGroupComponent<
    */
   public performLeave: (key: string) => void;
 }
-
-/**
- * A component for managing transitions of a group of elements.
- * @template T The type of HTML element to render as the container.
- */
-export type TransitionGroup<T extends keyof React.JSX.IntrinsicElements = "span"> =
-  typeof TransitionGroupComponent<T>;

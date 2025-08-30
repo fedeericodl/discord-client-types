@@ -19,11 +19,6 @@ interface IconProps {
 
 export interface FormErrorBlockProps {
   /**
-   * The role attribute for the element containing the text.
-   */
-  role?: string;
-
-  /**
    * The class name applied to the error block.
    */
   className?: string;
@@ -44,7 +39,7 @@ export interface FormErrorBlockProps {
    * The icon to be displayed in the error block.
    * @default CircleErrorIcon
    */
-  icon?: React.ElementType<IconProps>;
+  icon?: React.ComponentType<IconProps>;
 
   /**
    * The class name applied to the icon.
@@ -60,7 +55,11 @@ export interface FormErrorBlockProps {
  * ```
  */
 export type FormErrorBlock = React.ForwardRefExoticComponent<
-  React.PropsWithoutRef<React.PropsWithChildren<FormErrorBlockProps>> & React.RefAttributes<unknown>
+  React.PropsWithoutRef<React.PropsWithChildren<FormErrorBlockProps>> &
+    React.RefAttributes<HTMLDivElement>
 > & {
-  render: React.ForwardRefRenderFunction<unknown, React.PropsWithChildren<FormErrorBlockProps>>;
+  render: React.ForwardRefRenderFunction<
+    HTMLDivElement,
+    React.PropsWithChildren<FormErrorBlockProps>
+  >;
 };

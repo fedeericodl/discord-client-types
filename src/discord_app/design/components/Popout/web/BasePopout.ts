@@ -8,6 +8,7 @@ import type {
   ReferencePositionLayer,
   ReferencePositionLayerProps,
 } from "../../Layers/web/ReferencePositionLayer";
+import type { LoadingPopout } from "./LoadingPopout";
 
 export type POPOUT_PREVENT_CLOSE = symbol;
 
@@ -99,9 +100,9 @@ export interface BasePopoutProps
   ignoreModalClicks?: boolean;
 
   /**
-   * Whether to automatically close the popout when page scrolling occurs.
+   * Scroll behavior for the popout when the page scrolls.
    */
-  closeOnScroll?: boolean;
+  scrollBehavior?: "close" | "sticky";
 
   /**
    * Reference to the DOM element that triggers the popout.
@@ -132,13 +133,17 @@ export interface BasePopoutProps
   /**
    * Component displayed while asynchronous content loads.
    * @default LoadingPopout
+   * @see {@link LoadingPopout}
    */
   loadingComponent?: React.ComponentType;
 
   /**
    * Event handler called when popout requests to close.
    */
-  onRequestClose?: React.MouseEventHandler<HTMLElement>;
+  onRequestClose?: (
+    event: React.MouseEvent<HTMLElement> | React.KeyboardEvent<HTMLElement> | undefined,
+    context?: string,
+  ) => void;
 
   /**
    * Event handler called for shift+click interactions.
@@ -339,6 +344,17 @@ export declare class BasePopout extends React.Component<BasePopoutProps, BasePop
    * Provides immediate popout closure on any scroll activity.
    */
   public handleScroll: () => void;
+
+  /**
+   * Handles escape key presses to close the popout.
+   * @param event Keyboard event from the document.
+   */
+  public handleEscapeClose: (event?: KeyboardEvent) => void;
+
+  /**
+   * Handles scroll events to maintain popout position when sticky-scroll is enabled.
+   */
+  public handleStickyScroll: () => void;
 
   /**
    * Determines popout visibility based on props and state priority.

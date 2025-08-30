@@ -12,28 +12,6 @@ import type {
 } from "@discordapp/design/components/Scroller/web/utils";
 import type * as React from "react";
 
-export interface MasonryListScrollerRef extends AnimatedScrollHelperState {
-  /**
-   * Returns the DOM node for the scroller container.
-   */
-  getScrollerNode: () => HTMLDivElement | null;
-
-  /**
-   * Returns the 2D grid representation (array per column) of item keys that were assigned to each column.
-   */
-  getItemGrid: () => MasonryListGrid;
-
-  /**
-   * Returns the map of item keys to their computed position and size.
-   */
-  getCoordsMap: () => MasonryListCoordsMap;
-
-  /**
-   * Returns the current scroller state.
-   */
-  getScrollerState: () => ScrollerState;
-}
-
 export type RenderSection = (
   section: number,
   coords: MasonryListUnitCoords,
@@ -136,6 +114,28 @@ export interface MasonryListScrollerProps extends ScrollerComponentBaseProps {
    * Function called when item visibility changes.
    */
   onItemVisibilityChange?: (section: number, index: number, added: boolean) => void;
+}
+
+export interface MasonryListScrollerRef extends AnimatedScrollHelperState {
+  /**
+   * Returns the DOM node for the scroller container.
+   */
+  getScrollerNode: () => HTMLDivElement | null;
+
+  /**
+   * Returns the 2D grid representation (array per column) of item keys that were assigned to each column.
+   */
+  getItemGrid: () => MasonryListGrid;
+
+  /**
+   * Returns the map of item keys to their computed position and size.
+   */
+  getCoordsMap: () => MasonryListCoordsMap;
+
+  /**
+   * Returns the current scroller state.
+   */
+  getScrollerState: () => ScrollerState;
 }
 
 /**

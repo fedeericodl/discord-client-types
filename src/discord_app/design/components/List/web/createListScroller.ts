@@ -1,13 +1,16 @@
 import type {
+  AnimatedListScrollHelperState,
   GetAnchorId,
   ListFooterHeight,
   ListHeaderHeight,
+  ListItem,
   ListItemFooter,
   ListItemRow,
   ListItemSection,
   ListRowHeight,
   ListSectionHeight,
   ScrollerComponentBaseProps,
+  ScrollerState,
 } from "@discordapp/design/components/Scroller/web/utils";
 import type * as React from "react";
 
@@ -165,6 +168,28 @@ export interface ListScrollerProps
   innerTag?: keyof React.JSX.IntrinsicElements;
 }
 
+export interface ListScrollerRef extends AnimatedListScrollHelperState {
+  /**
+   * Returns the DOM node for the scroller container.
+   */
+  getScrollerNode: () => HTMLDivElement | null;
+
+  /**
+   * Returns the current scroller state.
+   */
+  getScrollerState: () => ScrollerState;
+
+  /**
+   * Returns the full list of items.
+   */
+  getItems: () => ListItem[];
+
+  /**
+   * Returns the section and row for a given index.
+   */
+  getSectionRowFromIndex: (index: number) => [number, number];
+}
+
 /**
  * A factory function that creates a highly optimized virtualized `ListScroller` component.
  * Designed to handle tremendous amounts of data with minimal performance impact.
@@ -182,7 +207,7 @@ export type CreateListScroller = (
   customThemeClassName: string | undefined,
   ResizeObserverClass: typeof ResizeObserver,
 ) => React.ForwardRefExoticComponent<
-  React.PropsWithoutRef<ListScrollerProps> & React.RefAttributes<unknown>
+  React.PropsWithoutRef<ListScrollerProps> & React.RefAttributes<ListScrollerRef>
 > & {
-  render: React.ForwardRefRenderFunction<unknown, ListScrollerProps>;
+  render: React.ForwardRefRenderFunction<ListScrollerRef, ListScrollerProps>;
 };

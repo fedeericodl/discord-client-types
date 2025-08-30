@@ -28,7 +28,7 @@ export type CreateScroller = (
   scrollbarClassName?: string,
   fadeClassName?: string,
 ) => React.ForwardRefExoticComponent<
-  React.PropsWithoutRef<ScrollerProps> & React.RefAttributes<unknown>
+  React.PropsWithoutRef<ScrollerProps> & React.RefAttributes<HTMLDivElement>
 > & {
-  render: React.ForwardRefRenderFunction<unknown, ScrollerProps>;
+  render: React.ForwardRefRenderFunction<HTMLDivElement, ScrollerProps>;
 };

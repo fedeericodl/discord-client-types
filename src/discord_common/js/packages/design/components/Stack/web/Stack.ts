@@ -1,49 +1,48 @@
 import type * as React from "react";
 
-export type StackProps<T extends keyof React.JSX.IntrinsicElements = "div"> =
-  React.ComponentPropsWithoutRef<T> & {
-    /**
-     * The HTML tag to use for the stack.
-     * @default "div"
-     */
-    as?: T;
+export interface StackProps extends Omit<React.AllHTMLAttributes<HTMLElement>, "wrap"> {
+  /**
+   * The HTML tag to use for the stack.
+   * @default "div"
+   */
+  as?: keyof React.JSX.IntrinsicElements;
 
-    /**
-     * Spacing between stack items.
-     * @default 8
-     */
-    gap?: number;
+  /**
+   * Spacing between stack items.
+   * @default 8
+   */
+  gap?: number;
 
-    /**
-     * Flex direction of the stack.
-     * @default "vertical"
-     */
-    direction?: "vertical" | "vertical-reverse" | "horizontal" | "horizontal-reverse";
+  /**
+   * Flex direction of the stack.
+   * @default "vertical"
+   */
+  direction?: "vertical" | "vertical-reverse" | "horizontal" | "horizontal-reverse";
 
-    /**
-     * Cross-axis alignment of children.
-     * @default "stretch"
-     */
-    align?: "start" | "end" | "center" | "stretch" | "baseline";
+  /**
+   * Cross-axis alignment of children.
+   * @default "stretch"
+   */
+  align?: "start" | "end" | "center" | "stretch" | "baseline";
 
-    /**
-     * Whether children should wrap onto multiple lines when there’s not enough space.
-     * @default false
-     */
-    wrap?: boolean;
+  /**
+   * Whether children should wrap onto multiple lines when there’s not enough space.
+   * @default false
+   */
+  wrap?: boolean;
 
-    /**
-     * Padding applied to the stack container.
-     * @default 0
-     */
-    padding?: number | string | Record<string, number | string>;
+  /**
+   * Padding applied to the stack container.
+   * @default 0
+   */
+  padding?: number | string | Record<string, number | string>;
 
-    /**
-     * Whether the stack should take up the full width of its container.
-     * @default true
-     */
-    fullWidth?: boolean;
-  };
+  /**
+   * Whether the stack should take up the full width of its container.
+   * @default true
+   */
+  fullWidth?: boolean;
+}
 
 /**
  * A flexible layout component that arranges its children in a stack
@@ -57,9 +56,8 @@ export type StackProps<T extends keyof React.JSX.IntrinsicElements = "div"> =
  * </Stack>
  * ```
  */
-export type Stack<T extends keyof React.JSX.IntrinsicElements = "div"> =
-  React.ForwardRefExoticComponent<
-    React.PropsWithoutRef<React.PropsWithChildren<StackProps<T>>> & React.RefAttributes<unknown>
-  > & {
-    render: React.ForwardRefRenderFunction<unknown, React.PropsWithChildren<StackProps<T>>>;
-  };
+export type Stack = React.ForwardRefExoticComponent<
+  React.PropsWithoutRef<React.PropsWithChildren<StackProps>> & React.RefAttributes<HTMLElement>
+> & {
+  render: React.ForwardRefRenderFunction<HTMLElement, React.PropsWithChildren<StackProps>>;
+};

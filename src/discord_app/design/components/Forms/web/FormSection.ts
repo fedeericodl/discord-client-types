@@ -21,11 +21,6 @@ export type FormSectionProps = Pick<FormTitleProps, "disabled" | "tag"> &
      * The title of the section.
      */
     title?: React.ReactNode;
-
-    /**
-     * The icon to be displayed next to the title.
-     */
-    icon?: React.ReactNode;
   };
 
 /**
@@ -45,7 +40,8 @@ export type FormSectionProps = Pick<FormTitleProps, "disabled" | "tag"> &
  * ```
  */
 export type FormSection = React.ForwardRefExoticComponent<
-  React.PropsWithoutRef<React.PropsWithChildren<FormSectionProps>> & React.RefAttributes<unknown>
+  React.PropsWithoutRef<React.PropsWithChildren<FormSectionProps>> &
+    React.RefAttributes<HTMLDivElement>
 > & {
-  render: React.ForwardRefRenderFunction<unknown, React.PropsWithChildren<FormSectionProps>>;
+  render: React.ForwardRefRenderFunction<HTMLDivElement, React.PropsWithChildren<FormSectionProps>>;
 };

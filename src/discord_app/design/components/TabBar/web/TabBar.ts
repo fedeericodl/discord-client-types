@@ -29,9 +29,13 @@ export interface TabBarHeaderProps {
  * A header for organizing tabs into sections.
  */
 export type TabBarHeader = React.ForwardRefExoticComponent<
-  React.PropsWithoutRef<React.PropsWithChildren<TabBarHeaderProps>> & React.RefAttributes<unknown>
+  React.PropsWithoutRef<React.PropsWithChildren<TabBarHeaderProps>> &
+    React.RefAttributes<HTMLDivElement>
 > & {
-  render: React.ForwardRefRenderFunction<unknown, React.PropsWithChildren<TabBarHeaderProps>>;
+  render: React.ForwardRefRenderFunction<
+    HTMLDivElement,
+    React.PropsWithChildren<TabBarHeaderProps>
+  >;
 };
 
 export interface TabBarSeparatorProps {
@@ -52,9 +56,10 @@ export type TabBarPanelProps = React.ComponentPropsWithoutRef<"div">;
  * A panel component that contains the content for a tab.
  */
 export type TabBarPanel = React.ForwardRefExoticComponent<
-  React.PropsWithoutRef<React.PropsWithChildren<TabBarPanelProps>> & React.RefAttributes<unknown>
+  React.PropsWithoutRef<React.PropsWithChildren<TabBarPanelProps>> &
+    React.RefAttributes<HTMLDivElement>
 > & {
-  render: React.ForwardRefRenderFunction<unknown, React.PropsWithChildren<TabBarPanelProps>>;
+  render: React.ForwardRefRenderFunction<HTMLDivElement, React.PropsWithChildren<TabBarPanelProps>>;
 };
 
 export type TabBarLooks = "brand" | "grey";

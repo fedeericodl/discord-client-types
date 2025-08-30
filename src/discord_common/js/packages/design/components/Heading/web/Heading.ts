@@ -1,21 +1,14 @@
 import type * as React from "react";
 
-type HeadingLevels = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+import type { TextProps } from "../../Text/web/Text";
 
-export type HeadingProps<T extends HeadingLevels> = React.ComponentPropsWithoutRef<T> & {
-  /**
-   * The variant of the heading element.
-   */
-  variant?: T;
-};
-
-// TODO: Try to find a way to make the generic working.
+export type HeadingProps = Omit<TextProps, "tag">;
 
 /**
  * A heading component that renders a heading element with the specified level.
  */
-export type Heading<T extends HeadingLevels> = React.ForwardRefExoticComponent<
-  React.PropsWithoutRef<HeadingProps<T>> & React.RefAttributes<unknown>
+export type Heading = React.ForwardRefExoticComponent<
+  React.PropsWithoutRef<HeadingProps> & React.RefAttributes<HTMLHeadingElement>
 > & {
-  render: React.ForwardRefRenderFunction<unknown, HeadingProps<T>>;
+  render: React.ForwardRefRenderFunction<HTMLHeadingElement, HeadingProps>;
 };

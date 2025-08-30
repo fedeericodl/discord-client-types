@@ -19,7 +19,7 @@ export type GetBadgeWidthForValue = (value: number) => number;
  */
 export type GetBadgeCountString = (value: number) => string;
 
-export interface NumberBadgeProps extends React.ComponentPropsWithoutRef<"div"> {
+export interface NumberBadgeProps extends Omit<React.ComponentPropsWithoutRef<"div">, "children"> {
   /**
    * Numerical value to display in the badge.
    */
@@ -55,7 +55,7 @@ export interface NumberBadgeProps extends React.ComponentPropsWithoutRef<"div"> 
  */
 export type NumberBadge = React.FC<NumberBadgeProps>;
 
-export interface TextBadgeProps extends React.ComponentPropsWithoutRef<"div"> {
+export interface TextBadgeProps extends Omit<React.ComponentPropsWithoutRef<"div">, "children"> {
   /**
    * Text content to display.
    */
@@ -109,7 +109,7 @@ export interface IconBadgeProps {
   /**
    * The icon to display in the badge.
    */
-  icon: React.ElementType<IconProps>;
+  icon: React.ComponentType<IconProps>;
 
   /**
    * The class name applied to the badge.

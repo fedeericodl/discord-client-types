@@ -1,11 +1,11 @@
 import type * as React from "react";
 
-export interface HiddenVisuallyProps<T extends keyof React.JSX.IntrinsicElements = "span"> {
+export interface HiddenVisuallyProps {
   /**
    * The HTML tag to use for the hidden element.
    * @default "span"
    */
-  tag?: T;
+  tag?: keyof React.JSX.IntrinsicElements;
 
   /**
    * Whether the hidden element should be shown when focused.
@@ -20,8 +20,5 @@ export interface HiddenVisuallyProps<T extends keyof React.JSX.IntrinsicElements
 
 /**
  * Hides content visually, but keeps it accessible to screen readers.
- * @template T The HTML tag to use for the hidden element.
  */
-export type HiddenVisually = <T extends keyof React.JSX.IntrinsicElements = "span">(
-  props: React.PropsWithChildren<HiddenVisuallyProps<T>>,
-) => React.ReactNode;
+export type HiddenVisually = React.FC<React.PropsWithChildren<HiddenVisuallyProps>>;

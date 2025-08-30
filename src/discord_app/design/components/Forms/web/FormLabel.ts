@@ -1,8 +1,7 @@
+import type { TextProps } from "@discordapp/design/components/Text/web/Text";
 import type * as React from "react";
 
-import type { TextProps } from "@discordapp/design/components/Text/web/Text";
-
-export type FormLabelProps<T extends keyof React.JSX.IntrinsicElements = "div"> = TextProps<T> & {
+export interface FormLabelProps extends TextProps {
   /**
    * Whether the label is displayed as disabled.
    */
@@ -13,16 +12,13 @@ export type FormLabelProps<T extends keyof React.JSX.IntrinsicElements = "div"> 
    * @default false
    */
   required?: boolean;
-};
+}
 
 /**
  * A text label for a form.
- * @template T The HTML tag to use for the text.
  * @example
  * ```tsx
  * <FormLabel>Title of the form</FormLabel>
  * ```
  */
-export type FormLabel = <T extends keyof React.JSX.IntrinsicElements = "div">(
-  props: React.PropsWithChildren<FormLabelProps<T>>,
-) => React.ReactNode;
+export type FormLabel = React.FC<React.PropsWithChildren<FormLabelProps>>;

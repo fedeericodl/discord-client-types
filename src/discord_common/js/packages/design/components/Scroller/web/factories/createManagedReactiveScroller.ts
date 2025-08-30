@@ -1,6 +1,10 @@
 import type * as React from "react";
 
-import type { ScrollerComponentBaseProps } from "../utils";
+import type {
+  AnimatedScrollHelperState,
+  ScrollerComponentBaseProps,
+  ScrollerState,
+} from "../utils";
 
 export interface ManagedReactiveScrollerProps
   extends Omit<ScrollerComponentBaseProps, "paddingFix"> {
@@ -21,6 +25,23 @@ export interface ManagedReactiveScrollerProps
   customTheme?: boolean;
 }
 
+export interface ManagedReactiveScrollerRef extends AnimatedScrollHelperState {
+  /**
+   * Returns the DOM node for the scroller container.
+   */
+  getScrollerNode: () => HTMLDivElement | null;
+
+  /**
+   * Returns whether the scroller is currently scrolling.
+   */
+  isScrolling: () => boolean;
+
+  /**
+   * Returns the current scroller state.
+   */
+  getScrollerState: () => ScrollerState;
+}
+
 /**
  * A factory function for creating advanced `ManagedReactiveScroller` components with reactive resize handling.
  * Creates scrollable containers that automatically respond to content and container size changes using `ResizeObserver`.
@@ -33,7 +54,8 @@ export type CreateManagedReactiveScroller = (
   scrollbarClassName: string | undefined,
   ResizeObserverClass: typeof ResizeObserver,
 ) => React.ForwardRefExoticComponent<
-  React.PropsWithoutRef<ManagedReactiveScrollerProps> & React.RefAttributes<unknown>
+  React.PropsWithoutRef<ManagedReactiveScrollerProps> &
+    React.RefAttributes<ManagedReactiveScrollerRef>
 > & {
-  render: React.ForwardRefRenderFunction<unknown, ManagedReactiveScrollerProps>;
+  render: React.ForwardRefRenderFunction<ManagedReactiveScrollerRef, ManagedReactiveScrollerProps>;
 };

@@ -67,7 +67,7 @@ export interface DialogProps extends React.ComponentPropsWithoutRef<"div"> {
  * ```
  */
 export type Dialog = React.ForwardRefExoticComponent<
-  React.PropsWithoutRef<React.PropsWithChildren<DialogProps>> & React.RefAttributes<unknown>
+  React.PropsWithoutRef<React.PropsWithChildren<DialogProps>> & React.RefAttributes<HTMLDivElement>
 > & {
-  render: React.ForwardRefRenderFunction<unknown, React.PropsWithChildren<DialogProps>>;
+  render: React.ForwardRefRenderFunction<HTMLDivElement, React.PropsWithChildren<DialogProps>>;
 };

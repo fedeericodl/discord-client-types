@@ -129,6 +129,7 @@ export type {
   ModalTransitionState,
   POPOUT_MODAL_CONTEXT,
 } from "./components/Modal/web/ModalConstants";
+export type { Modals, UseModalContext } from "./components/Modal/web/Modals";
 export type { NavItem } from "./components/NavItem/web/NavItem";
 export type {
   Notice,

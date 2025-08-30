@@ -29,7 +29,7 @@ export interface BackdropProps {
   /**
    * The component to render as the backdrop layer. Creates a new div by default.
    */
-  LayerComponent?: React.ComponentType;
+  LayerComponent?: React.ComponentType<React.PropsWithChildren>;
 
   /**
    * Whether the backdrop is visible.

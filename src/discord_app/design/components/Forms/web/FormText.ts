@@ -24,11 +24,6 @@ export interface FormTextProps extends React.ComponentPropsWithoutRef<"div"> {
    * Whether the text is displayed as disabled.
    */
   disabled?: boolean;
-
-  /**
-   * Whether the text is selectable. Only applicable when `disabled` prop is false.
-   */
-  selectable?: boolean;
 }
 
 /**
