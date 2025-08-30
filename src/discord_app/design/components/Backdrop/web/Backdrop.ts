@@ -10,7 +10,7 @@ export interface BackdropProps {
   /**
    * The style of the backdrop.
    * @default BackdropStyles.SUBTLE
-   * @see {@link BackdropStyles}
+   * @see {@link Styles BackdropStyles}
    */
   backdropStyle?: Styles;
 

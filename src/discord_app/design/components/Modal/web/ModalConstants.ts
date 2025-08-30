@@ -8,9 +8,9 @@ export enum ModalTransitionState {
 
 export type TRANSITION_DURATION = number;
 
-export type DEFAULT_MODAL_CONTEXT = string;
+export type DEFAULT_MODAL_CONTEXT = "default";
 
-export type POPOUT_MODAL_CONTEXT = string;
+export type POPOUT_MODAL_CONTEXT = "popout";
 
 export interface ModalContentContextValue {
   /**

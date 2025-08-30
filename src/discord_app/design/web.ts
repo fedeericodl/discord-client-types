@@ -124,6 +124,32 @@ export type {
   MenuRadioItem,
   MenuSeparator,
 } from "./components/Menu/web/MenuComponents";
+export type { ConfirmModal, DeclarativeConfirmModal } from "./components/Modal/web/ConfirmModal";
+export type { Modal } from "./components/Modal/web/Modal";
+export type {
+  CloseAllModals,
+  CloseModal,
+  CloseModalAllContexts,
+  GetInteractingModalContext,
+  HasAnyModalOpen,
+  HasAnyModalOpenSelector,
+  HasModalOpen,
+  HasModalOpenSelector,
+  ModalContextFromAppContext,
+  OpenModal,
+  OpenModalLazy,
+  UpdateModal,
+  UseHasModalOpen,
+} from "./components/Modal/web/ModalAPI";
+export type {
+  ModalCloseButton,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  ModalListContent,
+  ModalRoot,
+  ModalSize,
+} from "./components/Modal/web/ModalComponents";
 export type {
   DEFAULT_MODAL_CONTEXT,
   ModalTransitionState,
