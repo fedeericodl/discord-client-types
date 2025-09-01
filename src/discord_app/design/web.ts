@@ -203,9 +203,21 @@ export type { CreateScroller } from "./components/Scroller/web/utils/createScrol
 export type { SearchBar } from "./components/SearchBar/web/SearchBar";
 export type { SearchIcon } from "./components/SearchBar/web/SearchIcon";
 export type { SegmentedControl } from "./components/SegmentedControl/web/SegmentedControl";
+export type { IconSelectOption } from "./components/Select/web/IconSelectOption";
+export type { SearchableSelect } from "./components/Select/web/SearchableSelect";
+export type {
+  MultiSelect,
+  Select,
+  SingleSelect,
+  SingleSelectFn,
+  ToggleSelect,
+  UseVariableSelect,
+} from "./components/Select/web/Select";
+export type { Sequencer } from "./components/Sequencer/web/Sequencer";
 export type { Shakeable } from "./components/Shakeable/web/Shakeable";
 export type { Shaker } from "./components/Shaker/web/Shaker";
 export type { Slider } from "./components/Slider/web/Slider";
+export type { Slide, Slides } from "./components/Slides/web/Slides";
 export type { Spacer } from "./components/Spacer/web/Spacer";
 export type { Spinner, SpinnerTypes } from "./components/Spinner/web/Spinner";
 export type { Switch } from "./components/Switch/web/Switch";

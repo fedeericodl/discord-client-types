@@ -1,3 +1,4 @@
+import type { ImpressionNames } from "@discordapp/analytics-utils/AnalyticsSchema";
 import type * as React from "react";
 
 export interface DialogContextValue {
@@ -21,8 +22,9 @@ export type DialogContext = React.Context<DialogContextValue>;
 export interface DialogImpression {
   /**
    * Name identifier for the impression event.
+   * @see {@link ImpressionNames}
    */
-  impressionName?: string;
+  impressionName?: ImpressionNames;
 
   /**
    * Additional properties to include with the impression.

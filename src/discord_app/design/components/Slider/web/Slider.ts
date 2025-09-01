@@ -233,7 +233,7 @@ export interface SliderState {
  * An interactive component that lets users select a value or range by moving a slider thumb along a track.
  * @example
  * ```tsx
- * const [volume, setVolume] = useState(50);
+ * const [volume, setVolume] = React.useState(50);
  *
  * <Slider
  *   initialValue={volume}

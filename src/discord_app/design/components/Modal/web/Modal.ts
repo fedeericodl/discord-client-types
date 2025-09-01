@@ -26,7 +26,7 @@ export interface ModalProps {
  * @example
  * ```tsx
  * function ExampleModal({ transitionState, onClose }) {
- *  return <Modal.ModalRoot transitionState={transitionState} onClose={onClose}>{...}</Modal.ModalRoot>;
+ *  return <ModalRoot transitionState={transitionState} onClose={onClose}>{...}</ModalRoot>;
  * }
  *
  * <Modal renderModal={(props) => <ExampleModal {...props} />} onCloseRequest={() => console.log("Close requested")} />

@@ -34,7 +34,7 @@ export interface AnimatedDotsProps {
  */
 export type AnimatedDots = React.MemoExoticComponent<React.FC<AnimatedDotsProps>>;
 
-export interface DotsProps {
+export interface DotsProps extends React.RefAttributes<SVGSVGElement> {
   /**
    * Radius of each dot in pixels.
    */
@@ -77,10 +77,4 @@ export interface DotsProps {
  * <Dots dotRadius={3} hide={!loading} themed />
  * ```
  */
-export type Dots = React.MemoExoticComponent<
-  React.ForwardRefExoticComponent<
-    React.PropsWithoutRef<DotsProps> & React.RefAttributes<SVGSVGElement>
-  > & {
-    render: React.ForwardRefRenderFunction<SVGSVGElement, DotsProps>;
-  }
->;
+export type Dots = React.MemoExoticComponent<React.FC<DotsProps>>;

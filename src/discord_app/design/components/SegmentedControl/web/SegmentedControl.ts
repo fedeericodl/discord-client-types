@@ -22,7 +22,7 @@ export interface SegmentedControlOption {
   tooltip?: React.ReactNode | (() => React.ReactNode);
 
   /**
-   * The aria-label for the tooltip.
+   * The accessibility label for the tooltip.
    */
   tooltipAriaLabel?: string;
 }

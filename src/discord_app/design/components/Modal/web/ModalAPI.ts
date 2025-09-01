@@ -5,7 +5,7 @@ import type { BackdropStyles } from "../../Backdrop/web/Backdrop";
 import type { DEFAULT_MODAL_CONTEXT, POPOUT_MODAL_CONTEXT } from "./ModalConstants";
 import type { RenderModal } from "./Modals";
 
-type AnyModalContext = POPOUT_MODAL_CONTEXT | DEFAULT_MODAL_CONTEXT;
+export type AnyModalContext = POPOUT_MODAL_CONTEXT | DEFAULT_MODAL_CONTEXT;
 
 /**
  * Returns the modal context of the currently interacting modal.
