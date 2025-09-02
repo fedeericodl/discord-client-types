@@ -85,5 +85,5 @@ export type Close = () => void;
  * ```
  */
 export type Confirm = (
-  props: Omit<ShowProps, "onConfirm" | "cancelText" | "onCancel">,
+  props?: Omit<ShowProps, "onConfirm" | "cancelText" | "onCancel">,
 ) => Promise<boolean>;

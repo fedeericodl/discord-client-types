@@ -17,10 +17,10 @@ export interface UseSingleSelectStateProps {
   onChange: (value: SelectOptionValue | null) => void;
 
   /**
-   * Function to convert a value to a string representation.
+   * Function to convert a value into a serialized value.
    * @default (value) => String(value)
    */
-  serialize?: (value: SelectOptionValue) => string;
+  serialize?: (value: SelectOptionValue) => SelectOptionValue;
 }
 
 export interface SelectionHookResult {
@@ -40,9 +40,9 @@ export interface SelectionHookResult {
   clear: () => void;
 
   /**
-   * Function to serialize a value to string.
+   * Function to serialize a value into a serialized value.
    */
-  serialize: (value: SelectOptionValue) => string;
+  serialize: (value: SelectOptionValue) => SelectOptionValue;
 }
 
 /**
@@ -74,10 +74,10 @@ export interface UseVariableSelectProps {
   ) => SelectInteractionResult;
 
   /**
-   * Function to convert a value to a string representation.
+   * Function to convert the value into a serialized value.
    * @default (value) => String(value)
    */
-  serialize?: (value: SelectOptionValue) => string;
+  serialize?: (value: SelectOptionValue) => SelectOptionValue;
 }
 
 /**
@@ -286,9 +286,9 @@ export interface SelectProps {
   isSelected: (value: SelectOptionValue) => boolean;
 
   /**
-   * Function to serialize values to strings. Provided by selection state hooks.
+   * Function to serialize values. Provided by selection state hooks.
    */
-  serialize: (value: SelectOptionValue) => string;
+  serialize: (value: SelectOptionValue) => SelectOptionValue;
 
   /**
    * Function to clear all selections. Provided by selection state hooks.
