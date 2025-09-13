@@ -1,5 +1,4 @@
 export type * from "@discordapp/common/constants/web/AvatarConstants";
-export type * from "@discordapp/design/web";
 export type * from "./components/Anchor/web/Anchor";
 export type * from "./components/Backdrop/web/Backdrop";
 export type * from "./components/Badges/web/Badges";
@@ -107,3 +106,4 @@ export type * from "./components/Toast/web/ToastConstants";
 export type * from "./components/Toast/web/ToastContainer";
 export type * from "./components/Tooltip/web/Tooltip";
 export type * from "./components/TransitionGroup/TransitionGroup";
+export type * from "./mana/web";

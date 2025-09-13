@@ -1,8 +1,6 @@
 import type * as React from "react";
 import type { FocusRingProps } from "react-focus-rings";
 
-import type { TextInput } from "./TextInput";
-
 export interface TextInputLegacyProps
   extends Omit<React.ComponentPropsWithoutRef<"input">, "onChange" | "onFocus" | "onBlur"> {
   /**
@@ -60,7 +58,6 @@ export interface TextInputLegacyProps
 
 /**
  * An interactive text input element.
- * @deprecated Use the new {@link TextInput TextInput (Mana)} component instead.
  * @example
  * ```tsx
  * <TextInputLegacy value={value} placeholder="Enter some text" />
