@@ -2,10 +2,9 @@ import type * as React from "react";
 
 import type { FormContextValue } from "./FormContext";
 import type { FormItem } from "./FormItem";
-import type { FormTitleProps, LabelProps } from "./FormTitle";
+import type { FormTitleProps } from "./FormTitle";
 
 export type FormSectionProps = Pick<FormTitleProps, "disabled" | "tag"> &
-  Pick<LabelProps, "htmlFor"> &
   Partial<Pick<FormContextValue, "titleId">> & {
     /**
      * The class name applied to the section.
@@ -21,6 +20,11 @@ export type FormSectionProps = Pick<FormTitleProps, "disabled" | "tag"> &
      * The title of the section.
      */
     title?: React.ReactNode;
+
+    /**
+     * The ID of the form element associated with the label.
+     */
+    htmlFor?: string;
   };
 
 /**

@@ -89,13 +89,7 @@ export interface ConfirmModalProps extends RenderModalProps {
  */
 export type ConfirmModal = React.FC<React.PropsWithChildren<ConfirmModalProps>>;
 
-export interface DeclarativeConfirmModalProps extends ConfirmModalProps {
-  /**
-   * Whether the modal can be dismissed by clicking outside or pressing escape.
-   * @default true
-   */
-  dismissable?: boolean;
-}
+export type DeclarativeConfirmModalProps = ConfirmModalProps;
 
 /**
  * A declarative confirmation modal component that manages its own lifecycle.

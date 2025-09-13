@@ -370,7 +370,7 @@ export declare class TimeOut {
 
   /**
    * Returns whether the timeout duration has been reached.
-   * @throws Will throw an error if {@link TimeOut.start} has not been called.
+   * @throws {Error} Will throw an error if {@link TimeOut.start} has not been called.
    */
   public hasTimedOut: () => boolean;
 

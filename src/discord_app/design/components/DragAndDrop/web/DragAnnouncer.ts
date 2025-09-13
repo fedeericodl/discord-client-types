@@ -1,4 +1,4 @@
-import type { AccessibilityAnnouncer } from "../../AccessibilityAnnouncer/web/AccessibilityAnnouncer";
+import type { AccessibilityAnnouncer } from "@discordapp/design/web";
 
 /**
  * Accessibility announcer for drag and drop operations.

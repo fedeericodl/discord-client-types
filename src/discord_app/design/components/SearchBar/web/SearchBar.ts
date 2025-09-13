@@ -5,8 +5,7 @@ import type { SearchIconProps } from "./SearchIcon";
 export type SearchBarSizes = "sm" | "md";
 
 export interface SearchBarProps
-  extends Omit<React.ComponentPropsWithoutRef<"div">, "onChange">,
-    Omit<SearchIconProps, "hasContent" | "className"> {
+  extends Omit<SearchIconProps, "hasContent" | "className" | "isLoading"> {
   /**
    * The value of the search bar.
    */
@@ -75,29 +74,4 @@ export interface SearchBarProps
  * />
  * ```
  */
-export declare class SearchBar extends React.PureComponent<SearchBarProps> {
-  /**
-   * The ref to the input element.
-   */
-  public inputRef: React.RefObject<HTMLInputElement>;
-
-  /**
-   * The ref to the container element.
-   */
-  public containerRef: React.RefObject<HTMLDivElement>;
-
-  /**
-   * Event handler called when the input value changes.
-   */
-  public handleOnChange: React.FormEventHandler<HTMLInputElement>;
-
-  /**
-   * Makes the input element focused.
-   */
-  public focus: () => void;
-
-  /**
-   * Makes the input element lose focus.
-   */
-  public blur: () => void;
-}
+export type SearchBar = React.FC<SearchBarProps>;

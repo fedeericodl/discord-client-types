@@ -1,16 +1,10 @@
 import type * as React from "react";
 
-export type FormTextTypes = Record<
-  | "DEFAULT"
-  | "INPUT_PLACEHOLDER"
-  | "DESCRIPTION"
-  | "LABEL_BOLD"
-  | "LABEL_SELECTED"
-  | "LABEL_DESCRIPTOR"
-  | "ERROR"
-  | "SUCCESS",
-  string
->;
+type Types = "default" | "description";
+
+export type FormTextTypes = {
+  [K in Types as Uppercase<K>]: K;
+};
 
 export interface FormTextProps extends React.ComponentPropsWithoutRef<"div"> {
   /**

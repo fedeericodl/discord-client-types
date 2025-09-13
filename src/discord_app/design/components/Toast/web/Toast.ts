@@ -17,6 +17,11 @@ export interface ToastOptions {
    * The duration the toast should be displayed in milliseconds.
    */
   duration?: number;
+
+  /**
+   * The context of the app where the toast is displayed.
+   */
+  appContext?: string;
 }
 
 export interface ToastState {

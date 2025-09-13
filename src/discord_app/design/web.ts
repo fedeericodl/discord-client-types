@@ -1,253 +1,109 @@
-export type {
-  AvatarSizes,
-  AvatarSizeSpecs,
-  GetAvatarSize,
-  GetAvatarSpecs,
-} from "@discordapp/common/constants/web/AvatarConstants";
-export type { H, Heading, HeadingLevel, UsePrivateHeadingLevel } from "@discordapp/design/web";
-export type { AccessibilityAnnouncer } from "./components/AccessibilityAnnouncer/web/AccessibilityAnnouncer";
-export type { LOW_SATURATION_THRESHOLD } from "./components/AccessibilityPreferencesContext/AccessibilityConstants";
-export type { AccessibilityPreferencesContext } from "./components/AccessibilityPreferencesContext/AccessibilityPreferencesContext";
-export type { Anchor } from "./components/Anchor/web/Anchor";
-export type { Backdrop, BackdropStyles } from "./components/Backdrop/web/Backdrop";
-export type {
-  BadgeShapes,
-  CircleBadge,
-  GetBadgeCountString,
-  GetBadgeWidthForValue,
-  IconBadge,
-  NumberBadge,
-  PremiumBadge,
-  TextBadge,
-} from "./components/Badges/web/Badges";
-export type {
-  BlockInteractions,
-  BlockInteractionsContext,
-} from "./components/BlockInteractions/BlockInteractions";
-export type { Breadcrumbs } from "./components/Breadcrumbs/web/Breadcrumbs";
-export type {
-  CircleIconButton,
-  CircleIconButtonColors,
-  CircleIconButtonSizes,
-} from "./components/Button/web/CircleIconButton";
-export type { CalendarPicker } from "./components/CalendarPicker/web/CalendarPicker";
-export type { Card, CardTypes } from "./components/Card/web/Card";
-export type { Checkbox, CheckboxAligns } from "./components/Checkbox/web/Checkbox";
-export type { Clickable } from "./components/Clickable/web/Clickable";
-export type { ClickableContainer } from "./components/Clickable/web/ClickableContainer";
-export type { Collapsible } from "./components/Collapsible/web/Collapsible";
-export type {
-  ColorPicker,
-  ColorPickerCustomButton,
-  ColorPickerDefaultButton,
-  CustomColorPicker,
-} from "./components/ColorPicker/web/ColorPicker";
-export type {
-  Combobox,
-  ComboboxItem,
-  UseMultiSelect,
-  UseSingleSelect,
-} from "./components/Combobox/web/Combobox";
-export type { ComboboxPopout } from "./components/Combobox/web/ComboboxPopout";
-export type { CopyInput, CopyInputModes } from "./components/CopyInput/web/CopyInput";
-export type { DateInput } from "./components/DateInput/web/DateInput";
-export type { Dialog, DialogContext } from "./components/Dialog/web/Dialog";
-export type { AnimatedDots, Dots } from "./components/Dots/web/Dots";
-export type { DnDKeyboardHelpBar } from "./components/DragAndDrop/web/DnDKeyboardHelpBar";
-export type { IsInDndMode } from "./components/DragAndDrop/web/DnDMode";
-export type { DnDProvider } from "./components/DragAndDrop/web/DnDProvider";
-export type {
-  EmptyState,
-  EmptyStateImage,
-  EmptyStateText,
-} from "./components/EmptyState/web/EmptyState";
-export type { FocusBlock, UseFocusBlock } from "./components/Focus/web/FocusBlock";
-export type {
-  FocusJumpSection,
-  UseFocusJumpSection,
-  UseFocusJumpSectionManager,
-} from "./components/Focus/web/FocusJumpSection";
-export type { FocusLock, UseFocusLock } from "./components/Focus/web/FocusLock";
-export type { FocusRing, FocusRingScope } from "./components/Focus/web/FocusRing";
-export type { FocusRingManager } from "./components/Focus/web/FocusRingManager";
-export type {
-  FormContext,
-  FormContextProvider,
-  UseFormContext,
-} from "./components/Forms/web/FormContext";
-export type { FormDivider } from "./components/Forms/web/FormDivider";
-export type { FormErrorBlock, FormErrorBlockColors } from "./components/Forms/web/FormErrorBlock";
-export type { FormItem } from "./components/Forms/web/FormItem";
-export type { FormLabel } from "./components/Forms/web/FormLabel";
-export type {
-  FormNotice,
-  FormNoticeImagePositions,
-  FormNoticeTypes,
-} from "./components/Forms/web/FormNotice";
-export type { FormSection } from "./components/Forms/web/FormSection";
-export type { FormSwitch } from "./components/Forms/web/FormSwitch";
-export type { FormText, FormTextTypes } from "./components/Forms/web/FormText";
-export type { FormTitle, FormTitleTags } from "./components/Forms/web/FormTitle";
-export type { HelpMessage, HelpMessageTypes } from "./components/HelpMessage/web/HelpMessage";
-export type { HiddenVisually } from "./components/HiddenVisually/web/HiddenVisually";
-export type { Interactive } from "./components/Interactive/web/Interactive";
-export type { KeyCombo } from "./components/KeyCombo/web/KeyCombo";
-export type {
-  CreateLayer,
-  GetParentLayerContainer,
-  Layer,
-  LayerClassName,
-  LayerContainer,
-  LayerProvider,
-} from "./components/Layers/web/Layer";
-export type {
-  ReferencePortalAwareContains,
-  ReferencePositionLayer,
-} from "./components/Layers/web/ReferencePositionLayer";
-export type { CreateListScroller } from "./components/List/web/createListScroller";
-export type { ListThin as List, ListAuto, ListNone, ListThin } from "./components/List/web/List";
-export type { CreateMasonryListScroller } from "./components/MasonryList/web/createMasonryListScroller";
-export type {
-  MasonryListThin as MasonryList,
-  MasonryListAuto,
-  MasonryListThin,
-} from "./components/MasonryList/web/MasonryList";
-export type { MenuInteractiveCompositeControl } from "./components/Menu/web/controls/MenuInteractiveCompositeControl";
-export type { MenuSearchControl } from "./components/Menu/web/controls/MenuSearchControl";
-export type { MenuSliderControl } from "./components/Menu/web/controls/MenuSliderControl";
-export type { Menu, MenuSpinner } from "./components/Menu/web/Menu";
-export type {
-  MenuCheckboxItem,
-  MenuControlItem,
-  MenuGroup,
-  MenuItem,
-  MenuRadioItem,
-  MenuSeparator,
-} from "./components/Menu/web/MenuComponents";
-export type { ConfirmModal, DeclarativeConfirmModal } from "./components/Modal/web/ConfirmModal";
-export type { Modal } from "./components/Modal/web/Modal";
-export type {
-  CloseAllModals,
-  CloseModal,
-  CloseModalAllContexts,
-  GetInteractingModalContext,
-  HasAnyModalOpen,
-  HasAnyModalOpenSelector,
-  HasModalOpen,
-  HasModalOpenSelector,
-  ModalContextFromAppContext,
-  OpenModal,
-  OpenModalLazy,
-  UpdateModal,
-  UseHasModalOpen,
-} from "./components/Modal/web/ModalAPI";
-export type {
-  ModalCloseButton,
-  ModalContent,
-  ModalFooter,
-  ModalHeader,
-  ModalListContent,
-  ModalRoot,
-  ModalSize,
-} from "./components/Modal/web/ModalComponents";
-export type {
-  DEFAULT_MODAL_CONTEXT,
-  ModalTransitionState,
-  POPOUT_MODAL_CONTEXT,
-} from "./components/Modal/web/ModalConstants";
-export type { Modals, UseModalContext } from "./components/Modal/web/Modals";
-export type { NavItem } from "./components/NavItem/web/NavItem";
-export type {
-  Notice,
-  NoticeButton,
-  NoticeButtonAnchor,
-  NoticeCloseButton,
-  NoticeColors,
-  PrimaryCTANoticeButton,
-} from "./components/Notice/web/Notice";
-export type { NumberInputStepper } from "./components/NumberInputStepper/web/NumberInputStepper";
-export type { Paginator } from "./components/Paginator/web/Paginator";
-export type { BasePopout, POPOUT_PREVENT_CLOSE } from "./components/Popout/web/BasePopout";
-export type { LoadingPopout } from "./components/Popout/web/LoadingPopout";
-export type { LazyPopout, Popout } from "./components/Popout/web/Popout";
-export type { PopoutCSSAnimator } from "./components/Popout/web/PopoutCSSAnimator";
-export type { PopoutList } from "./components/Popout/web/PopoutList";
-export type { Progress } from "./components/Progress/web/Progress";
-export type { ProgressCircle } from "./components/Progress/web/ProgressCircle";
-export type { StackedProgress } from "./components/Progress/web/StackedProgress";
-export type { QuickSelect } from "./components/QuickSelect/web/QuickSelect";
-export type { SearchableQuickSelect } from "./components/QuickSelect/web/SearchableQuickSelect";
-export type {
-  RadioGroup,
-  RadioIndicator,
-  UseRadioGroup,
-  UseRadioItem,
-} from "./components/RadioGroup/web/RadioGroup";
-export type {
-  AdvancedScrollerThin as AdvancedScroller,
-  AdvancedScrollerAuto,
-  AdvancedScrollerNone,
-  AdvancedScrollerThin,
-} from "./components/Scroller/web/AdvancedScroller";
-export type { PinToBottomScrollerAuto } from "./components/Scroller/web/PinToBottomScrollerAuto";
-export type {
-  ScrollerThin as Scroller,
-  ScrollerAuto,
-  ScrollerNone,
-  ScrollerThin,
-} from "./components/Scroller/web/Scroller";
-export type { IsListItemRow } from "./components/Scroller/web/utils";
-export type { CreateAdvancedScroller } from "./components/Scroller/web/utils/createAdvancedScroller";
-export type { CreateManagedReactiveScroller } from "./components/Scroller/web/utils/createManagedReactiveScroller";
-export type { CreateScroller } from "./components/Scroller/web/utils/createScroller";
-export type { SearchBar } from "./components/SearchBar/web/SearchBar";
-export type { SearchIcon } from "./components/SearchBar/web/SearchIcon";
-export type { SegmentedControl } from "./components/SegmentedControl/web/SegmentedControl";
-export type { IconSelectOption } from "./components/Select/web/IconSelectOption";
-export type { SearchableSelect } from "./components/Select/web/SearchableSelect";
-export type {
-  MultiSelect,
-  Select,
-  SingleSelect,
-  SingleSelectFn,
-  ToggleSelect,
-  UseVariableSelect,
-} from "./components/Select/web/Select";
-export type { Sequencer } from "./components/Sequencer/web/Sequencer";
-export type { Shakeable } from "./components/Shakeable/web/Shakeable";
-export type { Shaker } from "./components/Shaker/web/Shaker";
-export type { Slider } from "./components/Slider/web/Slider";
-export type { Slide, Slides } from "./components/Slides/web/Slides";
-export type { Spacer } from "./components/Spacer/web/Spacer";
-export type { Spinner, SpinnerTypes } from "./components/Spinner/web/Spinner";
-export type { Switch } from "./components/Switch/web/Switch";
-export type { TabBar } from "./components/TabBar/web/TabBar";
-export type {
-  Table,
-  TableBody,
-  TableCell,
-  TableColumn,
-  TableHeader,
-  TableRow,
-} from "./components/Table/web/Table";
-export type { Text } from "./components/Text/web/Text";
-export type { TextAreaLegacy } from "./components/TextInput/web/TextArea.legacy";
-export type { TextAreaAutosize } from "./components/TextInput/web/TextAreaAutosize";
-export type { TextInput } from "./components/TextInput/web/TextInput";
-export type { TextInputLegacy } from "./components/TextInput/web/TextInput.legacy";
-export type { InputError } from "./components/TextInput/web/TextInputError";
-export type { TimeInput } from "./components/TimeInput/web/TimeInput";
-export type { CreateToast, Toast } from "./components/Toast/web/Toast";
-export type { PopToast, ShowToast, UseToastStore } from "./components/Toast/web/ToastAPI";
-export type { ToastPosition, ToastType } from "./components/Toast/web/ToastConstants";
-export type { ToastContainer } from "./components/Toast/web/ToastContainer";
-export type {
-  Tooltip,
-  TooltipColors,
-  TooltipContainer,
-  TooltipLayer,
-} from "./components/Tooltip/web/Tooltip";
-export type {
-  TransitionGroup,
-  TransitionStates,
-} from "./components/TransitionGroup/TransitionGroup";
+export type * from "@discordapp/common/constants/web/AvatarConstants";
+export type * from "@discordapp/design/web";
+export type * from "./components/Anchor/web/Anchor";
+export type * from "./components/Backdrop/web/Backdrop";
+export type * from "./components/Badges/web/Badges";
+export type * from "./components/BlockInteractions/BlockInteractions";
+export type * from "./components/Breadcrumbs/web/Breadcrumbs";
+export type * from "./components/Button/web/CircleIconButton";
+export type * from "./components/CalendarPicker/web/CalendarPicker";
+export type * from "./components/Card/web/Card";
+export type * from "./components/Checkbox/web/Checkbox";
+export type * from "./components/Clickable/web/Clickable";
+export type * from "./components/Clickable/web/ClickableContainer";
+export type * from "./components/Collapsible/web/Collapsible";
+export type * from "./components/ColorPicker/web/ColorPicker";
+export type * from "./components/Combobox/web/Combobox";
+export type * from "./components/Combobox/web/ComboboxPopout";
+export type * from "./components/CopyInput/web/CopyInput";
+export type * from "./components/DateInput/web/DateInput";
+export type * from "./components/Dialog/web/Dialog";
+export type * from "./components/Dots/web/Dots";
+export type * from "./components/DragAndDrop/web/DnDKeyboardHelpBar";
+export type * from "./components/DragAndDrop/web/DnDMode";
+export type * from "./components/DragAndDrop/web/DnDProvider";
+export type * from "./components/EmptyState/web/EmptyState";
+export type * from "./components/Focus/web/FocusBlock";
+export type * from "./components/Focus/web/FocusJumpSection";
+export type * from "./components/Focus/web/FocusLock";
+export type * from "./components/Focus/web/FocusRingManager";
+export type * from "./components/Forms/web/FormContext";
+export type * from "./components/Forms/web/FormDivider";
+export type * from "./components/Forms/web/FormErrorBlock";
+export type * from "./components/Forms/web/FormItem";
+export type * from "./components/Forms/web/FormNotice";
+export type * from "./components/Forms/web/FormSection";
+export type * from "./components/Forms/web/FormSwitch";
+export type * from "./components/Forms/web/FormText";
+export type * from "./components/Forms/web/FormTitle";
+export type * from "./components/HelpMessage/web/HelpMessage";
+export type * from "./components/HiddenVisually/web/HiddenVisually";
+export type * from "./components/Interactive/web/Interactive";
+export type * from "./components/KeyCombo/web/KeyCombo";
+export type * from "./components/Layers/web/Layer";
+export type * from "./components/Layers/web/ReferencePositionLayer";
+export type * from "./components/List/web/createListScroller";
+export type * from "./components/List/web/List";
+export type * from "./components/MasonryList/web/createMasonryListScroller";
+export type * from "./components/MasonryList/web/MasonryList";
+export type * from "./components/Menu/web/controls/MenuInteractiveCompositeControl";
+export type * from "./components/Menu/web/controls/MenuSearchControl";
+export type * from "./components/Menu/web/controls/MenuSliderControl";
+export type * from "./components/Menu/web/Menu";
+export type * from "./components/Menu/web/MenuComponents";
+export type * from "./components/Modal/web/ConfirmModal";
+export type * from "./components/Modal/web/Modal";
+export type * from "./components/Modal/web/ModalAPI";
+export type * from "./components/Modal/web/ModalComponents";
+export type * from "./components/Modal/web/ModalConstants";
+export type * from "./components/Modal/web/Modals";
+export type * from "./components/NavItem/web/NavItem";
+export type * from "./components/Notice/web/Notice";
+export type * from "./components/NumberInputStepper/web/NumberInputStepper";
+export type * from "./components/Paginator/web/Paginator";
+export type * from "./components/Popout/web/BasePopout";
+export type * from "./components/Popout/web/LoadingPopout";
+export type * from "./components/Popout/web/Popout";
+export type * from "./components/Popout/web/PopoutCSSAnimator";
+export type * from "./components/Popout/web/PopoutList";
+export type * from "./components/Progress/web/Progress";
+export type * from "./components/Progress/web/ProgressCircle";
+export type * from "./components/Progress/web/StackedProgress";
+export type * from "./components/QuickSelect/web/QuickSelect";
+export type * from "./components/QuickSelect/web/SearchableQuickSelect";
+export type * from "./components/RadioGroup/web/RadioGroup";
+export type * from "./components/Scroller/web/AdvancedScroller";
+export type * from "./components/Scroller/web/PinToBottomScrollerAuto";
+export type * from "./components/Scroller/web/Scroller";
+export type * from "./components/Scroller/web/utils";
+export type * from "./components/Scroller/web/utils/createAdvancedScroller";
+export type * from "./components/Scroller/web/utils/createManagedReactiveScroller";
+export type * from "./components/Scroller/web/utils/createScroller";
+export type * from "./components/SearchBar/web/SearchBar";
+export type * from "./components/SearchBar/web/SearchIcon";
+export type * from "./components/SegmentedControl/web/SegmentedControl";
+export type * from "./components/Select/web/IconSelectOption";
+export type * from "./components/Select/web/SearchableSelect";
+export type * from "./components/Select/web/Select";
+export type * from "./components/Sequencer/web/Sequencer";
+export type * from "./components/Shakeable/web/Shakeable";
+export type * from "./components/Shaker/web/Shaker";
+export type * from "./components/Slider/web/Slider";
+export type * from "./components/Slides/web/Slides";
+export type * from "./components/Spacer/web/Spacer";
+export type * from "./components/Switch/web/Switch";
+export type * from "./components/TabBar/web/TabBar";
+export type * from "./components/Table/web/Table";
+export type * from "./components/Text/web/Text";
+export type * from "./components/TextInput/web/TextArea.legacy";
+export type * from "./components/TextInput/web/TextAreaAutosize";
+export type * from "./components/TextInput/web/TextInput";
+export type * from "./components/TextInput/web/TextInput.legacy";
+export type * from "./components/TextInput/web/TextInputError";
+export type * from "./components/TimeInput/web/TimeInput";
+export type * from "./components/Toast/web/Toast";
+export type * from "./components/Toast/web/ToastAPI";
+export type * from "./components/Toast/web/ToastConstants";
+export type * from "./components/Toast/web/ToastContainer";
+export type * from "./components/Tooltip/web/Tooltip";
+export type * from "./components/TransitionGroup/TransitionGroup";

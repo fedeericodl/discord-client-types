@@ -9,3 +9,5 @@ export type MasonryListThin = ReturnType<CreateMasonryListScroller>;
  * A `MasonryList` component with the auto scrollbar size.
  */
 export type MasonryListAuto = ReturnType<CreateMasonryListScroller>;
+
+export type { MasonryListThin as MasonryList };

@@ -78,7 +78,7 @@ export interface AssertUnreachableOptions {
  * Used at the end of switch statements to cause a compile-time error if a case is missed.
  * @param value The value that should be unreachable.
  * @param options The options for the assertion.
- * @throws Will throw an error if `options.andFail` is true and the value is reached.
+ * @throws {Error} Will throw an error if `options.andFail` is true and the value is reached.
  * @example
  * ```ts
  * type Shape = { kind: "circle", radius: number } | { kind: "square", size: number };

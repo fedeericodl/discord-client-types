@@ -100,7 +100,7 @@ export declare class Popout extends React.Component<PopoutProps> {
    * Renders popout content.
    * @param positionInfo Information about the current position of the popout.
    * @returns Rendered popout content.
-   * @throws Will throw an error if the position information is invalid.
+   * @throws {Error} Will throw an error if the position information is invalid.
    */
   public renderPopout: (positionInfo: PositionInfo) => React.ReactNode;
 }

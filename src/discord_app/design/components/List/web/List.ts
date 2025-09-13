@@ -14,3 +14,5 @@ export type ListAuto = ReturnType<CreateListScroller>;
  * A `List` component without the scrollbar.
  */
 export type ListNone = ReturnType<CreateListScroller>;
+
+export type { ListThin as List };

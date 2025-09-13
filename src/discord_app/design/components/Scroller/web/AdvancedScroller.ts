@@ -1,4 +1,5 @@
 export type {
+  AdvancedScrollerThin as AdvancedScroller,
   AdvancedScrollerAuto,
   AdvancedScrollerNone,
   AdvancedScrollerThin,

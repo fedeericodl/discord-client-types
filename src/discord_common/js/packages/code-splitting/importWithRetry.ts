@@ -31,7 +31,7 @@ export interface ImportWithRetryOptions<T = any> {
  * @template T The type of module to import.
  * @param options Configuration options for the import operation.
  * @returns A promise resolving to the imported module.
- * @throws Will throw an error if all retry attempts fail or if the module exists in webpack cache but failed to load.
+ * @throws {Error} Will throw an error if all retry attempts fail or if the module exists in webpack cache but failed to load.
  */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type ImportWithRetry = <T = any>(options: ImportWithRetryOptions<T>) => Promise<T>;

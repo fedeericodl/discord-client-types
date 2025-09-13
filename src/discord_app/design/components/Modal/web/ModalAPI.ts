@@ -55,6 +55,11 @@ export interface OpenModalOptions {
   modalKey?: string;
 
   /**
+   * Whether the modal can be dismissed by clicking outside or pressing the escape key.
+   */
+  dismissable?: boolean;
+
+  /**
    * Callback invoked when a close request is made.
    */
   onCloseRequest?: () => void;
@@ -85,6 +90,11 @@ export interface OpenModalOptions {
    * @default "replace"
    */
   stackingBehavior?: "stack" | "replace" | "replaceAll";
+
+  /**
+   * Whether the next modal should stack by default.
+   */
+  stackNextByDefault?: boolean;
 }
 
 /**

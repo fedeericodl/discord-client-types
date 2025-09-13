@@ -35,7 +35,7 @@ export declare class Backoff {
    * @param min The minimum (starting) delay in milliseconds. Must be greater than 0.
    * @param max The maximum delay in milliseconds. If null, defaults to 10 multiplied by `min`.
    * @param jitter Whether to apply random jitter to the delay to avoid thundering herd problems.
-   * @throws Will throw an error if min is less than or equal to 0.
+   * @throws {Error} Will throw an error if min is less than or equal to 0.
    */
   public constructor(min?: number, max?: number | null, jitter?: boolean);
 
@@ -105,7 +105,7 @@ export declare class Backoff {
    * If a callback is provided, it will be executed after the calculated delay.
    * @param callback Function to execute after the backoff period.
    * @returns The calculated delay in milliseconds.
-   * @throws Will throw an error if a different callback is already pending.
+   * @throws {Error} Will throw an error if a different callback is already pending.
    */
   public fail: (callback?: () => void) => number;
 

@@ -60,6 +60,7 @@ export enum ImpressionNames {
   DISPLAY_NAME_STYLES_MODAL = "impression_display_name_styles_modal",
   DM_LIST_KEBAB_MENU_SHOWN = "impression_dm_list_kebab_menu_shown",
   DM_LIST_RIGHT_CLICK_MENU_SHOWN = "impression_dm_list_right_click_menu_shown",
+  DOUBLE_TAP_REACT_UPSELL = "impression_double_tap_react_upsell",
   DROPS_QUEST_COMPLETION = "impression_drops_quest_completion",
   DROPS_QUEST_ENROLLMENT = "impression_drops_quest_enrollment",
   EMBEDDED_ACTIVITY_HAPPENING_NOW = "impression_embedded_activity_happening_now",

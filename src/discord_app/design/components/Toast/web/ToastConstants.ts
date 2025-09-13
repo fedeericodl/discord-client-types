@@ -20,20 +20,22 @@ export enum ToastPosition {
 export interface TOAST_DEFAULT_OPTIONS {
   /**
    * The position of the toast.
-   * @default ToastPosition.TOP
    * @see {@link ToastPosition}
    */
-  position: ToastPosition;
+  position: ToastPosition.TOP;
 
   /**
    * The component to render in the toast.
-   * @default null
    */
   component: null;
 
   /**
    * The duration the toast should be displayed in milliseconds.
-   * @default 3000
    */
-  duration: number;
+  duration: 3000;
+
+  /**
+   * The context of the app where the toast is displayed.
+   */
+  appContext: "APP";
 }

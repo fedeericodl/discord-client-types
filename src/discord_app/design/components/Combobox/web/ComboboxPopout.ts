@@ -9,7 +9,6 @@ export interface ComboboxPopoutProps
     | "placeholder"
     | "value"
     | "onChange"
-    | "showScrollbar"
     | "className"
     | "multiSelect"
     | "emptyStateText"

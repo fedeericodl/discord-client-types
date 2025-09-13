@@ -77,12 +77,6 @@ export interface ComboboxProps {
   itemToString?: (item: unknown) => string;
 
   /**
-   * Whether to display scrollbar for the items list.
-   * @default false
-   */
-  showScrollbar?: boolean;
-
-  /**
    * The text displayed when no items match the search query.
    */
   emptyStateText?: string;

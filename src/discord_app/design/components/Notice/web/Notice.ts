@@ -74,6 +74,11 @@ export interface NoticeCloseButtonProps {
    * The type of notice.
    */
   noticeType?: string;
+
+  /**
+   * The class name applied to the close button.
+   */
+  className?: string;
 }
 
 /**
@@ -81,7 +86,7 @@ export interface NoticeCloseButtonProps {
  */
 export type NoticeCloseButton = React.FC<NoticeCloseButtonProps>;
 
-export interface NoticeProps {
+export interface NoticeProps extends React.RefAttributes<HTMLDivElement> {
   /**
    * The color of the notice.
    * @default NoticeColors.DEFAULT

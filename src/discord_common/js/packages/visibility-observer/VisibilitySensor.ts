@@ -66,7 +66,7 @@ export declare class VisibilitySensor extends React.Component<
    * Returns the visibility observer instance associated with this component.
    * Creates a new observer if one doesn't already exist with the same configuration.
    * @returns The {@link VisibilityObserver} instance.
-   * @throws Will throw an error if the visibility observer is not found.
+   * @throws {Error} Will throw an error if the visibility observer is not found.
    */
   public getVisibilityObserver: () => VisibilityObserver;
 }

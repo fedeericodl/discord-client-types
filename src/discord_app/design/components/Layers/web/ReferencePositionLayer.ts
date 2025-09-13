@@ -305,7 +305,7 @@ export declare class ReferencePositionLayer extends React.Component<
    * @param containerElement The container element for boundary calculations.
    * @param baseStyle The base style object to extend.
    * @returns Object containing the calculated style and nudge offset.
-   * @throws Will throw an error if the alignment is unsupported.
+   * @throws {Error} Will throw an error if the alignment is unsupported.
    */
   public getHorizontalAlignmentStyle: (
     targetRect: LayerRect,
@@ -347,7 +347,7 @@ export declare class ReferencePositionLayer extends React.Component<
    * @param containerElement The container element for boundary calculations.
    * @param baseStyle The base style object to extend.
    * @returns Object containing the calculated style and nudge offset.
-   * @throws Will throw an error if the alignment is unsupported.
+   * @throws {Error} Will throw an error if the alignment is unsupported.
    */
   public getVerticalAlignmentStyle: (
     targetRect: LayerRect,
@@ -363,7 +363,7 @@ export declare class ReferencePositionLayer extends React.Component<
    * @param containerElement The container element for boundary calculations.
    * @param fallbackPosition Fallback position for overlap calculations.
    * @returns Object containing the calculated style and nudge offset.
-   * @throws Will throw an error if the target ref is invalid.
+   * @throws {Error} Will throw an error if the target ref is invalid.
    */
   public calculatePositionStyle: (
     position: LayerPosition,

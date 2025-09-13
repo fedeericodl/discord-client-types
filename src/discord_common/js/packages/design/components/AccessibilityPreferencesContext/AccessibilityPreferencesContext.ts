@@ -48,6 +48,11 @@ export interface AccessibilityPreferencesContextValue {
    * Indicates whether link decorations (such as underlines) should always be shown.
    */
   alwaysShowLinkDecorations: boolean;
+
+  /**
+   * Indicates whether high contrast mode is enabled.
+   */
+  highContrastModeEnabled: boolean;
 }
 
 /**

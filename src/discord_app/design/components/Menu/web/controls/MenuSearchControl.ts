@@ -15,12 +15,6 @@ export interface MenuSearchControlProps {
   onChange: (query: string) => void;
 
   /**
-   * Whether the search control is in a loading state.
-   * @default false
-   */
-  loading?: boolean;
-
-  /**
    * Whether the search control is disabled.
    * @default false
    */

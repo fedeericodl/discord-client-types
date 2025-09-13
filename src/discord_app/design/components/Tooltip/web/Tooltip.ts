@@ -287,7 +287,7 @@ export declare class TooltipComponent extends React.Component<TooltipProps, Tool
 
   /**
    * Finds and sets the target DOM element for tooltip positioning.
-   * @throws Will throw an error if no valid DOM element can be found.
+   * @throws {Error} Will throw an error if no valid DOM element can be found.
    */
   public setDomElement: () => void;
 

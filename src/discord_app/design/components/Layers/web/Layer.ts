@@ -60,7 +60,7 @@ export type LayerContainer = React.FC<LayerContainerProps>;
  * Finds the parent layer container element for a given DOM element.
  * @param element The DOM element to start searching from.
  * @returns The parent layer container element.
- * @throws Will throw an error if no parent layer container is found.
+ * @throws {Error} Will throw an error if no parent layer container is found.
  */
 export type GetParentLayerContainer = (element: HTMLElement) => HTMLElement | null;
 

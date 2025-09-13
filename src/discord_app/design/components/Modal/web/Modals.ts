@@ -13,6 +13,11 @@ export interface RenderModalProps {
    * Callback invoked when the modal requests to be closed.
    */
   onClose: () => Promise<void>;
+
+  /**
+   * Whether the modal can be dismissed by clicking outside or pressing the escape key.
+   */
+  dismissable: boolean | undefined;
 }
 
 export type RenderModal = React.FC<RenderModalProps>;

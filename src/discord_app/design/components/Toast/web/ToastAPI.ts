@@ -6,12 +6,12 @@ export interface ToastStoreState {
   /**
    * The current toast being displayed.
    */
-  currentToast: ToastState | null;
+  currentToastMap: Map<string, ToastState>;
 
   /**
    * The toasts that have been queued to be displayed.
    */
-  queuedToasts: ToastState[] | null;
+  queuedToastsMap: Map<string, ToastState[]>;
 }
 
 /**
@@ -27,5 +27,6 @@ export type ShowToast = (toast: ToastState) => void;
 
 /**
  * Removes the current toast from the store and displays the next toast in the queue.
+ * @param context The context of the app where the toast is displayed. If not provided, defaults to the default app context.
  */
-export type PopToast = () => void;
+export type PopToast = (context?: string) => void;

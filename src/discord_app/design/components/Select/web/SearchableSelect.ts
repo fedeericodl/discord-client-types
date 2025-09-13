@@ -220,6 +220,13 @@ export interface SearchableSelectProps {
   popoutPosition?: LayerPosition;
 
   /**
+   * The width of the popout.
+   * If "auto", the width will be determined by the content.
+   * If not provided, the width will match the select width.
+   */
+  popoutWidth?: number | "auto";
+
+  /**
    * The filtering behavior. If a function is provided, it will be used to filter the provided `options` for the current query.
    * @default true
    */

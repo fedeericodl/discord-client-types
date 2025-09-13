@@ -26,6 +26,12 @@ export interface StackProps extends Omit<React.AllHTMLAttributes<HTMLElement>, "
   align?: "start" | "end" | "center" | "stretch" | "baseline";
 
   /**
+   * Main-axis alignment of children.
+   * @default "start"
+   */
+  justify?: "start" | "end" | "center" | "space-around" | "space-between";
+
+  /**
    * Whether children should wrap onto multiple lines when there’s not enough space.
    * @default false
    */
