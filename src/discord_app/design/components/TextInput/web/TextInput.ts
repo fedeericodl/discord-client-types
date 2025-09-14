@@ -1,5 +1,83 @@
+import type { BaseIconButtonProps } from "@discordapp/design/web";
 import type * as React from "react";
 import type { FocusRingProps } from "react-focus-rings";
+
+export interface TextInputAccessoryIcon extends BaseIconButtonProps {
+  /**
+   * The tooltip to display on hover.
+   */
+  tooltip?: string;
+}
+
+export interface TextInputAccessoryButton {
+  /**
+   * The button element to display.
+   */
+  button: React.ReactNode;
+}
+
+// TODO: Complete this with TagGroup from Mana
+export interface TextInputAccessoryTags {
+  /**
+   * The type of accessory.
+   */
+  type: "tags";
+
+  /**
+   * The label for the tags.
+   */
+  label: string;
+
+  /**
+   * The items to display as tags.
+   */
+  items: { id: string; label: string }[];
+
+  /**
+   * Event handler called when a tag is removed.
+   */
+  onRemove: (set: Set<string>) => void;
+}
+
+export interface TextInputAccessoryImage {
+  /**
+   * The type of accessory.
+   */
+  type: "image";
+
+  /**
+   * The source URL of the image.
+   */
+  src: string;
+}
+
+// TODO: Complete icon types
+export interface IconProps {
+  /**
+   * The size of the icon.
+   */
+  size: string;
+
+  /**
+   * The color of the icon.
+   */
+  color: string;
+}
+
+export type TextInputAccessory =
+  | string
+  | TextInputAccessoryIcon
+  | TextInputAccessoryButton
+  | TextInputAccessoryTags
+  | TextInputAccessoryImage
+  | React.ComponentType<IconProps>;
+
+export interface TextInputClearable {
+  /**
+   * Whether to always show the clear button.
+   */
+  show: boolean;
+}
 
 export interface TextInputProps
   extends Omit<
@@ -24,7 +102,7 @@ export interface TextInputProps
   /**
    * The error message to display.
    */
-  error?: string;
+  error?: React.ReactNode;
 
   /**
    * Whether the input is initially "dirty" (i.e. input field has been changed).
@@ -35,12 +113,12 @@ export interface TextInputProps
   /**
    * The element to display before the input.
    */
-  leading?: React.ReactNode;
+  leading?: TextInputAccessory;
 
   /**
    * The element to display after the input.
    */
-  trailing?: React.ReactNode;
+  trailing?: TextInputAccessory;
 
   /**
    * The event to validate the input on.
@@ -64,12 +142,12 @@ export interface TextInputProps
    * Whether the input can be cleared.
    * @default false
    */
-  clearable?: boolean | { show: boolean };
+  clearable?: boolean | TextInputClearable;
 
   /**
    * The helper text to display below the input.
    */
-  helperText?: string;
+  helperText?: React.ReactNode;
 
   /**
    * Whether to show the character count.
@@ -80,7 +158,22 @@ export interface TextInputProps
   /**
    * The success message to display when the input is valid.
    */
-  successMessage?: string;
+  successMessage?: React.ReactNode;
+
+  /**
+   * The label to display above the input.
+   */
+  label?: React.ReactNode;
+
+  /**
+   * The description to display below the label.
+   */
+  description?: React.ReactNode;
+
+  /**
+   * Whether to visually hide the label.
+   */
+  hideLabel?: boolean;
 
   /**
    * Event handler called when the input changes.

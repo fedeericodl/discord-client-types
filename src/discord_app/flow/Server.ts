@@ -27,6 +27,10 @@ export enum EmbeddedActivitySurfaces {
   TEXT_LAUNCHER = "text_launcher",
 }
 
+export enum GameLinkTypes {
+  LINKED = 1,
+}
+
 export enum ApplicationDirectoryEntryCarouselItemType {
   MEDIA_PROXY = 1,
   YOUTUBE,
@@ -94,7 +98,8 @@ export enum ComponentType {
   FILE,
   SEPARATOR,
   CONTENT_INVENTORY_ENTRY = 16,
-  CONTAINER = 17,
+  CONTAINER,
+  LABEL,
 }
 
 export enum ButtonStyle {
@@ -107,7 +112,7 @@ export enum ButtonStyle {
 }
 
 export enum TextInputComponentStyle {
-  SHORT = 1,
+  SMALL = 1,
   PARAGRAPH,
 }
 

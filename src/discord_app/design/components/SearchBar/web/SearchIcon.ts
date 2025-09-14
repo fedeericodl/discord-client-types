@@ -1,7 +1,5 @@
 import type * as React from "react";
 
-import type { SearchBarSizes } from "./SearchBar";
-
 export interface SearchIconProps {
   /**
    * Whether there is content in the search bar. This affects the visibility of the clear icon.
@@ -26,9 +24,8 @@ export interface SearchIconProps {
   /**
    * The size of the search icon.
    * @default "sm"
-   * @see {@link SearchBarSizes}
    */
-  size?: SearchBarSizes;
+  size?: "sm" | "md";
 }
 
 /**

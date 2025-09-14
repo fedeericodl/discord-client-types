@@ -176,7 +176,7 @@ export interface ButtonIconIcon {
   asset: React.ComponentType<IconProps>;
 }
 
-// TODO: complete Rive props and asset
+// TODO: Complete Rive props and asset
 export interface ButtonIconRive {
   /**
    * The type of the icon.

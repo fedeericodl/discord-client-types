@@ -1,7 +1,6 @@
 import type { AlertProps } from "@app/components/modals/Alert";
 import type { AnyModalContext } from "@app/design/components/Modal/web/ModalAPI";
-
-// TODO: Complete `confirmVariant` with Button variants from Mana
+import type { ButtonVariant } from "@discordapp/design/web";
 
 export interface ShowProps
   extends Pick<
@@ -21,7 +20,7 @@ export interface ShowProps
   /**
    * The variant of the confirm button.
    */
-  confirmVariant?: string;
+  confirmVariant?: ButtonVariant;
 
   /**
    * Callback invoked after the modal has been closed.
