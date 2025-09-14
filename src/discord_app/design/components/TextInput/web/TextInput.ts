@@ -52,7 +52,7 @@ export interface TextInputAccessoryImage {
 }
 
 // TODO: Complete icon types
-export interface IconProps {
+interface IconProps {
   /**
    * The size of the icon.
    */
