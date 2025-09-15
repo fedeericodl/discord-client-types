@@ -2,16 +2,35 @@ import type * as React from "react";
 
 import type { TextInputProps } from "../../TextInput/web/TextInput";
 
-export interface SearchBarProps extends TextInputProps, React.RefAttributes<HTMLInputElement> {
+export interface SearchBarProps
+  extends Pick<
+      TextInputProps,
+      | "autoFocus"
+      | "placeholder"
+      | "onKeyDown"
+      | "size"
+      | "disabled"
+      | "onChange"
+      | "onBlur"
+      | "onFocus"
+      | "autoComplete"
+      | "aria-label"
+    >,
+    React.RefAttributes<HTMLInputElement> {
   /**
    * The value of the search bar.
    */
   query: string;
 
   /**
+   * Event handler called when the clear button is clicked.
+   */
+  onClear: () => void;
+
+  /**
    * Props to be passed to the input element.
    */
-  inputProps?: React.ComponentPropsWithoutRef<"input">;
+  inputProps?: TextInputProps;
 }
 
 /**
@@ -20,7 +39,7 @@ export interface SearchBarProps extends TextInputProps, React.RefAttributes<HTML
  * ```tsx
  * const [query, setQuery] = React.useState("");
  *
- * <SearchBar query={query} onChange={setQuery} />
+ * <SearchBar query={query} onChange={setQuery} onClear={() => setQuery("")} />
  * ```
  */
 export type SearchBar = React.FC<SearchBarProps>;
