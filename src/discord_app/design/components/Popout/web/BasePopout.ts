@@ -1,7 +1,7 @@
+import type { LayerProps } from "@discordapp/design/components/Layer/Layer";
 import type { Timeout } from "@discordapp/timers/Timers";
 import type * as React from "react";
 
-import type { LayerProps } from "../../Layers/web/Layer";
 import type {
   LayerPosition,
   PositionInfo,

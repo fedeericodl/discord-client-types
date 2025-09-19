@@ -1,7 +1,7 @@
 import type {
   AdvancedScrollerProps,
   AdvancedScrollerRef,
-} from "@discordapp/design/components/Scroller/web/factories/createAdvancedScroller";
+} from "@discordapp/design/components/Scroller/factories/createAdvancedScroller";
 import type { UseSpringProps } from "@react-spring/web";
 import type * as React from "react";
 

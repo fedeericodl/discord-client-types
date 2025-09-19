@@ -72,6 +72,7 @@ export enum ImpressionNames {
   FRIEND_REQUESTS_SPAM_INBOX = "impression_friend_requests_spam_inbox",
   FRIENDS = "impression_friends",
   GAME_CONSOLE_DEVICE_LIST = "impression_game_console_device_list",
+  GAME_DETECTION_REPORT_MODAL = "impression_game_detection_report_modal",
   GDM_SETTINGS_INVITES = "impression_gdm_settings_invites",
   GIFT_INTENT_ACTION_BUTTON = "impression_gift_intent_action_button",
   GIFT_INTENT_BADGE = "impression_gift_intent_badge",

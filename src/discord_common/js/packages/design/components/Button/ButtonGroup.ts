@@ -1,6 +1,6 @@
 import type * as React from "react";
 
-import type { StackProps } from "../../Stack/web/Stack";
+import type { StackProps } from "../Stack/Stack";
 import type { ButtonSize } from "./BaseButton";
 
 export interface ButtonGroupProps

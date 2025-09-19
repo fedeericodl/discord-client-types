@@ -13,4 +13,4 @@ export type {
   UseVirtualizedAnchor,
   UseVirtualizedMasonryState,
   UseVirtualizedState,
-} from "@discordapp/design/components/Scroller/web/utils";
+} from "@discordapp/design/components/Scroller/utils";

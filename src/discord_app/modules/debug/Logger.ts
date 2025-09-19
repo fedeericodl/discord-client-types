@@ -1,1 +1,1 @@
-export type { Logger } from "@discordapp/logger/Logger";
+export type * from "@discordapp/logger/Logger";

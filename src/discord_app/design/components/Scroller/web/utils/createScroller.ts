@@ -1,1 +1,1 @@
-export type { CreateScroller } from "@discordapp/design/components/Scroller/web/factories/createScroller";
+export type { CreateScroller } from "@discordapp/design/components/Scroller/factories/createScroller";

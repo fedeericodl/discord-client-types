@@ -1,4 +1,1 @@
-export type {
-  HelpMessage,
-  HelpMessageTypes,
-} from "@discordapp/design/components/HelpMessage/web/HelpMessage";
+export type * from "@discordapp/design/components/HelpMessage/HelpMessage";

@@ -1,6 +1,6 @@
 import type * as React from "react";
 
-import type { Stack } from "../../../Stack/web/Stack";
+import type { Stack } from "../../Stack/Stack";
 import type {
   AnimatedScrollHelperState,
   ScrollerComponentBaseProps,

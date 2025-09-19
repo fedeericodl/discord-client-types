@@ -109,4 +109,4 @@ export interface LazyLibraryProps<T> {
  */
 export type LazyLibrary = <T>(props: LazyLibraryProps<T>) => React.ReactElement;
 
-export type { ImportWithRetry, SetAwaitOnline } from "./importWithRetry";
+export type * from "./importWithRetry";

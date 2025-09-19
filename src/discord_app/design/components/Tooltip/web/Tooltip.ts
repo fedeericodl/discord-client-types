@@ -327,7 +327,7 @@ export declare class TooltipComponent extends React.Component<TooltipProps, Tool
  * ```tsx
  * <Tooltip text="Save your changes" position="bottom" color="green">
  *   {(props) => (
- *     <button {...props}>Save</button>
+ *     <Button {...props}>Save</Button>
  *   )}
  * </Tooltip>
  * ```
@@ -336,7 +336,7 @@ export type Tooltip = typeof TooltipComponent & {
   Colors: TooltipColors;
 };
 
-export interface TooltipContainerProps extends TooltipProps {
+export interface TooltipContainerProps extends Omit<TooltipProps, "children"> {
   /**
    * The class name applied to the container.
    */

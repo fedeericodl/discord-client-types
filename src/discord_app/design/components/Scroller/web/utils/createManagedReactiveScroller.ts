@@ -1,1 +1,1 @@
-export type { CreateManagedReactiveScroller } from "@discordapp/design/components/Scroller/web/factories/createManagedReactiveScroller";
+export type { CreateManagedReactiveScroller } from "@discordapp/design/components/Scroller/factories/createManagedReactiveScroller";

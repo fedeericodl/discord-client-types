@@ -1,6 +1,6 @@
 import type * as React from "react";
 
-import type { TextProps } from "../../Text/web/Text";
+import type { TextProps } from "../Text/Text";
 
 export type HeadingProps = Omit<TextProps, "tag">;
 

@@ -1,6 +1,7 @@
 import type * as React from "react";
 
 export type StrokeSizes = Readonly<{
+  XSMALL: 0.8;
   SMALL: 1;
   MEDIUM: 2;
   LARGE: 4;
@@ -31,9 +32,19 @@ export interface ProgressCircleProps {
   background?: string;
 
   /**
+   * The class name applied to the background circle.
+   */
+  ringColorOverrideClassName?: string;
+
+  /**
    * The class name applied to the progress circle.
    */
   className?: string;
+
+  /**
+   * The class name applied to the overlay.
+   */
+  overlayClassName?: string;
 }
 
 export declare class ProgressCircleComponent extends React.Component<

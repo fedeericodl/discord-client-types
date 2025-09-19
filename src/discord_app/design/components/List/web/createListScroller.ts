@@ -11,7 +11,7 @@ import type {
   ListSectionHeight,
   ScrollerComponentBaseProps,
   ScrollerState,
-} from "@discordapp/design/components/Scroller/web/utils";
+} from "@discordapp/design/components/Scroller/utils";
 import type * as React from "react";
 
 export type RenderSectionFunction = (item: ListItemSection) => React.ReactNode;

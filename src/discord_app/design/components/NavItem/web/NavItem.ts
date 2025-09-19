@@ -1,6 +1,5 @@
+import type { ClickableProps } from "@discordapp/design/web";
 import type * as React from "react";
-
-import type { ClickableProps } from "../../Clickable/web/Clickable";
 
 export interface NavItemTo<S = unknown> {
   /**
