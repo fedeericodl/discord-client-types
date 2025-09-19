@@ -1,1 +1,1 @@
-export type * from "react-focus-rings";
+export type { FocusRing, FocusRingScope } from "react-focus-rings";

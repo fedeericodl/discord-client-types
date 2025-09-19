@@ -1,12 +1,8 @@
 {
   "version": "0.2",
-  "ignorePaths": [
-    "src/**/*.module.ts"
-  ],
+  "ignorePaths": ["src/**/*.module.ts"],
   "dictionaryDefinitions": [],
-  "dictionaries": [
-    "html"
-  ],
+  "dictionaries": ["html"],
   "words": [
     "APNG",
     "bolditalic",
@@ -23,6 +19,7 @@
     "ICYMI",
     "Inplace",
     "INTERACTABLE",
+    "Keybind",
     "keybinds",
     "NCMEC",
     "normalitalic",
