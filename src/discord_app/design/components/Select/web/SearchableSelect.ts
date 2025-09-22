@@ -100,11 +100,22 @@ type Ranking = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7;
 
 //
 
-export interface SearchableSelectOption {
+export type SearchableSelectOptionValue = string | number;
+
+type ExtractSearchableOptionValue<T> = T extends readonly SearchableSelectOption<infer U>[]
+  ? U
+  : never;
+type SearchableSelectValue<T, Multi extends boolean> = Multi extends true
+  ? T[] | undefined
+  : T | undefined;
+
+export interface SearchableSelectOption<
+  T extends SearchableSelectOptionValue = SearchableSelectOptionValue,
+> {
   /**
    * The value of the option.
    */
-  value: string | number;
+  value: T;
 
   /**
    * The label of the option.
@@ -129,21 +140,24 @@ export interface SearchableSelectAccessoryOptions {
   inDropdown: boolean;
 }
 
-export interface SearchableSelectProps {
+export interface SearchableSelectProps<
+  TOptions extends readonly SearchableSelectOption[] = readonly SearchableSelectOption[],
+  TMulti extends boolean = false,
+> {
   /**
    * The list of options to show, or an async loader function that returns options for a given query.
    */
-  options: SearchableSelectOption[] | ((query: string) => Promise<SearchableSelectOption[]>);
+  options: TOptions | ((query: string) => Promise<TOptions[number][]>);
 
   /**
    * The current selected value(s).
    */
-  value: string | string[] | number | number[] | undefined;
+  value: SearchableSelectValue<ExtractSearchableOptionValue<TOptions>, TMulti>;
 
   /**
    * Event handler called when the selection changes.
    */
-  onChange: (value: string | string[] | number | number[] | undefined) => void;
+  onChange: (value: SearchableSelectValue<ExtractSearchableOptionValue<TOptions>, TMulti>) => void;
 
   /**
    * Whether a clear button is shown to clear the selection.
@@ -155,7 +169,7 @@ export interface SearchableSelectProps {
    * Whether to enable multi-selection.
    * @default false
    */
-  multi?: boolean;
+  multi?: TMulti;
 
   /**
    * Whether the dropdown/popout should close after selecting an option.
@@ -230,9 +244,7 @@ export interface SearchableSelectProps {
    * The filtering behavior. If a function is provided, it will be used to filter the provided `options` for the current query.
    * @default true
    */
-  filter?:
-    | boolean
-    | ((options: SearchableSelectOption[], query: string) => SearchableSelectOption[]);
+  filter?: boolean | ((options: TOptions[number][], query: string) => TOptions[number][]);
 
   /**
    * Debounce time in milliseconds for async option loaders / search input.
@@ -243,7 +255,7 @@ export interface SearchableSelectProps {
    * Render prop for the visible label for an option in the list and pills.
    * @default (option) => option.label
    */
-  renderOptionLabel?: (option: SearchableSelectOption) => React.ReactNode;
+  renderOptionLabel?: (option: TOptions[number]) => React.ReactNode;
 
   /**
    * Callback fired when the search query changes in the input.
@@ -255,7 +267,7 @@ export interface SearchableSelectProps {
    * @default () => null
    */
   renderOptionPrefix?: (
-    option: SearchableSelectOption,
+    option: TOptions[number],
     options: SearchableSelectAccessoryOptions,
   ) => React.ReactNode;
 
@@ -264,7 +276,7 @@ export interface SearchableSelectProps {
    * @default () => null
    */
   renderOptionSuffix?: (
-    option: SearchableSelectOption,
+    option: TOptions[number],
     options: SearchableSelectAccessoryOptions,
   ) => React.ReactNode;
 
@@ -322,7 +334,7 @@ export interface SearchableSelectProps {
   /**
    * Render prop for a custom pill node for a selected option.
    */
-  renderCustomPill?: (option: SearchableSelectOption) => React.ReactNode;
+  renderCustomPill?: (option: TOptions[number]) => React.ReactNode;
 
   /**
    * The class name applied to the custom pill container.
@@ -365,8 +377,14 @@ export interface SearchableSelectRef {
  * />
  * ```
  */
-export type SearchableSelect = React.ForwardRefExoticComponent<
-  React.PropsWithoutRef<SearchableSelectProps> & React.RefAttributes<SearchableSelectRef>
-> & {
-  render: React.ForwardRefRenderFunction<SearchableSelectRef, SearchableSelectProps>;
+export type SearchableSelect = <
+  TOptions extends readonly SearchableSelectOption[] = readonly SearchableSelectOption[],
+  TMulti extends boolean = false,
+>(
+  props: SearchableSelectProps<TOptions, TMulti> & React.RefAttributes<SearchableSelectRef>,
+) => React.ReactElement & {
+  render: React.ForwardRefRenderFunction<
+    SearchableSelectRef,
+    SearchableSelectProps<TOptions, TMulti>
+  >;
 };

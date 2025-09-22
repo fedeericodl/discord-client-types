@@ -3,36 +3,36 @@ import type * as React from "react";
 import type { LayerPosition } from "../../Layers/web/ReferencePositionLayer";
 import type { PopoutProps } from "../../Popout/web/Popout";
 
-export type SelectOptionValue = string | number;
+export type SelectOptionValue = string | number | null | undefined;
 
-export interface UseSingleSelectStateProps {
+export interface UseSingleSelectStateProps<T extends SelectOptionValue> {
   /**
    * The currently selected value.
    */
-  value: SelectOptionValue | null;
+  value: T | null;
 
   /**
    * Callback function called when the selection changes.
    */
-  onChange: (value: SelectOptionValue | null) => void;
+  onChange: (value: T | null) => void;
 
   /**
    * Function to convert a value into a serialized value.
    * @default (value) => String(value)
    */
-  serialize?: (value: SelectOptionValue) => SelectOptionValue;
+  serialize?: (value: T) => SelectOptionValue;
 }
 
-export interface SelectionHookResult {
+export interface SelectionHookResult<T extends SelectOptionValue> {
   /**
    * Function to select a specific value.
    */
-  select: (value: SelectOptionValue) => void;
+  select: (value: T) => void;
 
   /**
    * Function to check if a value is currently selected.
    */
-  isSelected: (value: SelectOptionValue) => boolean;
+  isSelected: (value: T) => boolean;
 
   /**
    * Function to clear the current selection.
@@ -42,7 +42,7 @@ export interface SelectionHookResult {
   /**
    * Function to serialize a value into a serialized value.
    */
-  serialize: (value: SelectOptionValue) => SelectOptionValue;
+  serialize: (value: T) => SelectOptionValue;
 }
 
 /**
@@ -52,32 +52,31 @@ export interface SelectionHookResult {
  * @param props The properties for configuring the selection state.
  * @returns An object containing selection utilities.
  */
-export type UseSingleSelectState = (props: UseSingleSelectStateProps) => SelectionHookResult;
+export type UseSingleSelectState = <T extends SelectOptionValue>(
+  props: UseSingleSelectStateProps<T>,
+) => SelectionHookResult<T>;
 
-export interface UseVariableSelectProps {
+export interface UseVariableSelectProps<T extends SelectOptionValue> {
   /**
    * The currently selected values as a Set.
    */
-  value: Set<SelectOptionValue> | null;
+  value: Set<T> | null;
 
   /**
    * Callback function called when the selection changes.
    */
-  onChange: (value: Set<SelectOptionValue>) => void;
+  onChange: (value: Set<T>) => void;
 
   /**
    * Function that determines how selection interactions are handled.
    */
-  onSelectInteraction: (
-    value: SelectOptionValue,
-    currentValues: Set<SelectOptionValue> | null,
-  ) => SelectInteractionResult;
+  onSelectInteraction: (value: T, currentValues: Set<T> | null) => SelectInteractionResult<T>;
 
   /**
    * Function to convert the value into a serialized value.
    * @default (value) => String(value)
    */
-  serialize?: (value: SelectOptionValue) => SelectOptionValue;
+  serialize?: (value: T) => SelectOptionValue;
 }
 
 /**
@@ -86,13 +85,15 @@ export interface UseVariableSelectProps {
  * @param props The properties for configuring the selection state.
  * @returns An object containing selection utilities.
  */
-export type UseVariableSelect = (props: UseVariableSelectProps) => SelectionHookResult;
+export type UseVariableSelect = <T extends SelectOptionValue>(
+  props: UseVariableSelectProps<T>,
+) => SelectionHookResult<T>;
 
-export interface SelectInteractionResult {
+export interface SelectInteractionResult<T extends SelectOptionValue> {
   /**
    * The new set of selected values after the interaction.
    */
-  newValues: Set<SelectOptionValue>;
+  newValues: Set<T>;
 
   /**
    * Whether the selection was changed.
@@ -108,10 +109,10 @@ export interface SelectInteractionResult {
  * @param currentValues The current set of selected values.
  * @returns An object containing the new set of selected values and whether an update occurred.
  */
-export type MultiSelect = (
-  value: SelectOptionValue,
-  currentValues: Set<SelectOptionValue> | null,
-) => SelectInteractionResult;
+export type MultiSelect = <T extends SelectOptionValue>(
+  value: T,
+  currentValues: Set<T> | null,
+) => SelectInteractionResult<T>;
 
 /**
  * Selection function for toggle behavior.
@@ -121,10 +122,10 @@ export type MultiSelect = (
  * @param currentValues The current set of selected values.
  * @returns An object containing the new set of selected values and whether an update occurred.
  */
-export type ToggleSelect = (
-  value: SelectOptionValue,
-  currentValues: Set<SelectOptionValue> | null,
-) => SelectInteractionResult;
+export type ToggleSelect = <T extends SelectOptionValue>(
+  value: T,
+  currentValues: Set<T> | null,
+) => SelectInteractionResult<T>;
 
 /**
  * Selection function for single-select behavior within a Set.
@@ -134,17 +135,17 @@ export type ToggleSelect = (
  * @param currentValues The current set of selected values.
  * @returns An object containing the new set of selected values and whether an update occurred.
  */
-export type SingleSelectFn = (
-  value: SelectOptionValue,
-  currentValues: Set<SelectOptionValue> | null,
-) => SelectInteractionResult;
+export type SingleSelectFn = <T extends SelectOptionValue>(
+  value: T,
+  currentValues: Set<T> | null,
+) => SelectInteractionResult<T>;
 // ? Need to call it like this because there is already a SingleSelect type
 
-export interface SelectOption {
+export interface SelectOption<T extends SelectOptionValue = SelectOptionValue> {
   /**
    * The value of the option.
    */
-  value: SelectOptionValue;
+  value: T;
 
   /**
    * The label of the option.
@@ -167,11 +168,17 @@ export interface SelectOption {
   key?: string | number;
 }
 
-export interface SelectProps {
+type ExtractOptionValue<T> = T extends readonly SelectOption<infer U>[] ? U : never;
+type SelectValue<T, Clearable extends boolean> = Clearable extends true ? T | null : T;
+
+export interface SelectProps<
+  TOptions extends readonly SelectOption[] = readonly SelectOption[],
+  TClearable extends boolean = false,
+> {
   /**
    * The list of options to show.
    */
-  options: SelectOption[];
+  options: TOptions;
 
   /**
    * The placeholder text shown when no value is selected.
@@ -212,7 +219,7 @@ export interface SelectProps {
    * Whether a clear button is shown to clear the selection.
    * @default false
    */
-  clearable?: boolean;
+  clearable?: TClearable;
 
   /**
    * Size variant of the select.
@@ -240,13 +247,13 @@ export interface SelectProps {
    * Render prop for the visible label for an option.
    * @default (option) => option?.label
    */
-  renderOptionLabel?: (option: SelectOption | null) => React.ReactNode;
+  renderOptionLabel?: (option: TOptions[number] | null) => React.ReactNode;
 
   /**
    * Render prop for the visible value shown in the select when options are selected.
    * @default (options) => options.map((o) => o.label).join(", ")
    */
-  renderOptionValue?: (options: SelectOption[]) => React.ReactNode;
+  renderOptionValue?: (options: TOptions[number][]) => React.ReactNode;
 
   /**
    * The class name applied to the popout container.
@@ -278,17 +285,17 @@ export interface SelectProps {
   /**
    * Function to select a value. Provided by selection state hooks.
    */
-  select: (value: SelectOptionValue) => void;
+  select: (value: ExtractOptionValue<TOptions>) => void;
 
   /**
    * Function to check if a value is selected. Provided by selection state hooks.
    */
-  isSelected: (value: SelectOptionValue) => boolean;
+  isSelected: (value: ExtractOptionValue<TOptions>) => boolean;
 
   /**
    * Function to serialize values. Provided by selection state hooks.
    */
-  serialize: (value: SelectOptionValue) => SelectOptionValue;
+  serialize: (value: ExtractOptionValue<TOptions>) => SelectOptionValue;
 
   /**
    * Function to clear all selections. Provided by selection state hooks.
@@ -349,18 +356,26 @@ export interface SelectProps {
  * <Select options={options} {...selectState} />
  * ```
  */
-export type Select = React.FC<SelectProps>;
+export type Select = <
+  TOptions extends readonly SelectOption[] = readonly SelectOption[],
+  TClearable extends boolean = false,
+>(
+  props: SelectProps<TOptions, TClearable>,
+) => React.ReactElement;
 
-export interface SingleSelectProps extends SelectProps {
+export interface SingleSelectProps<
+  TOptions extends readonly SelectOption[] = readonly SelectOption[],
+  TClearable extends boolean = false,
+> extends Omit<SelectProps<TOptions, TClearable>, keyof SelectionHookResult<SelectOptionValue>> {
   /**
    * The currently selected value.
    */
-  value: SelectOptionValue | null;
+  value: SelectValue<ExtractOptionValue<TOptions>, TClearable>;
 
   /**
    * Callback function called when the selection changes.
    */
-  onChange: (value: SelectOptionValue | null) => void;
+  onChange: (value: SelectValue<ExtractOptionValue<TOptions>, TClearable>) => void;
 }
 
 /**
@@ -378,4 +393,9 @@ export interface SingleSelectProps extends SelectProps {
  * <SingleSelect options={options} value={value} onChange={setValue} />
  * ```
  */
-export type SingleSelect = React.FC<SingleSelectProps>;
+export type SingleSelect = <
+  TOptions extends readonly SelectOption[] = readonly SelectOption[],
+  TClearable extends boolean = false,
+>(
+  props: SingleSelectProps<TOptions, TClearable>,
+) => React.ReactElement;

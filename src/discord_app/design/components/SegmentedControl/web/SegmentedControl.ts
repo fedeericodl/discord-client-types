@@ -1,10 +1,12 @@
 import type * as React from "react";
 
+export type SegmentedControlOptionValue = string | number;
+
 export interface SegmentedControlOption {
   /**
    * The value of the option.
    */
-  value: string | number;
+  value: SegmentedControlOptionValue;
 
   /**
    * The key of the option.
@@ -36,7 +38,7 @@ export interface SegmentedControlProps {
   /**
    * The value of the selected option.
    */
-  value: string;
+  value: SegmentedControlOptionValue;
 
   /**
    * Event handler called when an option is selected.
