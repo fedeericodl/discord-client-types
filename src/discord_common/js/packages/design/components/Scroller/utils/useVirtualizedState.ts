@@ -69,7 +69,7 @@ export interface VirtualizedStateProps {
   getAnchorId?: GetAnchorId;
 }
 
-export interface Anchor {
+export interface ScrollAnchor {
   /**
    * Unique identifier of the anchor.
    */
@@ -105,7 +105,7 @@ export interface VirtualizedUseState extends ListState {
   /**
    * The current scroll anchor, or `null` if none is active.
    */
-  anchor: Anchor | null;
+  anchor: ScrollAnchor | null;
 }
 
 /**
@@ -124,7 +124,7 @@ interface VirtualizedAnchorProps {
   /**
    * Current active scroll anchor.
    */
-  anchor: Anchor | null;
+  anchor: ScrollAnchor | null;
 
   /**
    * Function returning the latest {@link ScrollerState}.

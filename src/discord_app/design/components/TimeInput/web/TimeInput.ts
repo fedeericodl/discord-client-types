@@ -1,7 +1,13 @@
 import type { Moment } from "moment";
 import type * as React from "react";
 
-export interface TimeInputProps {
+import type { SearchableSelectProps } from "../../Select/web/SearchableSelect";
+
+export interface TimeInputProps
+  extends Omit<
+    SearchableSelectProps,
+    "ref" | "options" | "value" | "onChange" | "isDisabled" | "onSearchChange" | "onKeyDown"
+  > {
   /**
    * The value of the time input.
    */
@@ -30,9 +36,6 @@ export interface TimeInputProps {
  * ```tsx
  * const [time, setTime] = React.useState(moment());
  *
- * <TimeInput
- *   value={time}
- *   onChange={(value) => setTime(value)}
- * />
+ * <TimeInput value={time} onChange={(value) => setTime(value)} />
  */
 export type TimeInput = React.FC<TimeInputProps>;

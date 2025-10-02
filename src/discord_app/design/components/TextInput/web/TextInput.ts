@@ -1,6 +1,8 @@
-import type { BaseIconButtonProps } from "@discordapp/design/web";
+import type { BaseIconButtonProps, FormControlProps } from "@discordapp/design/web";
 import type * as React from "react";
 import type { FocusRingProps } from "react-focus-rings";
+
+import type { IconSize } from "../../Icon/IconSize";
 
 export interface TextInputAccessoryIcon extends BaseIconButtonProps {
   /**
@@ -56,7 +58,7 @@ interface IconProps {
   /**
    * The size of the icon.
    */
-  size: string;
+  size: keyof IconSize;
 
   /**
    * The color of the icon.
@@ -80,10 +82,11 @@ export interface TextInputClearable {
 }
 
 export interface TextInputProps
-  extends Omit<
-    React.ComponentPropsWithoutRef<"input">,
-    "size" | "onChange" | "onFocus" | "onBlur"
-  > {
+  extends Omit<React.ComponentPropsWithoutRef<"input">, "size" | "onChange" | "onFocus" | "onBlur">,
+    Pick<
+      FormControlProps,
+      "helperText" | "successMessage" | "label" | "description" | "hideLabel" | "required" | "id"
+    > {
   /**
    * Whether the input is editable.
    */
@@ -145,35 +148,10 @@ export interface TextInputProps
   clearable?: boolean | TextInputClearable;
 
   /**
-   * The helper text to display below the input.
-   */
-  helperText?: React.ReactNode;
-
-  /**
    * Whether to show the character count.
    * @default false
    */
   showCharacterCount?: boolean;
-
-  /**
-   * The success message to display when the input is valid.
-   */
-  successMessage?: React.ReactNode;
-
-  /**
-   * The label to display above the input.
-   */
-  label?: React.ReactNode;
-
-  /**
-   * The description to display below the label.
-   */
-  description?: React.ReactNode;
-
-  /**
-   * Whether to visually hide the label.
-   */
-  hideLabel?: boolean;
 
   /**
    * Event handler called when the input changes.

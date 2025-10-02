@@ -1,11 +1,17 @@
 import type * as React from "react";
 
+import type { FormControlProps } from "@app/design/web";
+
 export enum MarkerPositions {
   ABOVE,
   BELOW,
 }
 
-export interface SliderProps {
+export interface SliderProps
+  extends Pick<
+    FormControlProps,
+    "label" | "hideLabel" | "description" | "helperText" | "errorMessage" | "successMessage"
+  > {
   /**
    * Initial value of the slider.
    * @default 10

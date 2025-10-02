@@ -34,6 +34,11 @@ export interface TextButtonProps extends React.ComponentPropsWithoutRef<"button"
    * @see {@link TextButtonVariant}
    */
   variant?: TextButtonVariant;
+
+  /**
+   * A ref to be passed to the button element.
+   */
+  buttonRef?: React.RefObject<HTMLButtonElement>;
 }
 
 /**

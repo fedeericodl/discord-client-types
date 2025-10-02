@@ -53,6 +53,11 @@ export interface AccessibilityPreferencesContextValue {
    * Indicates whether high contrast mode is enabled.
    */
   highContrastModeEnabled: boolean;
+
+  /**
+   * Indicates whether keyboard navigation mode is enabled.
+   */
+  keyboardModeEnabled: boolean;
 }
 
 /**

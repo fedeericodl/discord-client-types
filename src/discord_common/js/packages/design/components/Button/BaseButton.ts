@@ -1,4 +1,4 @@
-import type { StickerFormat } from "@discordapp/design/web";
+import type { ICON_SIZE, StickerFormat } from "@discordapp/design/web";
 import type * as React from "react";
 import type { FocusRingProps } from "react-focus-rings";
 
@@ -70,6 +70,11 @@ export interface BaseButtonProps
    * @default false
    */
   rounded?: boolean;
+
+  /**
+   * The minimum width of the button.
+   */
+  minWidth?: number | string;
 
   /**
    * A ref to be passed to the button element.
@@ -156,7 +161,7 @@ export interface IconProps {
   /**
    * The size of the icon.
    */
-  size: string;
+  size: keyof ICON_SIZE;
 
   /**
    * The class name applied to the icon element.

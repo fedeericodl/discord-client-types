@@ -79,9 +79,9 @@ export interface SlidesProps {
   centered?: boolean;
 
   /**
-   * Whether to use media queries to set container height.
+   * Whether to use media queries for responsive sizing.
    */
-  shouldUseMediaQueryToSetHeight?: boolean;
+  shouldUseMediaQueriesForSizing?: boolean;
 
   /**
    * The overflow style property for the slides container.

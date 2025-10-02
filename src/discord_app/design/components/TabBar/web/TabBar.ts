@@ -73,7 +73,7 @@ export interface TabBarItemProps {
   /**
    * Unique identifier for this tab item.
    */
-  id?: string;
+  id?: string | number;
 
   /**
    * The id of the currently selected tab item.

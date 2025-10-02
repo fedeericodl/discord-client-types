@@ -7,8 +7,18 @@ export type STYLES_VERTICAL = Readonly<{
   overflowX: "hidden";
 }>;
 
+export type STYLES_VERTICAL_AUTO = Readonly<{
+  overflowY: "auto";
+  overflowX: "hidden";
+}>;
+
 export type STYLES_HORIZONTAL = Readonly<{
   overflowX: "scroll";
+  overflowY: "hidden";
+}>;
+
+export type STYLES_HORIZONTAL_AUTO = Readonly<{
+  overflowX: "auto";
   overflowY: "hidden";
 }>;
 
@@ -25,4 +35,5 @@ export type STYLES_AUTO = Readonly<{
 export type GetMergedOrientationStyles = (
   style: React.CSSProperties | undefined,
   orientation?: ScrollerOrientationTypes,
+  overflow?: "hidden" | "scroll" | "auto",
 ) => React.CSSProperties;

@@ -1,7 +1,9 @@
 import type {
   AdvancedScrollerProps,
   AdvancedScrollerRef,
-} from "@discordapp/design/components/Scroller/factories/createAdvancedScroller";
+  ListScrollerProps,
+  ListScrollerRef,
+} from "@discordapp/design/web";
 import type { UseSpringProps } from "@react-spring/web";
 import type * as React from "react";
 
@@ -9,7 +11,6 @@ import type { FlexProps } from "@app/modules/core/web/Flex";
 
 import type { ButtonProps } from "../../Button/web/Button";
 import type { DialogProps } from "../../Dialog/web/Dialog";
-import type { ListScrollerProps, ListScrollerRef } from "../../List/web/createListScroller";
 import type { ModalTransitionState } from "./ModalConstants";
 
 type Sizes = "small" | "medium" | "large" | "dynamic";
@@ -29,7 +30,7 @@ export interface ModalRootProps extends Omit<DialogProps, "onAnimationEnd"> {
    * The current transition state of the modal.
    * @see {@link ModalTransitionState}
    */
-  transitionState?: ModalTransitionState;
+  transitionState?: ModalTransitionState | null;
 
   /**
    * The size of the modal.

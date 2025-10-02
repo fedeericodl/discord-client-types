@@ -1,18 +1,13 @@
+import type { BackdropStyles } from "@discordapp/design/web";
 import type * as React from "react";
-
-type Styles = "DARK" | "LIGHTBOX" | "IMMERSIVE" | "SUBTLE" | "BLUR" | "TOP_RADIAL";
-
-export type BackdropStyles = {
-  [K in Styles as Uppercase<K>]: K;
-};
 
 export interface BackdropProps {
   /**
    * The style of the backdrop.
    * @default BackdropStyles.SUBTLE
-   * @see {@link Styles BackdropStyles}
+   * @see {@link BackdropStyles}
    */
-  backdropStyle?: Styles;
+  backdropStyle?: keyof BackdropStyles;
 
   /**
    * Whether the backdrop is instant, with no fade-in animation.

@@ -1,7 +1,6 @@
 import type * as React from "react";
 
-import type { LayerPosition } from "../../Layers/web/ReferencePositionLayer";
-import type { PopoutProps } from "../../Popout/web/Popout";
+import type { FormControlProps, LayerPosition, PopoutProps } from "@app/design/web";
 
 // https://www.npmjs.com/package/match-sorter
 
@@ -143,7 +142,16 @@ export interface SearchableSelectAccessoryOptions {
 export interface SearchableSelectProps<
   TOptions extends readonly SearchableSelectOption[] = readonly SearchableSelectOption[],
   TMulti extends boolean = false,
-> {
+> extends Pick<
+    FormControlProps,
+    | "label"
+    | "hideLabel"
+    | "required"
+    | "description"
+    | "helperText"
+    | "errorMessage"
+    | "successMessage"
+  > {
   /**
    * The list of options to show, or an async loader function that returns options for a given query.
    */

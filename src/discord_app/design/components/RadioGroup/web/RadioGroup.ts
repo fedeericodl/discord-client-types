@@ -1,8 +1,9 @@
 import type * as React from "react";
 
-import type { RadioGroupProps as VoidRadioGroupProps } from "./VoidRadioGroup";
+import type { BaseRadioGroupProps } from "./BaseRadioGroup";
+import type { VoidRadioGroupProps } from "./VoidRadioGroup";
 
-export type RadioGroupProps = VoidRadioGroupProps;
+export type RadioGroupProps = BaseRadioGroupProps | VoidRadioGroupProps;
 
 /**
  * A group of radio buttons that allows the user to select one option from a set.

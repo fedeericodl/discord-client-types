@@ -21,6 +21,12 @@ export interface AdvancedScrollerProps extends Omit<ScrollerComponentBaseProps, 
   orientation?: ScrollerOrientationTypes;
 
   /**
+   * The overflow behavior for the non-scrolling axis.
+   * @default "scroll"
+   */
+  overflow?: "hidden" | "scroll" | "auto";
+
+  /**
    * Whether to use a custom theme for styling.
    * @default false
    */

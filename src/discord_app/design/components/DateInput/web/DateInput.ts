@@ -1,8 +1,10 @@
 import type * as React from "react";
 
-import type { CalendarPickerProps } from "../../CalendarPicker/web/CalendarPicker";
+import type { CalendarPickerProps, FormControlProps } from "@app/design/web";
 
-export interface DateInputProps extends Pick<CalendarPickerProps, "value" | "minDate" | "maxDate"> {
+export interface DateInputProps
+  extends Pick<CalendarPickerProps, "value" | "minDate" | "maxDate">,
+    Omit<FormControlProps, "children"> {
   /**
    * Event handler called when a date is selected.
    */

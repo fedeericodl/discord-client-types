@@ -89,7 +89,7 @@ export type {
   VirtualizedMasonryUseState,
 } from "./useVirtualizedMasonryState";
 export type {
-  Anchor,
+  ScrollAnchor,
   UseVirtualizedAnchor,
   UseVirtualizedState,
   VirtualizedStateProps,

@@ -1,7 +1,6 @@
 import type * as React from "react";
 
-import type { LayerPosition } from "../../Layers/web/ReferencePositionLayer";
-import type { PopoutProps } from "../../Popout/web/Popout";
+import type { FormControlProps, LayerPosition, PopoutProps } from "@app/design/web";
 
 export type SelectOptionValue = string | number | null | undefined;
 
@@ -174,7 +173,10 @@ type SelectValue<T, Clearable extends boolean> = Clearable extends true ? T | nu
 export interface SelectProps<
   TOptions extends readonly SelectOption[] = readonly SelectOption[],
   TClearable extends boolean = false,
-> {
+> extends Pick<
+    FormControlProps,
+    "label" | "description" | "helperText" | "errorMessage" | "successMessage"
+  > {
   /**
    * The list of options to show.
    */

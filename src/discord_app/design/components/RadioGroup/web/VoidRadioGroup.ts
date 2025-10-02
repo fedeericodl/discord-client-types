@@ -1,8 +1,9 @@
 import type * as React from "react";
 
-import type { LayerPosition } from "../../Layers/web/ReferencePositionLayer";
+import type { FormControlProps, LayerPosition } from "@app/design/web";
+import type { IconSize } from "../../Icon/IconSize";
 
-export type RadioGroupSizes = Record<"NOT_SET" | "NONE" | "SMALL" | "MEDIUM", string>;
+export type VoidRadioGroupSizes = Record<"NOT_SET" | "NONE" | "SMALL" | "MEDIUM", string>;
 
 interface IconProps {
   /**
@@ -13,7 +14,7 @@ interface IconProps {
   /**
    * The size of the icon.
    */
-  size?: string;
+  size?: keyof IconSize;
 
   /**
    * The color of the icon.
@@ -21,7 +22,7 @@ interface IconProps {
   color?: string;
 }
 
-export interface RadioIndicatorProps {
+export interface VoidRadioIndicatorProps {
   /**
    * Whether the radio indicator is checked.
    */
@@ -46,9 +47,9 @@ export interface RadioIndicatorProps {
 /**
  * Visually represents the state of a radio indicator.
  */
-export type RadioIndicator = React.FC<RadioIndicatorProps>;
+export type VoidRadioIndicator = React.FC<VoidRadioIndicatorProps>;
 
-export interface HookRadioGroupProps {
+export interface HookVoidRadioGroupProps {
   /**
    * The orientation of the radio group.
    */
@@ -66,7 +67,7 @@ export interface HookRadioGroupProps {
   labelledBy?: string;
 }
 
-export interface HookRadioGroup {
+export interface HookVoidRadioGroup {
   /**
    * The role of the radio group element.
    */
@@ -102,9 +103,9 @@ export interface HookRadioGroup {
  * Hook that manages keyboard navigation and accessibility attributes for radio group controls.
  * Useful for making a custom radio group.
  */
-export type UseRadioGroup = (props: HookRadioGroupProps) => HookRadioGroup;
+export type UseVoidRadioGroup = (props: HookVoidRadioGroupProps) => HookVoidRadioGroup;
 
-export interface HookRadioItemProps {
+export interface HookVoidRadioItemProps {
   /**
    * The role of the radio item element.
    */
@@ -116,7 +117,7 @@ export interface HookRadioItemProps {
   label?: string;
 }
 
-export interface HookRadioItem {
+export interface HookVoidRadioItem {
   /**
    * The role of the radio item element.
    */
@@ -142,9 +143,10 @@ export interface HookRadioItem {
  * Hook that returns the necessary attributes for an individual radio button element.
  * Useful for making a custom radio button.
  */
-export type UseRadioItem = (props: HookRadioItemProps) => HookRadioItem;
+export type UseVoidRadioItem = (props: HookVoidRadioItemProps) => HookVoidRadioItem;
 
-export interface RadioOption extends Pick<RadioIndicatorProps, "radioItemIconClassName" | "icon"> {
+export interface RadioGroupOption
+  extends Pick<VoidRadioIndicatorProps, "radioItemIconClassName" | "icon"> {
   /**
    * The value of the radio option.
    */
@@ -192,7 +194,7 @@ export interface RadioOption extends Pick<RadioIndicatorProps, "radioItemIconCla
   desc?: string;
 }
 
-export interface RadioGroupBaseProps {
+export interface RadioGroupProps {
   /**
    * The class name applied to the name and description of a radio item.
    */
@@ -226,7 +228,7 @@ export interface RadioGroupBaseProps {
   /**
    * The size of the radio item.
    * @default RadioGroupSizes.MEDIUM
-   * @see {@link RadioGroupSizes}
+   * @see {@link VoidRadioGroupSizes}
    */
   size?: string;
 
@@ -240,7 +242,7 @@ export interface RadioGroupBaseProps {
    * Event handler called when the selected radio item changes.
    * @default NOOP
    */
-  onChange?: (option: RadioOption) => void;
+  onChange?: (option: RadioGroupOption) => void;
 
   /**
    * Whether the radio group is disabled.
@@ -251,7 +253,7 @@ export interface RadioGroupBaseProps {
   /**
    * The radio options to display in the radio group.
    */
-  options?: RadioOption[];
+  options?: RadioGroupOption[];
 
   /**
    * The accessibility identifier for the radio group.
@@ -269,19 +271,10 @@ export interface RadioGroupBaseProps {
   withTransparentBackground?: boolean;
 }
 
-export interface RadioGroupProps extends RadioGroupBaseProps {
-  /**
-   * The label displayed above the radio group.
-   */
-  label?: string;
-
-  /**
-   * The description displayed below the radio group label.
-   */
-  description?: string;
-}
+export type VoidRadioGroupProps = RadioGroupProps &
+  Pick<FormControlProps, "label" | "description" | "required">;
 
 /**
  * A group of radio buttons that allows the user to select one option from a set.
  */
-export type RadioGroup = React.FC<RadioGroupProps>;
+export type VoidRadioGroup = React.FC<VoidRadioGroupProps>;

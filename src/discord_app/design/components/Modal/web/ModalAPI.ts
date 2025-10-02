@@ -1,7 +1,7 @@
+import type { BackdropStyles } from "@discordapp/design/web";
 import type * as React from "react";
 import type { UseBoundStore } from "zustand";
 
-import type { BackdropStyles } from "../../Backdrop/web/Backdrop";
 import type { DEFAULT_MODAL_CONTEXT, POPOUT_MODAL_CONTEXT } from "./ModalConstants";
 import type { RenderModal } from "./Modals";
 

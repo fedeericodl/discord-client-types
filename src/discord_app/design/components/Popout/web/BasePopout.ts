@@ -342,8 +342,9 @@ export declare class BasePopout extends React.Component<BasePopoutProps, BasePop
   /**
    * Handles scroll events to close popout when scroll-close is enabled.
    * Provides immediate popout closure on any scroll activity.
+   * @param event Scroll event from the document.
    */
-  public handleScroll: () => void;
+  public handleScroll: (event: Event) => void;
 
   /**
    * Handles escape key presses to close the popout.

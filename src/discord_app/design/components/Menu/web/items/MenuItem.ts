@@ -114,11 +114,6 @@ export interface MenuItemProps {
    * Additional properties for the icon component.
    */
   iconProps?: Record<string, unknown>;
-
-  /**
-   * Whether the item should have a sparkle effect.
-   */
-  sparkle?: boolean;
 }
 
 /**
