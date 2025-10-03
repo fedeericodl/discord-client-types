@@ -12,6 +12,7 @@ export enum MenuItemType {
   SLIDER = "slider",
   SEARCH = "search",
   IMAGE_UPLOAD = "image upload",
+  SWITCH = "switch",
 }
 
 /**

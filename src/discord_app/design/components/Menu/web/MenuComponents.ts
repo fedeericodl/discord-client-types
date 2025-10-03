@@ -9,6 +9,7 @@ import type { MenuItemProps as OriginalMenuItemProps } from "./items/MenuItem";
 import type { MenuRadioItemProps as OriginalMenuRadioItemProps } from "./items/MenuRadioItem";
 import type { MenuSubmenuItemProps as OriginalMenuSubmenuItemProps } from "./items/MenuSubmenuItem";
 import type { MenuSubmenuListItemProps as OriginalMenuSubmenuListItemProps } from "./items/MenuSubmenuListItem";
+import type { MenuSwitchItemProps as OriginalMenuSwitchItemProps } from "./items/MenuSwitchItem";
 
 /**
  * Separator component for visually dividing menu items.
@@ -151,6 +152,24 @@ export interface MenuRadioItemProps
  * ```
  */
 export type MenuRadioItem = React.FC<MenuRadioItemProps>;
+
+export interface MenuSwitchItemProps
+  extends Omit<OriginalMenuSwitchItemProps, "isFocused" | "menuItemProps"> {
+  /**
+   * The id of the switch item.
+   */
+  id: string;
+}
+
+/**
+ * A radio item component for use in menus.
+ * It allows users to select one option from a set of choices.
+ * @example
+ * ```tsx
+ * <MenuSwitchItem id="switch-1" label="Switch 1" action={() => {}} />
+ * ```
+ */
+export type MenuSwitchItem = React.FC<MenuSwitchItemProps>;
 
 export interface MenuControlItemProps
   extends Omit<OriginalMenuControlItemProps, "isFocused" | "menuItemProps" | "onClose"> {

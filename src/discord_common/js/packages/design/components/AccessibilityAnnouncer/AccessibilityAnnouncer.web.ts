@@ -6,7 +6,7 @@ type clearAnnouncer = (assertiveness: Assertiveness) => void;
 
 /**
  * An announcer that can be used to announce messages to screen readers.
- * @see {@link https://www.npmjs.com/package/@react-aria/live-announcer @react-aria/live-announcer}
+ * @see {@link https://www.npmjs.com/package/@react-aria/live-announcer \@react-aria/live-announcer}
  */
 export interface AccessibilityAnnouncer {
   /**

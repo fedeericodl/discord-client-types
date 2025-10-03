@@ -1,4 +1,4 @@
-import type { BaseIconButtonProps, FormControlProps } from "@discordapp/design/web";
+import type { BaseIconButtonProps, FormControlProps, TagGroupProps } from "@discordapp/design/web";
 import type * as React from "react";
 import type { FocusRingProps } from "react-focus-rings";
 
@@ -18,27 +18,11 @@ export interface TextInputAccessoryButton {
   button: React.ReactNode;
 }
 
-// TODO: Complete this with TagGroup from Mana
-export interface TextInputAccessoryTags {
+export interface TextInputAccessoryTags extends TagGroupProps {
   /**
    * The type of accessory.
    */
   type: "tags";
-
-  /**
-   * The label for the tags.
-   */
-  label: string;
-
-  /**
-   * The items to display as tags.
-   */
-  items: { id: string; label: string }[];
-
-  /**
-   * Event handler called when a tag is removed.
-   */
-  onRemove: (set: Set<string>) => void;
 }
 
 export interface TextInputAccessoryImage {
@@ -182,3 +166,10 @@ export interface TextInputProps
  * ```
  */
 export type TextInput = React.FC<TextInputProps>;
+
+export type InputProps = React.ComponentPropsWithoutRef<"input">;
+
+/**
+ * Wrapper around the native input element.
+ */
+export type Input = React.FC<InputProps>;

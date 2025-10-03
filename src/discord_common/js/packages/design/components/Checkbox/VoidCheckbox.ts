@@ -1,20 +1,20 @@
 import type * as React from "react";
 
-type Types = "default" | "inverted" | "ghost" | "row";
+type TypesType = "default" | "inverted" | "ghost" | "row";
 
-export type CheckboxTypes = {
-  [K in Types as Uppercase<K>]: K;
+export type Types = {
+  [K in TypesType as Uppercase<K>]: K;
 };
 
-type Aligns = "top" | "center";
+type AlignsType = "top" | "center";
 
-export type CheckboxAligns = {
-  [K in Aligns as Uppercase<K>]: K;
+export type Aligns = {
+  [K in AlignsType as Uppercase<K>]: K;
 };
 
-export type CheckboxShapes = Record<"BOX" | "ROUND" | "SMALL_BOX", string>;
+export type Shapes = Record<"BOX" | "ROUND" | "SMALL_BOX", string>;
 
-export interface VoidCheckboxProps extends CheckboxIndicatorProps {
+export interface VoidCheckboxProps extends VoidCheckboxIndicatorProps {
   /**
    * Whether the checkbox is read-only.
    * @default false
@@ -29,10 +29,10 @@ export interface VoidCheckboxProps extends CheckboxIndicatorProps {
 
   /**
    * The alignment of the checkbox.
-   * @default CheckboxAligns.CENTER
-   * @see {@link Aligns CheckboxAligns}
+   * @default Aligns.CENTER
+   * @see {@link AlignsType CheckboxAligns}
    */
-  align?: Aligns;
+  align?: AlignsType;
 
   /**
    * Event handler called when the checkbox's value changes. Only applicable when `disabled` prop and `readOnly` prop are false.
@@ -68,12 +68,12 @@ export interface VoidCheckboxProps extends CheckboxIndicatorProps {
  * ```tsx
  * const [value, setValue] = React.useState(false);
  *
- * <VoidCheckbox type={CheckboxTypes.INVERTED} value={value} onChange={() => setValue(!value)} />
+ * <VoidCheckbox type={Types.INVERTED} value={value} onChange={() => setValue(!value)} />
  * ```
  */
 export type VoidCheckbox = React.FC<React.PropsWithChildren<VoidCheckboxProps>>;
 
-export interface CheckboxIndicatorProps {
+export interface VoidCheckboxIndicatorProps {
   /**
    * The class name applied to the checkbox indicator.
    */
@@ -93,8 +93,8 @@ export interface CheckboxIndicatorProps {
 
   /**
    * The shape of the checkbox.
-   * @default CheckboxShapes.BOX
-   * @see {@link CheckboxShapes}
+   * @default Shapes.BOX
+   * @see {@link Shapes}
    */
   shape?: string;
 
@@ -111,10 +111,10 @@ export interface CheckboxIndicatorProps {
 
   /**
    * The type of the checkbox, which determines its appearance.
-   * @default CheckboxTypes.DEFAULT
-   * @see {@link Types CheckboxTypes}
+   * @default Types.DEFAULT
+   * @see {@link TypesType CheckboxTypes}
    */
-  type?: Types;
+  type?: TypesType;
 
   /**
    * The color of the checkbox tick. This should be used with the CSS var() function.
@@ -130,4 +130,4 @@ export interface CheckboxIndicatorProps {
 /**
  * Visually represents the state of a checkbox.
  */
-export type CheckboxIndicator = React.FC<CheckboxIndicatorProps>;
+export type VoidCheckboxIndicator = React.FC<VoidCheckboxIndicatorProps>;

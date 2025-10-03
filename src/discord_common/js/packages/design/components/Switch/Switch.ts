@@ -1,8 +1,9 @@
 import type * as React from "react";
 
+import type { BaseSwitchProps } from "./BaseSwitch";
 import type { VoidSwitchProps } from "./VoidSwitch";
 
-export type SwitchProps = VoidSwitchProps;
+export type SwitchProps = BaseSwitchProps | VoidSwitchProps;
 
 /**
  * An interactive switch component.

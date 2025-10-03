@@ -1,6 +1,25 @@
 import type * as React from "react";
 
+import type { BadgeType } from "../Badge/Badge";
+import type { ICON_SIZE } from "../Icon/getIconSize";
 import type { FormControlContextValue } from "./FormControlContext";
+
+interface IconProps {
+  /**
+   * Whether the icon is hidden from screen readers.
+   */
+  "aria-hidden": boolean;
+
+  /**
+   * The size of the icon.
+   */
+  size: keyof ICON_SIZE;
+
+  /**
+   * The class name applied to the icon.
+   */
+  className: string;
+}
 
 export interface FormControlProps {
   /**
@@ -64,6 +83,17 @@ export interface FormControlProps {
    * @default "vertical"
    */
   layout?: "vertical" | "horizontal";
+
+  /**
+   * The badge to display next to the label.
+   */
+  badge?: BadgeType;
+
+  /**
+   * The icon to display in the form.
+   * @default null
+   */
+  icon?: React.ComponentType<IconProps>;
 
   /**
    * The id of the form element.

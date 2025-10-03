@@ -124,7 +124,7 @@ export interface SearchableSelectOption<
   /**
    * The key of the option.
    */
-  key?: string | number;
+  key?: React.Key;
 }
 
 export interface SearchableSelectAccessoryOptions {

@@ -11,7 +11,7 @@ export interface SegmentedControlOption {
   /**
    * The key of the option.
    */
-  key?: string;
+  key?: React.Key;
 
   /**
    * The name of the option.

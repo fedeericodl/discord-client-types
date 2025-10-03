@@ -1,8 +1,9 @@
 import type * as React from "react";
 
+import type { BaseCheckboxProps } from "./BaseCheckbox";
 import type { VoidCheckboxProps } from "./VoidCheckbox";
 
-export type CheckboxProps = VoidCheckboxProps;
+export type CheckboxProps = BaseCheckboxProps | VoidCheckboxProps;
 
 /**
  * An interactive checkbox element.
@@ -14,3 +15,9 @@ export type CheckboxProps = VoidCheckboxProps;
  * ```
  */
 export type Checkbox = React.FC<CheckboxProps>;
+
+/**
+ * An interactive checkbox element.
+ */
+export type WrappedVoidCheckbox = React.FC<CheckboxProps>;
+// unknown name

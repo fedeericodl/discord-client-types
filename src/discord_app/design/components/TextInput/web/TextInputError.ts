@@ -1,4 +1,21 @@
-export interface InputErrorProps {
+export interface ErrorValidation {
+  /**
+   * The error message to display.
+   */
+  errorMessage: string | null;
+
+  /**
+   * Whether there is an error.
+   */
+  hasError: boolean;
+
+  /**
+   * Function to set whether validation should occur.
+   */
+  setShouldValidate: (shouldValidate: boolean) => void;
+}
+
+export interface TextInputErrorProps {
   /**
    * The error message to display.
    */
@@ -10,7 +27,7 @@ export interface InputErrorProps {
  * Typically used under any input field.
  * @example
  * ```tsx
- * <InputError error="A very generic error." />
+ * <TextInputError error="A very generic error." />
  * ```
  */
-export type InputError = React.FC<InputErrorProps>;
+export type TextInputError = React.FC<TextInputErrorProps>;

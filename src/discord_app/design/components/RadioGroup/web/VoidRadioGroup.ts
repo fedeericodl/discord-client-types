@@ -9,17 +9,17 @@ interface IconProps {
   /**
    * The class name applied to the icon.
    */
-  className?: string;
+  className: string;
 
   /**
    * The size of the icon.
    */
-  size?: keyof IconSize;
+  size: keyof IconSize;
 
   /**
    * The color of the icon.
    */
-  color?: string;
+  color: string;
 }
 
 export interface VoidRadioIndicatorProps {
@@ -145,12 +145,14 @@ export interface HookVoidRadioItem {
  */
 export type UseVoidRadioItem = (props: HookVoidRadioItemProps) => HookVoidRadioItem;
 
-export interface RadioGroupOption
+export type VoidRadioGroupOptionValue = string | number;
+
+export interface VoidRadioGroupOption
   extends Pick<VoidRadioIndicatorProps, "radioItemIconClassName" | "icon"> {
   /**
    * The value of the radio option.
    */
-  value: string | number;
+  value: VoidRadioGroupOptionValue;
 
   /**
    * The class name applied to the radio bar.
@@ -191,10 +193,11 @@ export interface RadioGroupOption
   /**
    * The description to display for the radio option.
    */
-  desc?: string;
+  desc?: React.ReactNode;
 }
 
-export interface RadioGroupProps {
+export interface VoidRadioGroupProps
+  extends Pick<FormControlProps, "label" | "description" | "required"> {
   /**
    * The class name applied to the name and description of a radio item.
    */
@@ -223,7 +226,7 @@ export interface RadioGroupProps {
   /**
    * The value of the selected radio item.
    */
-  value?: string | number | null;
+  value?: VoidRadioGroupOptionValue | null;
 
   /**
    * The size of the radio item.
@@ -242,7 +245,7 @@ export interface RadioGroupProps {
    * Event handler called when the selected radio item changes.
    * @default NOOP
    */
-  onChange?: (option: RadioGroupOption) => void;
+  onChange?: (option: VoidRadioGroupOption) => void;
 
   /**
    * Whether the radio group is disabled.
@@ -252,8 +255,9 @@ export interface RadioGroupProps {
 
   /**
    * The radio options to display in the radio group.
+   * @default []
    */
-  options?: RadioGroupOption[];
+  options?: VoidRadioGroupOption[];
 
   /**
    * The accessibility identifier for the radio group.
@@ -271,10 +275,23 @@ export interface RadioGroupProps {
   withTransparentBackground?: boolean;
 }
 
-export type VoidRadioGroupProps = RadioGroupProps &
-  Pick<FormControlProps, "label" | "description" | "required">;
-
 /**
  * A group of radio buttons that allows the user to select one option from a set.
+ * @example
+ * ```tsx
+ * const [value, setValue] = React.useState<string | null>(null);
+ * const options = [
+ *   { value: "option1", name: "Option 1", desc: "This is the first option" },
+ *   { value: "option2", name: "Option 2", desc: "This is the second option" },
+ *   { value: "option3", name: "Option 3", desc: "This is the third option", disabled: true },
+ * ];
+ *
+ * <VoidRadioGroup
+ *   label="Choose an option"
+ *   value={value}
+ *   onChange={(option) => setValue(option.value)}
+ *   options={options}
+ * />
+ * ```
  */
 export type VoidRadioGroup = React.FC<VoidRadioGroupProps>;

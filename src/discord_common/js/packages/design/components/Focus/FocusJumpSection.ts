@@ -1,6 +1,6 @@
 import type * as React from "react";
 
-interface JumpSectionHTMLAttributes {
+export interface JumpSectionHTMLAttributes {
   ["data-jump-section"]: string;
 }
 

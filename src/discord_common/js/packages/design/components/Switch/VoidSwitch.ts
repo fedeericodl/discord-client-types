@@ -1,19 +1,17 @@
 import type * as React from "react";
 import type { FocusRingProps } from "react-focus-rings";
 
-export interface VoidSwitchProps {
-  /**
-   * The id for the input element.
-   */
-  id?: string;
+import type { FormControlProps } from "../Forms/FormControl";
 
+export interface VoidSwitchProps
+  extends Omit<FormControlProps, "disabled" | "layout" | "children"> {
   /**
    * Event handler called when the switch value changes.
    */
-  onChange?: (value: boolean, event: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (value: boolean) => void;
 
   /**
-   * The value of the switch.
+   * Whether the switch is checked.
    */
   checked?: boolean;
 
@@ -30,7 +28,7 @@ export interface VoidSwitchProps {
   /**
    * A ref for the input element.
    */
-  innerRef?: React.Ref<HTMLInputElement>;
+  innerRef?: React.RefObject<HTMLInputElement>;
 }
 
 /**
@@ -39,7 +37,7 @@ export interface VoidSwitchProps {
  * ```tsx
  * const [value, setValue] = React.useState(false);
  *
- * <VoidSwitch checked={value} onChange={setValue} />
+ * <VoidSwitch label="Example Switch" description="This is an example switch" checked={value} onChange={setValue} />
  * ```
  */
 export type VoidSwitch = React.FC<VoidSwitchProps>;

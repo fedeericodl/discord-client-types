@@ -5,6 +5,11 @@ export interface FieldSetProps extends React.ComponentPropsWithoutRef<"fieldset"
    * The label of the fieldset.
    */
   label?: React.ReactNode;
+
+  /**
+   * The description of the fieldset.
+   */
+  description?: React.ReactNode;
 }
 
 /**

@@ -164,7 +164,7 @@ export interface SelectOption<T extends SelectOptionValue = SelectOptionValue> {
   /**
    * The key of the option.
    */
-  key?: string | number;
+  key?: React.Key;
 }
 
 type ExtractOptionValue<T> = T extends readonly SelectOption<infer U>[] ? U : never;
@@ -175,7 +175,7 @@ export interface SelectProps<
   TClearable extends boolean = false,
 > extends Pick<
     FormControlProps,
-    "label" | "description" | "helperText" | "errorMessage" | "successMessage"
+    "label" | "description" | "helperText" | "errorMessage" | "successMessage" | "layout"
   > {
   /**
    * The list of options to show.

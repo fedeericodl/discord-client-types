@@ -17,7 +17,7 @@ export interface QuickSelectOption {
   /**
    * A unique identifier.
    */
-  key?: string;
+  key?: React.Key;
 }
 
 export interface QuickSelectBaseProps {

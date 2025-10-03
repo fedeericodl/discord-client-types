@@ -18,15 +18,23 @@ interface IconProps {
    * The color of the icon.
    */
   color: string;
-}
 
-export type BaseRadioGroupOptionValue = string | number;
+  /**
+   * Whether the icon is hidden from screen readers.
+   */
+  "aria-hidden": boolean;
+
+  /**
+   * Whether the icon is focusable.
+   */
+  focusable: boolean;
+}
 
 export interface BaseRadioGroupOption {
   /**
    * The value of the radio option.
    */
-  value: BaseRadioGroupOptionValue;
+  value: string;
 
   /**
    * The description to display for the radio option.
@@ -41,7 +49,7 @@ export interface BaseRadioGroupOption {
   /**
    * The icon to display in the radio option.
    */
-  icon?: React.ComponentType<IconProps>;
+  leadingIcon?: React.ComponentType<IconProps>;
 
   /**
    * The name to display for the radio option.
@@ -51,14 +59,9 @@ export interface BaseRadioGroupOption {
 
 export interface BaseRadioGroupProps extends Omit<FormControlProps, "children"> {
   /**
-   * The default value of the selected radio item.
-   */
-  defaultValue?: BaseRadioGroupOptionValue | null;
-
-  /**
    * Event handler called when the selected radio item changes.
    */
-  onChange?: (value: BaseRadioGroupOptionValue | null) => void;
+  onChange?: (value: string | null) => void;
 
   /**
    * The radio options to display in the radio group.
@@ -68,13 +71,7 @@ export interface BaseRadioGroupProps extends Omit<FormControlProps, "children"> 
   /**
    * The value of the selected radio item.
    */
-  value?: BaseRadioGroupOptionValue | null;
-
-  /**
-   * The size of the radio items.
-   * @default "medium"
-   */
-  size?: "small" | "medium";
+  value?: string | null;
 
   /**
    * Whether the radio group is disabled.
@@ -90,5 +87,21 @@ export interface BaseRadioGroupProps extends Omit<FormControlProps, "children"> 
 
 /**
  * A group of radio buttons that allows the user to select one option from a set.
+ * @example
+ * ```tsx
+ * const [value, setValue] = React.useState<string | null>(null);
+ * const options = [
+ *   { value: "option1", name: "Option 1", desc: "This is the first option" },
+ *   { value: "option2", name: "Option 2", desc: "This is the second option" },
+ *   { value: "option3", name: "Option 3", desc: "This is the third option", disabled: true },
+ * ];
+ *
+ * <BaseRadioGroup
+ *   label="Choose an option"
+ *   value={value}
+ *   onChange={(option) => setValue(option.value)}
+ *   options={options}
+ * />
+ * ```
  */
 export type BaseRadioGroup = React.FC<BaseRadioGroupProps>;

@@ -8,3 +8,4 @@ export type { MenuRadioItem as RadioItem } from "./MenuRadioItem";
 export type { MenuSeparator as Separator } from "./MenuSeparator";
 export type { MenuSubmenuItem as SubmenuItem } from "./MenuSubmenuItem";
 export type { MenuSubmenuListItem as SubmenuListItem } from "./MenuSubmenuListItem";
+export type { MenuSwitchItem as SwitchItem } from "./MenuSwitchItem";

@@ -142,8 +142,7 @@ export type CloseModal = (key: string, context?: AnyModalContext) => boolean;
  * Closes a modal by its unique key across all contexts.
  * @param key The unique key identifying the modal to be closed.
  */
-export type CloseModalAllContexts = (key: string) => void;
-// unknown name
+export type CloseModalInAllContexts = (key: string) => void;
 
 /**
  * Updates an existing modal's content and callbacks.
@@ -195,7 +194,6 @@ export type CloseAllModals = () => void;
  * @param context The context from which to close all modals. If not provided, it will be determined based on the current application context.
  */
 export type CloseAllModalsInContext = (context?: AnyModalContext) => void;
-// unknown name
 
 /**
  * Selector to check if a specific modal is open.
@@ -225,4 +223,3 @@ export type HasModalOpen = (key: string, context?: AnyModalContext) => boolean;
  * @returns Whether the specified modal is currently open in the given context.
  */
 export type UseHasModalOpen = (key: string, context?: AnyModalContext) => boolean;
-// unknown name
