@@ -1,3 +1,4 @@
+export type * from "@discordapp/design/components/Checkbox/HoistedStylesCheckbox";
 export type {
   VoidCheckbox,
   Aligns as VoidCheckboxAligns,
