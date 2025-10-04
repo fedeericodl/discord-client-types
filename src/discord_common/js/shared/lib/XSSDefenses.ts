@@ -8,6 +8,6 @@ import type * as TokenManager from "./TokenManager";
  * Displays warning messages to users about potential security risks in the console.
  * Automatically restores token visibility when DevTools are closed or page is unloaded.
  * @param tokenManager The {@link TokenManager} instance for hiding/showing tokens.
- * @param DiscordNative The {@link DiscordNative} API object.
+ * @param DiscordNative The DiscordNative API object.
  */
 export type UserDefenses = (tokenManager: typeof TokenManager, DiscordNative?: unknown) => void;

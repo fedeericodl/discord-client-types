@@ -36,11 +36,6 @@ export interface BaseCheckboxProps {
   checked?: boolean;
 
   /**
-   * Whether the checkbox is checked by default (for uncontrolled checkboxes).
-   */
-  defaultChecked?: boolean;
-
-  /**
    * A description to display below the label.
    */
   description?: React.ReactNode;
@@ -82,16 +77,16 @@ export interface BaseCheckboxProps {
   value?: string | number | boolean;
 
   /**
-   * The variant of the checkbox group.
-   * @default "single"
-   */
-  groupVariant?: "single" | "group";
-
-  /**
    * The type of label to display.
    * @default "primary"
    */
   labelType?: "primary" | "secondary";
+
+  /**
+   * The variant of the checkbox.
+   * @default "single"
+   */
+  usageVariant?: "single" | "indicator";
 }
 
 /**

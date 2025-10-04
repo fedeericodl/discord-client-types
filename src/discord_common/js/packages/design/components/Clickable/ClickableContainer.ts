@@ -31,6 +31,11 @@ export interface ClickableContainerProps {
   onClick?: React.MouseEventHandler<HTMLElement>;
 
   /**
+   * Event handler called when the mouse enters the container.
+   */
+  onMouseEnter?: React.MouseEventHandler<HTMLElement>;
+
+  /**
    * Event handler called when the container is double clicked.
    */
   onDoubleClick?: React.MouseEventHandler<HTMLElement>;
@@ -79,6 +84,11 @@ export interface ClickableContainerProps {
    * The accessibility label for the clickable element.
    */
   "aria-label"?: string;
+
+  /**
+   * The accessibility description for the clickable element.
+   */
+  "aria-describedby"?: string;
 }
 
 /**

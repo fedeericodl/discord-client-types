@@ -58,6 +58,11 @@ export interface AccessibilityPreferencesContextValue {
    * Indicates whether keyboard navigation mode is enabled.
    */
   keyboardModeEnabled: boolean;
+
+  /**
+   * Indicates whether the user has enabled switch icons for better visibility.
+   */
+  switchIconsEnabled: boolean;
 }
 
 /**

@@ -69,6 +69,7 @@ export enum ImpressionNames {
   ENABLE_CREATOR_MONETIZATION_GUILD_HEADER_UPSELL = "impression_enable_creator_monetization_guild_header_upsell",
   ENABLE_CREATOR_MONETIZATION_WAITLIST_LANDING = "impression_enable_creator_monetization_waitlist_landing",
   FOR_LATER_LIST_VIEWED = "impression_for_later_list_viewed",
+  FORTNITE_GET_GAME_MODAL = "impression_fortnite_get_game_modal",
   FRIEND_REQUESTS_SPAM_INBOX = "impression_friend_requests_spam_inbox",
   FRIENDS = "impression_friends",
   GAME_CONSOLE_DEVICE_LIST = "impression_game_console_device_list",

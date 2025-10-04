@@ -36,6 +36,7 @@ export type * from "./components/KeyCombo/web/KeyCombo";
 export type * from "./components/Layers/web/ReferencePositionLayer";
 export type * from "./components/MasonryList/web/createMasonryListScroller";
 export type * from "./components/MasonryList/web/MasonryList";
+export type * from "./components/Menu/web/controls/MenuImageUploadControl";
 export type * from "./components/Menu/web/controls/MenuInteractiveCompositeControl";
 export type * from "./components/Menu/web/controls/MenuSearchControl";
 export type * from "./components/Menu/web/controls/MenuSliderControl";
