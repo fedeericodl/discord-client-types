@@ -1,4 +1,3 @@
-export type * from "@discordapp/design/components/Checkbox/HoistedStylesCheckbox";
 export type {
   VoidCheckbox,
   Aligns as VoidCheckboxAligns,
@@ -8,10 +7,20 @@ export type {
   Shapes as VoidCheckboxShapes,
   Types as VoidCheckboxTypes,
 } from "@discordapp/design/components/Checkbox/VoidCheckbox";
-export type * from "@discordapp/design/components/Switch/VoidSwitch";
+export type {
+  HookVoidRadioGroup,
+  HookVoidRadioGroupProps,
+  HookVoidRadioItem,
+  HookVoidRadioItemProps,
+  UseVoidRadioGroup,
+  VoidRadioGroup,
+  VoidRadioGroupOption,
+  VoidRadioGroupOptionValue,
+  VoidRadioGroupProps,
+  VoidRadioGroupSizes,
+} from "@discordapp/design/web";
 export type * from "../components/Button/web/Button";
 export type * from "../components/ButtonGroup/web/ButtonGroup";
-export type * from "../components/RadioGroup/web/VoidRadioGroup";
 export type {
   LegacyTextArea as VoidTextArea,
   LegacyTextAreaProps as VoidTextAreaProps,

@@ -127,7 +127,7 @@ export declare class CopyInputComponent extends React.PureComponent<
  * An interactive input component designed for copying text values to the clipboard.
  * @example
  * ```tsx
- * <CopyInput value="Sample text to copy" onCopy={handleCopy} />
+ * <CopyInput value="Sample text to copy" onCopy={(value) => console.log(value)} />
  * ```
  */
 export type CopyInput = typeof CopyInputComponent & {

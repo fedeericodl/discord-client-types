@@ -7,7 +7,7 @@ import type {
   PositionInfo,
   ReferencePositionLayer,
   ReferencePositionLayerProps,
-} from "../../Layers/web/ReferencePositionLayer";
+} from "@app/design/web";
 import type { LoadingPopout } from "./LoadingPopout";
 
 export type POPOUT_PREVENT_CLOSE = symbol;

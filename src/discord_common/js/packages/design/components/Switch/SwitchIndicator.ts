@@ -39,6 +39,11 @@ export interface SwitchIndicatorProps {
   describedBy?: string;
 
   /**
+   * The accessibility label for the switch.
+   */
+  labelledBy?: string;
+
+  /**
    * A ref for the input element.
    */
   innerRef?: React.RefObject<HTMLInputElement | null>;

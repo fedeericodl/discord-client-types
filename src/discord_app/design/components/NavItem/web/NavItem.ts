@@ -1,5 +1,6 @@
-import type { ClickableProps } from "@discordapp/design/web";
 import type * as React from "react";
+
+import type { ClickableProps } from "@app/design/web";
 
 export interface NavItemTo<S = unknown> {
   /**
@@ -52,4 +53,6 @@ export interface NavItemProps<S = unknown> extends ClickableProps {
  * This is used in the guilds sidebar.
  * @template S The type of state for the nav item.
  */
-export type NavItem<S = unknown> = React.FC<React.PropsWithChildren<NavItemProps<S>>>;
+export type NavItem = <S = unknown>(
+  props: React.PropsWithChildren<NavItemProps<S>>,
+) => React.ReactElement;

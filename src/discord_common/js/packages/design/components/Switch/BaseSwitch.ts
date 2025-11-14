@@ -1,9 +1,12 @@
 import type * as React from "react";
 
-import type { FormControlProps } from "../Forms/FormControl";
+import type { FieldProps } from "../Forms/Field";
 import type { SwitchIndicatorProps } from "./SwitchIndicator";
 
-export type BaseSwitchProps = Omit<FormControlProps, "disabled" | "layout" | "children"> &
+export type BaseSwitchProps = Omit<
+  FieldProps,
+  "disabled" | "layout" | "interactiveLabel" | "auxiliaryContentPosition" | "children"
+> &
   Pick<SwitchIndicatorProps, "checked" | "disabled" | "onChange" | "focusProps" | "hasIcon">;
 
 /**

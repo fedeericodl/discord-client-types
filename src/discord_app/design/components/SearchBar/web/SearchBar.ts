@@ -1,6 +1,6 @@
 import type * as React from "react";
 
-import type { TextInputProps } from "../../TextInput/web/TextInput";
+import type { TextInputProps } from "@app/design/web";
 
 export interface SearchBarProps
   extends Pick<

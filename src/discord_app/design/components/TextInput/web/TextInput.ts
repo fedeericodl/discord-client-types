@@ -1,4 +1,8 @@
-import type { BaseIconButtonProps, FormControlProps, TagGroupProps } from "@discordapp/design/web";
+import type {
+  BaseIconButtonProps,
+  ExtractedFieldProps,
+  TagGroupProps,
+} from "@discordapp/design/web";
 import type * as React from "react";
 import type { FocusRingProps } from "react-focus-rings";
 
@@ -67,10 +71,7 @@ export interface TextInputClearable {
 
 export interface TextInputProps
   extends Omit<React.ComponentPropsWithoutRef<"input">, "size" | "onChange" | "onFocus" | "onBlur">,
-    Pick<
-      FormControlProps,
-      "helperText" | "successMessage" | "label" | "description" | "hideLabel" | "required" | "id"
-    > {
+    Omit<ExtractedFieldProps, "errorMessage" | "trailingAuxiliaryContent"> {
   /**
    * Whether the input is editable.
    */

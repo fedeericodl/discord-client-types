@@ -65,7 +65,7 @@ export interface FormNoticeProps {
   /**
    * The title of the notice.
    */
-  title?: string;
+  title?: React.ReactNode;
 
   /**
    * The body of the notice.

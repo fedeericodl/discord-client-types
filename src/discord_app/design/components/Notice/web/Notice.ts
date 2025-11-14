@@ -1,6 +1,6 @@
 import type * as React from "react";
 
-import type { AnchorProps } from "../../Anchor/web/Anchor";
+import type { AnchorProps } from "@app/design/web";
 
 export type NoticeColors = Readonly<
   Record<
@@ -39,7 +39,7 @@ export interface NoticeButtonProps extends React.ComponentPropsWithoutRef<"butto
  */
 export type NoticeButton = React.FC<React.PropsWithChildren<NoticeButtonProps>>;
 
-export interface PrimaryCTANoticeButtonProps extends NoticeButtonProps {
+interface ButtonTrackingProps {
   /**
    * The type of notice.
    */
@@ -52,12 +52,14 @@ export interface PrimaryCTANoticeButtonProps extends NoticeButtonProps {
   additionalTrackingProps?: Record<string, unknown>;
 }
 
+export type PrimaryCTANoticeButtonProps = NoticeButtonProps & ButtonTrackingProps;
+
 /**
  * A primary call-to-action button that can be used in a notice.
  */
 export type PrimaryCTANoticeButton = React.FC<React.PropsWithChildren<PrimaryCTANoticeButtonProps>>;
 
-export type NoticeButtonAnchorProps = AnchorProps;
+export type NoticeButtonAnchorProps = AnchorProps & ButtonTrackingProps;
 
 /**
  * A button that can be used in a notice that acts as an anchor.

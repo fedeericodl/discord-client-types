@@ -1,10 +1,13 @@
 import type * as React from "react";
 import type { FocusRingProps } from "react-focus-rings";
 
-import type { FormControlProps } from "../Forms/FormControl";
+import type { FieldProps } from "../Forms/Field";
 
 export interface VoidSwitchProps
-  extends Omit<FormControlProps, "disabled" | "layout" | "children"> {
+  extends Omit<
+    FieldProps,
+    "disabled" | "layout" | "layoutConfig" | "auxiliaryContentPosition" | "children"
+  > {
   /**
    * Event handler called when the switch value changes.
    */

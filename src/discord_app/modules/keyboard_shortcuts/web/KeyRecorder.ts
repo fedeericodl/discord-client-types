@@ -1,6 +1,6 @@
 import type * as React from "react";
 
-export type KeyCombo = [number, number, string][];
+import type { KeyCombo } from "@app/lib/GlobalShortcut";
 
 type Modes = "DEFAULT" | "RECORDING";
 

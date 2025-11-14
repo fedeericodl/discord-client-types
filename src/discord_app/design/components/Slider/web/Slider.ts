@@ -1,17 +1,12 @@
+import type { ExtractedFieldProps } from "@discordapp/design/web";
 import type * as React from "react";
-
-import type { FormControlProps } from "@app/design/web";
 
 export enum MarkerPositions {
   ABOVE,
   BELOW,
 }
 
-export interface SliderProps
-  extends Pick<
-    FormControlProps,
-    "label" | "hideLabel" | "description" | "helperText" | "errorMessage" | "successMessage"
-  > {
+export interface SliderProps extends ExtractedFieldProps {
   /**
    * Initial value of the slider.
    * @default 10

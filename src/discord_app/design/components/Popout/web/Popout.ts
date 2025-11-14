@@ -1,6 +1,6 @@
 import type * as React from "react";
 
-import type { LayerPosition, PositionInfo } from "../../Layers/web/ReferencePositionLayer";
+import type { LayerPosition, PositionInfo } from "@app/design/web";
 import type { BasePopout, BasePopoutProps } from "./BasePopout";
 
 export enum PopoutAnimation {

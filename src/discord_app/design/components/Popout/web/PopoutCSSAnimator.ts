@@ -1,6 +1,6 @@
 import type * as React from "react";
 
-import type { LayerPosition } from "../../Layers/web/ReferencePositionLayer";
+import type { LayerPosition } from "@app/design/web";
 
 export enum PopoutAnimationTypes {
   TRANSLATE = 1,

@@ -53,12 +53,7 @@ export type TableHeaderProps<T> = Omit<RACTableHeaderProps<T>, "className">;
  */
 export type TableHeader = <T>(props: TableHeaderProps<T>) => React.ReactElement;
 
-export interface TableProps extends Omit<RACTableProps, "aria-labelledby" | "className"> {
-  /**
-   * The title of the table.
-   */
-  title?: React.ReactNode;
-
+export interface TableProps extends Omit<RACTableProps, "className"> {
   /**
    * The header of the table.
    */
@@ -98,7 +93,6 @@ export interface TableProps extends Omit<RACTableProps, "aria-labelledby" | "cla
  * };
  *
  * <Table
- *   title="Users List"
  *   header={<Button onClick={addUser}>Add User</Button>}
  *   footer={<Text>Total users: {users.length}</Text>}
  *   selectionMode="multiple"
@@ -120,4 +114,4 @@ export interface TableProps extends Omit<RACTableProps, "aria-labelledby" | "cla
  * </Table>
  * ```
  */
-export type Table = React.FC<TableProps>;
+export type Table = React.FC<React.PropsWithChildren<TableProps>>;

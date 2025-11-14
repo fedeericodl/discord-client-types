@@ -48,6 +48,12 @@ export interface ShinyButtonProps
 
 /**
  * Button featuring a customizable shine animation effect on it.
+ * @example
+ * ```tsx
+ * <ShinyButton shineSize={ShinyButton.ShineSizes.SMALL}>
+ *   Shiny Button
+ * </ShinyButton>
+ * ```
  */
 export type ShinyButton = React.FC<React.PropsWithChildren<ShinyButtonProps>> & {
   ShineSizes: ShineSizes;

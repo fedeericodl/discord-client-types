@@ -3,7 +3,7 @@ import type { FocusRingProps } from "react-focus-rings";
 
 import type { ClickableProps } from "./Clickable";
 
-export interface ClickableContainerProps {
+export interface ClickableContainerProps extends React.RefAttributes<HTMLElement> {
   /**
    * The HTML tag to use for the container element.
    * @default "div"
@@ -89,6 +89,11 @@ export interface ClickableContainerProps {
    * The accessibility description for the clickable element.
    */
   "aria-describedby"?: string;
+
+  /**
+   * The ref for the clickable element.
+   */
+  buttonRef?: React.Ref<HTMLElement>;
 }
 
 /**
@@ -102,12 +107,4 @@ export interface ClickableContainerProps {
  * </ClickableContainer>
  * ```
  */
-export type ClickableContainer = React.ForwardRefExoticComponent<
-  React.PropsWithoutRef<React.PropsWithChildren<ClickableContainerProps>> &
-    React.RefAttributes<HTMLElement>
-> & {
-  render: React.ForwardRefRenderFunction<
-    HTMLElement,
-    React.PropsWithChildren<ClickableContainerProps>
-  >;
-};
+export type ClickableContainer = React.FC<ClickableContainerProps>;

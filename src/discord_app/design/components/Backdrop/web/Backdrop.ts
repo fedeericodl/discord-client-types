@@ -1,5 +1,6 @@
-import type { BackdropStyles } from "@discordapp/design/web";
 import type * as React from "react";
+
+import type { BackdropStyles } from "@app/design/web";
 
 export interface BackdropProps {
   /**

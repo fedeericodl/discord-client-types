@@ -1,6 +1,8 @@
+import type { ExtractedFieldProps } from "@discordapp/design/web";
 import type * as React from "react";
 
-import type { FormControlProps, LayerPosition, PopoutProps } from "@app/design/web";
+import type { LayerPosition } from "@app/design/web";
+import type { PopoutProps } from "../../Popout/web/Popout";
 
 // https://www.npmjs.com/package/match-sorter
 
@@ -142,16 +144,7 @@ export interface SearchableSelectAccessoryOptions {
 export interface SearchableSelectProps<
   TOptions extends readonly SearchableSelectOption[] = readonly SearchableSelectOption[],
   TMulti extends boolean = false,
-> extends Pick<
-    FormControlProps,
-    | "label"
-    | "hideLabel"
-    | "required"
-    | "description"
-    | "helperText"
-    | "errorMessage"
-    | "successMessage"
-  > {
+> extends ExtractedFieldProps {
   /**
    * The list of options to show, or an async loader function that returns options for a given query.
    */

@@ -1,3 +1,5 @@
+import type * as React from "react";
+
 import type {
   AnimatedListScrollHelperState,
   GetAnchorId,
@@ -11,8 +13,7 @@ import type {
   ListSectionHeight,
   ScrollerComponentBaseProps,
   ScrollerState,
-} from "@discordapp/design/components/Scroller/utils";
-import type * as React from "react";
+} from "../Scroller/utils";
 
 export type RenderSectionFunction = (item: ListItemSection) => React.ReactNode;
 export type RenderRowFunction = (item: ListItemRow) => React.ReactNode;

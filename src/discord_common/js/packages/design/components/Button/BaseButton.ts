@@ -1,6 +1,8 @@
-import type { ICON_SIZE, StickerFormat } from "@discordapp/design/web";
 import type * as React from "react";
 import type { FocusRingProps } from "react-focus-rings";
+
+import type { ICON_SIZE } from "../Icon/getIconSize";
+import type { StickerFormat } from "../Stickers/StickerTypes";
 
 export type ButtonVariant =
   | "primary"
@@ -147,7 +149,7 @@ export interface ButtonIconSticker {
   asset: ButtonIconStickerAsset;
 }
 
-export interface IconProps {
+interface IconProps {
   /**
    * The color of the icon.
    */

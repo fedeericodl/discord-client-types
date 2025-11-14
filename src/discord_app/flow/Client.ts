@@ -11,6 +11,7 @@ export enum RunningProcessFullscreenType {
   FULLSCREEN,
   MINIMIZED,
 }
+
 export enum QueryUserNotificationState {
   QUNS_UNKNOWN = -1,
   QUNS_NOT_PRESENT = 1,

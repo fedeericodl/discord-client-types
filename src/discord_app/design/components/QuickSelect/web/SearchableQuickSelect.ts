@@ -1,6 +1,6 @@
 import type * as React from "react";
 
-import type { PopoutRenderProps } from "../../Popout/web/BasePopout";
+import type { PopoutRenderProps } from "@app/design/web";
 import type { QuickSelectOption, QuickSelectProps } from "./QuickSelect";
 
 export interface SearchableQuickSelectProps

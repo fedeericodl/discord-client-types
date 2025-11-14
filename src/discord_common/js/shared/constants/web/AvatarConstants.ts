@@ -27,6 +27,7 @@ type Sizes =
   | "SIZE_44"
   | "SIZE_48"
   | "SIZE_56"
+  | "SIZE_72"
   | "SIZE_80"
   | "SIZE_96"
   | "SIZE_120"

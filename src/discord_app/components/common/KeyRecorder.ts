@@ -1,7 +1,7 @@
 import type * as React from "react";
 
-import type { GlobalShortcut } from "@app/lib/GlobalShortcut";
-import type { KeyCombo, RecordModes } from "@app/modules/keyboard_shortcuts/web/KeyRecorder";
+import type { GlobalShortcut, KeyCombo } from "@app/lib/GlobalShortcut";
+import type { RecordModes } from "@app/modules/keyboard_shortcuts/web/KeyRecorder";
 
 export interface KeybindRecorderProps {
   /**

@@ -29,6 +29,8 @@ export enum EmbeddedActivitySurfaces {
 
 export enum GameLinkTypes {
   LINKED = 1,
+  OFFICIAL,
+  NVIDIA,
 }
 
 export enum ApplicationDirectoryEntryCarouselItemType {
@@ -83,6 +85,7 @@ export enum UnfurledMediaLoadingState {
 }
 
 export enum ComponentType {
+  UNKNOWN = -1,
   ACTION_ROW = 1,
   BUTTON,
   STRING_SELECT,
@@ -100,6 +103,8 @@ export enum ComponentType {
   CONTENT_INVENTORY_ENTRY = 16,
   CONTAINER,
   LABEL,
+  FILE_UPLOAD,
+  CHECKPOINT_CARD,
 }
 
 export enum ButtonStyle {

@@ -9,6 +9,18 @@ export enum HelpMessageTypes {
   PREVIEW,
 }
 
+interface IconProps {
+  /**
+   * The class name applied to the icon element.
+   */
+  className: string;
+
+  /**
+   * The color of the icon.
+   */
+  color: string;
+}
+
 export interface HelpMessageProps {
   /**
    * The content to display in the help message.
@@ -43,6 +55,11 @@ export interface HelpMessageProps {
    * @see {@link TEXT_VARIANT}
    */
   textVariant?: TEXT_VARIANT;
+
+  /**
+   * Custom icon to display instead of the default icon for the message type.
+   */
+  icon?: React.ComponentType<IconProps>;
 }
 
 /**

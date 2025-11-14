@@ -8,7 +8,6 @@ import type { UseSpringProps } from "@react-spring/web";
 import type * as React from "react";
 
 import type { FlexProps } from "@app/modules/core/web/Flex";
-
 import type { ButtonProps } from "../../Button/web/Button";
 import type { DialogProps } from "../../Dialog/web/Dialog";
 import type { ModalTransitionState } from "./ModalConstants";
@@ -128,7 +127,7 @@ export interface ModalContentProps extends AdvancedScrollerProps {
  * </ModalContent>
  * ```
  */
-export type ModalContent = React.FC<ModalContentProps>;
+export type ModalContent = React.FC<React.PropsWithChildren<ModalContentProps>>;
 
 export interface ModalFooterProps
   extends Pick<FlexProps, "direction" | "justify" | "align" | "wrap" | "className"> {

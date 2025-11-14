@@ -1,6 +1,8 @@
+import type { ExtractedFieldProps } from "@discordapp/design/web";
 import type * as React from "react";
 
-import type { FormControlProps, LayerPosition, PopoutProps } from "@app/design/web";
+import type { LayerPosition } from "@app/design/web";
+import type { PopoutProps } from "../../Popout/web/Popout";
 
 export type SelectOptionValue = string | number | null | undefined;
 
@@ -173,10 +175,7 @@ type SelectValue<T, Clearable extends boolean> = Clearable extends true ? T | nu
 export interface SelectProps<
   TOptions extends readonly SelectOption[] = readonly SelectOption[],
   TClearable extends boolean = false,
-> extends Pick<
-    FormControlProps,
-    "label" | "description" | "helperText" | "errorMessage" | "successMessage" | "layout"
-  > {
+> extends ExtractedFieldProps {
   /**
    * The list of options to show.
    */

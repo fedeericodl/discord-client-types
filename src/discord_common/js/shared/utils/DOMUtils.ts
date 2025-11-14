@@ -66,3 +66,14 @@ export type GetParentElementByClassName = (
   element: Element | null,
   className: string,
 ) => Element | null;
+
+/**
+ * Traverses up the DOM tree from a given element to find the nearest ancestor with a specified attribute.
+ * @param element The starting DOM element to begin the search from.
+ * @param attributeName The attribute name to search for in ancestor elements.
+ * @returns The nearest ancestor element with the specified attribute, or `null` if none is found.
+ */
+export type GetParentElementByAttribute = (
+  element: Element | null,
+  attributeName: string,
+) => Element | null;

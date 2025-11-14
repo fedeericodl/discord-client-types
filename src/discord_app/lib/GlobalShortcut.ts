@@ -1,6 +1,6 @@
 import type EventEmitter from "events";
 
-import type { KeyCombo } from "@app/modules/keyboard_shortcuts/web/KeyRecorder";
+export type KeyCombo = [number, number, string][];
 
 /**
  * Global keyboard shortcut recorder and manager that captures system-wide input events.

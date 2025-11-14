@@ -1,1 +1,1 @@
-export type * from "@discordapp/design/components/Text/Text";
+export type { Text, TextProps } from "@discordapp/design/web";

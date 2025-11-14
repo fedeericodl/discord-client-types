@@ -1,6 +1,7 @@
-import type { AlertProps } from "@app/components/modals/Alert";
-import type { AnyModalContext } from "@app/design/components/Modal/web/ModalAPI";
 import type { ButtonVariant } from "@discordapp/design/web";
+
+import type { AlertProps } from "@app/design/components/AlertModal/web/AlertModal";
+import type { AnyModalContext } from "@app/design/components/Modal/web/ModalAPI";
 
 export interface ShowProps
   extends Pick<

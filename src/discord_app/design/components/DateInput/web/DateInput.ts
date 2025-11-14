@@ -1,10 +1,11 @@
+import type { FieldProps } from "@discordapp/design/web";
 import type * as React from "react";
 
-import type { CalendarPickerProps, FormControlProps } from "@app/design/web";
+import type { CalendarPickerProps } from "../../CalendarPicker/web/CalendarPicker";
 
 export interface DateInputProps
   extends Pick<CalendarPickerProps, "value" | "minDate" | "maxDate">,
-    Omit<FormControlProps, "children"> {
+    Omit<FieldProps, "children"> {
   /**
    * Event handler called when a date is selected.
    */
@@ -29,10 +30,7 @@ export interface DateInputProps
  * ```tsx
  * const [date, setDate] = React.useState(moment());
  *
- * <DateInput
- *   value={date}
- *   onSelect={(date) => setDate(date)}
- * />
+ * <DateInput value={date} onSelect={(date) => setDate(date)} />
  * ```
  */
 export type DateInput = React.FC<DateInputProps>;

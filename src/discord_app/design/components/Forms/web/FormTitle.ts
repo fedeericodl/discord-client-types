@@ -2,19 +2,12 @@ import type * as React from "react";
 
 import type { FormContextValue } from "./FormContext";
 
-export type Tags = "h1" | "h2" | "h3" | "h4" | "h5" | "legend";
-
-export type FormTitleTags = {
-  [K in Tags as Uppercase<K>]: K;
-};
-
 interface CommonFormTitleProps extends Partial<Pick<FormContextValue, "error" | "errorId">> {
   /**
    * The HTML tag to use for the title. This is applied to its class name.
-   * @default FormTitleTags.H5
-   * @see {@link Tags FormTitleTags}
+   * @default "h5"
    */
-  tag?: Tags;
+  tag?: "h1" | "h2" | "h3" | "h4" | "h5" | "legend";
 
   /**
    * Whether the title is displayed as disabled.
@@ -45,7 +38,7 @@ export type FormTitleProps = FormTitleHeadingProps | FormTitleLegendProps;
  * A title for a form. The HTML tag for the title can be automatically selected based on the previous heading levels.
  * @example
  * ```tsx
- * <FormTitle tag={FormTitleTags.H1}>Title of the form</FormTitle>
+ * <FormTitle tag="h1">Title of the form</FormTitle>
  * ```
  */
 export type FormTitle = React.FC<React.PropsWithChildren<FormTitleProps>>;

@@ -1,12 +1,9 @@
-import type { FormControlProps } from "@discordapp/design/web";
+import type { ExtractedFieldProps } from "@discordapp/design/web";
 import type * as React from "react";
 
 export interface TextAreaProps
   extends React.ComponentPropsWithoutRef<"textarea">,
-    Pick<
-      FormControlProps,
-      "label" | "hideLabel" | "description" | "helperText" | "successMessage"
-    > {
+    Omit<ExtractedFieldProps, "trailingAuxiliaryContent" | "errorMessage"> {
   /**
    * Whether the textarea should automatically adjust its height based on content.
    * @default false

@@ -1,7 +1,6 @@
 import type * as React from "react";
 
-import type { PopoutRenderProps } from "../../Popout/web/BasePopout";
-import type { Popout, PopoutProps } from "../../Popout/web/Popout";
+import type { Popout, PopoutProps, PopoutRenderProps } from "@app/design/web";
 
 export interface QuickSelectOption {
   /**
